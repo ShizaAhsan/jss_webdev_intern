@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobSkillShare — Job-Ready IT Training with Hands-on Labs</title>
+  <meta name="description" content="Master job-ready IT skills with hands-on practice labs. Transition to IT Support, Systems Engineering, Cloud, and Cybersecurity with step-by-step programs.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#" class="logo" id="logo-main" aria-label="ITTech4D Home">
+        <img src="assest\logo.png" alt="EdTech4D Logo" style="height: 84px; width: auto; object-fit: contain;">
+      </a>
+      
+      <!-- Primary Desktop Nav -->
+      <nav class="primary-nav" aria-label="Main Navigation">
+        <a href="#">Home</a>
+        <a href="#programs">Programs</a>
+        <a href="#outcomes">Success Stories</a>
+        <a href="#testimonials">Testimonials</a>
+      </nav>
+      
+      <!-- Desktop Actions -->
+      <div class="nav-actions">
+        <a href="login.html" class="login-link">Sign In</a>
+        <a href="signup.html" class="btn btn-primary">Start Learning</a>
+      </div>
+      
+      <!-- Mobile Toggle Button -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay & Drawer -->
+  <div class="mobile-nav-overlay" id="mobile-overlay" role="presentation"></div>
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true" role="dialog">
+    <div class="mobile-nav-links">
+      <a href="#" class="mobile-link">Home</a>
+      <a href="#programs" class="mobile-link">Programs</a>
+      <a href="#outcomes" class="mobile-link">Success Stories</a>
+      <a href="#testimonials" class="mobile-link">Testimonials</a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
+      <a href="signup.html" class="btn btn-primary" style="width: 100%;">Start Learning</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      
+      <!-- Left Content -->
+      <div class="hero-content">
+        <span class="eyebrow">Interactive Job-Ready IT Training</span>
+        <h1>Master Job-Ready <span class="text-gradient">IT Skills</span> with Hands-on Labs</h1>
+        <p class="lede">Step-by-step career roadmaps designed around real enterprise roles. Practice in browser-based environments with live servers — no complex configurations needed.</p>
+        
+        <div class="hero-actions">
+          <a href="#programs" class="btn btn-primary">Explore Paths & Labs →</a>
+          <a href="#outcomes" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            Watch Platform Tour
+          </a>
+        </div>
+        
+        <div class="hero-bullets">
+          <div class="bullet-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E75B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Hands-on Active Directory & Cloud labs
+          </div>
+          <div class="bullet-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E75B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Complete job-aligned certificate pathways
+          </div>
+          <div class="bullet-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E75B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            24/7 self-paced access on any browser
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Visual Mockup -->
+      <div class="browser-wrapper" id="preview">
+        <div class="browser-header">
+          <div class="browser-dots">
+            <span class="browser-dot red"></span>
+            <span class="browser-dot yellow"></span>
+            <span class="browser-dot green"></span>
+          </div>
+          <div class="browser-address">https://jobskillshare.org/lab/active-directory-dns</div>
+        </div>
+        <div class="browser-content">
+          <img src="assest\blue_jss_web.png" alt="JobSkillShare Live IT Laboratory Interface Dashboard Mockup" width="600" height="450" loading="eager">
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+  <!-- Learning Tracks / Programs -->
+  <section class="programs-section" id="programs">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Career Path Programs</span>
+        <h2>Choose Your Specialization</h2>
+        <p>Comprehensive, job-aligned training pathways designed to take you from beginner to hired in your dream IT role.</p>
+      </div>
+      
+      <div class="program-grid">
+        
+        <!-- Track 1 -->
+        <div class="program-card">
+          <div class="p-card-header">
+            <div class="program-icon"><img src="icon-1.png" alt="Icon"></div>
+            <div class="p-badges">
+              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Entry-Level</span>
+              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ~98 hrs</span>
+            </div>
+          </div>
+          <h3>Modern IT Support<br>Certificate Program</h3>
+          <p>Best for: Help Desk, IT Support, Service Desk</p>
+          <div class="program-meta">OS • Hardware • AD • Microsoft 365 • Troubleshooting</div>
+          <a href="#" class="btn-outline">Open Program ↗</a>
+        </div>
+        
+        <!-- Track 2 -->
+        <div class="program-card">
+          <div class="p-card-header">
+            <div class="program-icon"><img src="icon-2.png" alt="Icon"></div>
+            <div class="p-badges">
+              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Basic to Advanced</span>
+              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ~110 hrs</span>
+            </div>
+          </div>
+          <h3>Systems Engineer<br>Certificate Program</h3>
+          <p>Best for: SysAdmin, Jr Systems Engineer, Infrastructure Tech</p>
+          <div class="program-meta">Windows Server • Networking • Linux • PowerShell</div>
+          <a href="#" class="btn-outline">Open Program ↗</a>
+        </div>
+        
+        <!-- Track 3 -->
+        <div class="program-card">
+          <div class="p-card-header">
+            <div class="program-icon"><img src="icon-3.png" alt="Icon"></div>
+            <div class="p-badges">
+              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Basic to Advanced</span>
+              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ~110+ hrs</span>
+            </div>
+          </div>
+          <h3>Cloud Engineer<br>Certificate Program</h3>
+          <p>Best for: Cloud Admin, Cloud Engineer, Azure/AWS Specialist</p>
+          <div class="program-meta">Azure • AWS • Linux • Automation</div>
+          <a href="#" class="btn-outline">Open Program ↗</a>
+        </div>
+        
+        <!-- Track 4 -->
+        <div class="program-card">
+          <div class="p-card-header">
+            <div class="program-icon"><img src="icon-4.png" alt="Icon"></div>
+            <div class="p-badges">
+              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Basic to Advanced</span>
+              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ~70+ hrs</span>
+            </div>
+          </div>
+          <h3>Cybersecurity Analyst<br>Certificate Program</h3>
+          <p>Best for: SOC Analyst (Junior), Security Analyst</p>
+          <div class="program-meta">Networking • Linux • Security+ • SOC Labs</div>
+          <a href="#" class="btn-outline">Open Program ↗</a>
+        </div>
+        
+        <!-- Track 5 -->
+        <div class="program-card">
+          <div class="p-card-header">
+            <div class="program-icon"><img src="icon-5.png" alt="Icon"></div>
+            <div class="p-badges">
+              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Basic to Advanced</span>
+              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ~180+ hrs</span>
+            </div>
+          </div>
+          <h3>AI Engineering &<br>Automation Certificate Program</h3>
+          <p>Best for: Jr AI Engineer, Automation Engineer, GenAI Developer</p>
+          <div class="program-meta">Python • Data • GenAI • Agents • IoT</div>
+          <a href="#" class="btn-outline">Open Program ↗</a>
+        </div>
+        
+        <!-- Track 6 -->
+        <div class="program-card">
+          <div class="p-card-header">
+            <div class="program-icon"><img src="icon-6.png" alt="Icon"></div>
+            <div class="p-badges">
+              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Basic to Advanced</span>
+              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 20+ hrs</span>
+            </div>
+          </div>
+          <h3>Freelancer Certificate<br>Program</h3>
+          <p>Best for: Fiverr/Upwork beginners, online earning, remote work skills</p>
+          <div class="program-meta">Profiles • Gigs • Client communication • Pro delivery</div>
+          <a href="#" class="btn-outline">Open Program ↗</a>
+        </div>
+        
+        <!-- Track 7 -->
+        <div class="program-card coming-soon">
+          <div class="p-card-header">
+            <div class="program-icon"><img src="icon-7.png" alt="Icon"></div>
+            <div class="p-badges">
+              <span class="p-badge">Coming Soon</span>
+              <span class="p-badge text-blue">Coming Soon</span>
+            </div>
+          </div>
+          <h3>Web Development</h3>
+          <p>Best for: Frontend & Backend roles, freelancing, junior developer jobs</p>
+          <div class="program-meta">HTML • CSS • JavaScript • APIs • Git • Deployment</div>
+          <a href="#" class="btn-outline" style="pointer-events: none; opacity: 0.5;">Coming Soon</a>
+        </div>
+        
+        <!-- Track 8 -->
+        <div class="program-card coming-soon">
+          <div class="p-card-header">
+            <div class="program-icon"><img src="icon-8.png" alt="Icon"></div>
+            <div class="p-badges">
+              <span class="p-badge">Coming Soon</span>
+              <span class="p-badge text-blue">Coming Soon</span>
+            </div>
+          </div>
+          <h3>Data Science</h3>
+          <p>Best for: Data Analyst, BI, Python data projects, entry data roles</p>
+          <div class="program-meta">Python • Pandas • SQL • Visualization • ML basics</div>
+          <a href="#" class="btn-outline" style="pointer-events: none; opacity: 0.5;">Coming Soon</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes: Stats & Testimonials Combined -->
+  <section class="outcomes-section" id="outcomes">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Real Results</span>
+        <h2>Proven Career Switches</h2>
+        <p>See how thousands of self-paced learners went from non-tech jobs to professional IT careers.</p>
+      </div>
+      
+      <!-- Stats Board -->
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num">50,000+</div>
+          <div class="stat-label">Active Global Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">95%</div>
+          <div class="stat-label">Lab Completion Success Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">10,000+</div>
+          <div class="stat-label">Verified IT Career Placements</div>
+        </div>
+      </div>
+      
+      <!-- Testimonials Carousel -->
+      <div class="testimonial-carousel" id="testimonials">
+        <div class="testimonial-track" id="testimonial-track">
+          
+          <div class="testimonial-card color-1">
+            <div class="t-header">
+              <div class="t-avatar av-1">ZN</div>
+              <div class="t-meta">
+                <h4>Zeeshan B. Nasir</h4>
+                <span>IT Support Technician</span>
+              </div>
+            </div>
+            <p class="t-quote">"The lab console is exactly like what I face in my daily job now. Best investment for career change."</p>
+          </div>
+          
+          <div class="testimonial-card color-2">
+            <div class="t-header">
+              <div class="t-avatar av-2">MR</div>
+              <div class="t-meta">
+                <h4>Manjinder S. Rahal</h4>
+                <span>Systems Engineer</span>
+              </div>
+            </div>
+            <p class="t-quote">"The active directory tasks in systems engineer roadmap helped me pass my technical interview with 100% confidence."</p>
+          </div>
+          
+          <div class="testimonial-card color-3">
+            <div class="t-header">
+              <div class="t-avatar av-3">HW</div>
+              <div class="t-meta">
+                <h4>Hadi Wali</h4>
+                <span>SOC Analyst</span>
+              </div>
+            </div>
+            <p class="t-quote">"No other platform gives you live servers and mentor guidance in one roadmap. Landed a SOC job in 6 months."</p>
+          </div>
+
+          <div class="testimonial-card color-4">
+            <div class="t-header">
+              <div class="t-avatar av-4" style="background-color: #8B5CF6;">JS</div>
+              <div class="t-meta">
+                <h4>Jessica Smith</h4>
+                <span>Cloud Administrator</span>
+              </div>
+            </div>
+            <p class="t-quote">"Transitioning to Azure was seamless thanks to the practical hands-on labs. Highly recommended for aspiring cloud engineers!"</p>
+          </div>
+
+          <div class="testimonial-card color-5">
+            <div class="t-header">
+              <div class="t-avatar av-5" style="background-color: #10B981;">DA</div>
+              <div class="t-meta">
+                <h4>David Anderson</h4>
+                <span>Network Engineer</span>
+              </div>
+            </div>
+            <p class="t-quote">"The networking modules are top-notch. I finally understood VLANs and routing protocols perfectly."</p>
+          </div>
+          
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="t-prev" aria-label="Previous Testimonial">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="carousel-btn" id="t-next" aria-label="Next Testimonial">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alumni Success Section -->
+  <section class="alumni-section" id="alumni">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Success Stories</span>
+        <h2>Our Alumni Work At Top Companies</h2>
+        <p>Join thousands of successful professionals who advanced their IT careers.</p>
+      </div>
+      
+      <div class="alumni-grid">
+        <div class="alumni-card">
+          <img src="alumni-1.jpg" alt="Zeeshan B. Nasir" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Zeeshan B. Nasir</h3>
+            <span class="alumni-title">Information Technology Technician</span>
+            <span class="alumni-company">All Native Group</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-2.jpg" alt="Manjinder Singh Rahal" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Manjinder Singh Rahal</h3>
+            <span class="alumni-title">Information Technology Specialist</span>
+            <span class="alumni-company">Woodland Joint USD</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-3.jpg" alt="Hadi Wali" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Hadi Wali</h3>
+            <span class="alumni-title">Cyber Security Engineer</span>
+            <span class="alumni-company">TikTok</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-4.jpg" alt="Bradley Williams" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Bradley Williams</h3>
+            <span class="alumni-title">Systems Administrator</span>
+            <span class="alumni-company">RadNet</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-5.jpg" alt="Haifa Shalabi" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Haifa Shalabi</h3>
+            <span class="alumni-title">System Administrator</span>
+            <span class="alumni-company">HR Service Partners</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-6.jpg" alt="Trung Nguyen" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Trung Nguyen</h3>
+            <span class="alumni-title">Technical Support Specialist</span>
+            <span class="alumni-company">BD</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-7.jpg" alt="Nelson J." class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Nelson J.</h3>
+            <span class="alumni-title">Microsoft 365 Support Engineer</span>
+            <span class="alumni-company">Microsoft</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-8.jpg" alt="Yan Lyu" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Yan Lyu</h3>
+            <span class="alumni-title">IT Support Engineer</span>
+            <span class="alumni-company">Amazon Web Services (AWS)</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-9.jpg" alt="Desktop Deployment Specialist" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Desktop Deployment Specialist</h3>
+            <span class="alumni-title">Product Specialist</span>
+            <span class="alumni-company">Computacenter US</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-10.jpg" alt="Mario Potsis" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Mario Potsis</h3>
+            <span class="alumni-title">Desktop Support Engineer</span>
+            <span class="alumni-company">A&O IT Group</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-11.jpg" alt="Reetika Dhiman" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">Reetika Dhiman</h3>
+            <span class="alumni-title">IT Specialist</span>
+            <span class="alumni-company">Knix</span>
+          </div>
+        </div>
+        <div class="alumni-card">
+          <img src="alumni-12.jpg" alt="James Triplett II" class="alumni-img">
+          <div class="alumni-info">
+            <h3 class="alumni-name">James Triplett II</h3>
+            <span class="alumni-title">IT Professional</span>
+            <span class="alumni-company">PeopleConnect</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combined Enroll CTA Panel -->
+  <section class="enroll-section" id="enroll">
+    <div class="container">
+      <div class="enroll-panel">
+        <div class="enroll-grid">
+          
+          <div class="enroll-content">
+            <h2>Ready to launch your IT career?</h2>
+            <p>Select your roadmap, access real enterprise hardware through browser-based labs, and get support from IT mentors.</p>
+            
+            <div class="enroll-trust-bar">
+              <div class="enroll-trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                Secure 256-bit payment encryption
+              </div>
+              <div class="enroll-trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Cancel subscription anytime
+              </div>
+            </div>
+          </div>
+          
+          <div class="enroll-action-panel">
+            <a href="pricing.html" class="btn btn-primary" style="background: var(--white); color: var(--navy); box-shadow: none;">Start Free Trial</a>
+            <div class="enroll-badge-row">
+              <span class="enroll-sec-badge">14-Day Free Period</span>
+              <span class="enroll-sec-badge">Cancel in 1 click</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <img src="assest\logo.png" alt="EdTech4D Logo" style="height: 96px; width: auto; margin-bottom: 12px; object-fit: contain;">
+          <p>Empowering job-seekers and career switchers worldwide with hands-on, enterprise-grade IT practice labs.</p>
+          <div class="social-icons">
+            <a href="https://www.youtube.com/c/JOBSkillSharesite" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://www.facebook.com/jobskillshare.org/" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/dmvitsolutions" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Learning Tracks</h4>
+          <ul>
+            <li><a href="#programs">Modern IT Support</a></li>
+            <li><a href="#programs">Systems Engineer</a></li>
+            <li><a href="#programs">Cloud Infrastructure</a></li>
+            <li><a href="#programs">Cybersecurity Analyst</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#outcomes">Success Stories</a></li>
+            <li><a href="#programs">Practice Labs</a></li>
+            <li><a href="pricing.html">Membership Plans</a></li>
+            <li><a href="#">Contact Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact & Location</h4>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>HQ: 15524 New Hampshire Ave, Silver Spring, MD 20905</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>support@jobskillshare.org</span>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2026 JobSkillShare. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+  <!-- Mobile Navigation Interaction Logic -->
+  <script src="script.js" defer></script>
+</body>
+</html>

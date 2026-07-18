@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - EdTech4D</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+  <div class="auth-wrapper">
+    <div class="auth-left">
+      <div class="auth-left-content">
+        <a href="index.html" class="auth-logo">
+          <img src="assest\logo.png" alt="EdTech4D Logo" style="height: 60px; object-fit: contain;">
+        </a>
+        <h2>Welcome Back to EdTech4D</h2>
+        <p>Access your enterprise-grade IT practice labs and continue your journey to becoming a top-tier IT professional.</p>
+        
+        <div class="auth-stats">
+          <div class="a-stat">
+            <h4>50,000+</h4>
+            <span>Learners</span>
+          </div>
+          <div class="a-stat">
+            <h4>100%</h4>
+            <span>Practical</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="auth-right">
+      <div class="auth-form-container">
+        <div class="auth-header-mobile">
+          <a href="index.html"><img src="assest\logo.png" alt="Logo" style="height: 48px;"></a>
+        </div>
+        
+        <h2>Sign In</h2>
+        <p class="auth-subtitle">Log in to your account to continue</p>
+        
+        <button class="btn-social">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
+          Sign in with Google
+        </button>
+        
+        <div class="auth-divider">
+          <span>or sign in with email</span>
+        </div>
+        
+        <form class="auth-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="name@example.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="password" placeholder="Enter your password" required>
+              <button type="button" class="toggle-password" aria-label="Show password">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <label class="remember-me">
+              <input type="checkbox" name="remember">
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-100">Sign In</button>
+        </form>
+        
+        <p class="auth-footer-text">
+          Don't have an account? <a href="signup.html">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
