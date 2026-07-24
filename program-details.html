@@ -701,5 +701,219 @@
       document.getElementById('rv-counter').innerText = (currentReview + 1) + " / 4";
     }
   </script>
+  <!-- Pricing Modal -->
+  <div class="modal-overlay" id="pricingModal" onclick="if(event.target === this) closePricingModal()">
+    <div class="modal-content" style="max-width: 1100px;">
+      <button class="modal-close" onclick="closePricingModal()">&times;</button>
+      
+      <!-- STEP 1 VIEW -->
+      <div id="step-1-view">
+        <div class="modal-header text-center">
+          <span class="p-top-badge" style="background: none; color: var(--blue); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">JOIN JOBSKILLSHARE</span>
+          <h2 style="font-size: 32px; color: var(--navy-dark); margin: 8px 0 32px;">Choose how you want to learn</h2>
+          
+          <!-- Stepper -->
+          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 700px; margin: 0 auto 40px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 28px; height: 28px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">1</div>
+              <span style="font-weight: 600; color: var(--blue); font-size: 14px;">Choose a plan</span>
+            </div>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 16px;"></div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 28px; height: 28px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">2</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 14px;">Secure checkout</span>
+            </div>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 16px;"></div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 28px; height: 28px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">3</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 14px;">Start learning</span>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-bottom: 32px;">
+          <h3 style="font-size: 24px; color: var(--navy-dark); margin-bottom: 8px;">Select your membership</h3>
+          <p style="color: #64748B;">Create your account here with secure membership and payment processing.</p>
+        </div>
+
+        <div class="pricing-cards-wrapper">
+          <!-- Free Card -->
+          <div class="p-card">
+            <div class="p-badge" style="background: #E2E8F0; color: #475569;">START FREE</div>
+            <h3>Free Access</h3>
+            <div class="price"><span>$</span>0.00</div>
+            <p class="p-desc">Explore selected foundation Courses for three months.</p>
+            <ul class="p-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Selected free Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Learning portal access</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress tracking</li>
+            </ul>
+            <button onclick="goToStep2('Free Access', 0)" class="p-btn p-btn-light" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Create Free Account</button>
+          </div>
+
+          <!-- Premium Monthly Card -->
+          <div class="p-card p-card-highlight">
+            <div class="p-badge" style="background: #DBEAFE; color: var(--blue);">FLEXIBLE</div>
+            <h3>Premium Monthly</h3>
+            <div class="price"><span>$</span>50.00<small>per month</small></div>
+            <p class="p-desc">Full learning access with monthly billing.</p>
+            <ul class="p-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
+              <li><strong style="color: #8B5CF6;">+ AI Career Tools</strong></li>
+            </ul>
+            <button onclick="goToStep2('Premium Monthly', 50)" class="p-btn p-btn-light" style="width: 100%; border: 1px solid var(--blue); color: var(--blue); cursor: pointer; font-family: inherit;">Choose Premium Monthly</button>
+          </div>
+
+          <!-- Premium Yearly Card -->
+          <div class="p-card">
+            <div class="p-badge" style="background: var(--blue); color: var(--white);">BEST VALUE</div>
+            <h3>Premium Yearly</h3>
+            <div class="price"><span>$</span>549.00<small>per year</small></div>
+            <p class="p-desc">Build long-term skills with yearly Premium access.</p>
+            <ul class="p-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
+              <li><strong style="color: #8B5CF6;">+ AI Career Tools</strong></li>
+            </ul>
+            <button onclick="goToStep2('Premium Yearly', 549)" class="p-btn p-btn-blue" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Choose Premium Yearly</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2 VIEW -->
+      <div id="step-2-view" style="display: none; max-width: 800px; margin: 0 auto; text-align: left;">
+        <button onclick="goToStep1()" style="background: none; border: none; color: var(--blue); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; margin-bottom: 24px; padding: 0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Plans
+        </button>
+        
+        <div class="modal-header text-center" style="margin-bottom: 40px;">
+          <h2 style="font-size: 32px; color: var(--navy-dark); margin: 0 0 32px;">Complete Your Registration</h2>
+          
+          <!-- Stepper Step 2 -->
+          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 700px; margin: 0 auto;">
+            <div style="display: flex; align-items: center; gap: 12px; opacity: 0.5;">
+              <div style="width: 28px; height: 28px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">1</div>
+              <span style="font-weight: 600; color: var(--navy); font-size: 14px;">Choose a plan</span>
+            </div>
+            <div style="flex: 1; height: 1px; background: var(--blue); margin: 0 16px;"></div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 28px; height: 28px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">2</div>
+              <span style="font-weight: 600; color: var(--blue); font-size: 14px;">Secure checkout</span>
+            </div>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 16px;"></div>
+            <div style="display: flex; align-items: center; gap: 12px; opacity: 0.5;">
+              <div style="width: 28px; height: 28px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">3</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 14px;">Start learning</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 24px; margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div style="font-size: 12px; font-weight: 700; color: #64748B; text-transform: uppercase; margin-bottom: 4px;">Selected Plan</div>
+            <div id="modal-plan-name" style="font-size: 20px; font-weight: 700; color: var(--navy-dark);">Premium Monthly</div>
+          </div>
+          <div id="modal-plan-price" style="font-size: 24px; font-weight: 700; color: var(--blue);">$50.00</div>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert('Proceeding to Start Learning!'); closePricingModal();">
+          <!-- Account Details -->
+          <h3 style="font-size: 18px; color: var(--navy-dark); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #E2E8F0;">Account Information</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Full Name *</label>
+              <input type="text" required style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Email Address *</label>
+              <input type="email" required style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1; margin-bottom: 0;">
+              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Create Password *</label>
+              <input type="password" required style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
+            </div>
+          </div>
+
+          <!-- Payment Details (Dynamically shown) -->
+          <div id="modal-payment-section">
+            <h3 style="font-size: 18px; color: var(--navy-dark); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #E2E8F0;">Payment Details</h3>
+            
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Discount Code (Optional)</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" placeholder="Enter code" style="flex: 1; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
+                <button type="button" style="padding: 0 16px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 8px; color: var(--navy-dark); font-weight: 600; cursor: pointer;">Apply</button>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 32px;">
+              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Card Information *</label>
+              <div style="border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <input type="text" placeholder="Card Number" style="grid-column: 1 / -1; width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit;" required class="pmt-input">
+                <input type="text" placeholder="MM/YY" style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit;" required class="pmt-input">
+                <input type="text" placeholder="CVC" style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit;" required class="pmt-input">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 16px; display: flex; justify-content: center; align-items: center; gap: 8px;">
+            Complete Registration
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script>
+    function openPricingModal(e) {
+      if(e) e.preventDefault();
+      document.getElementById('pricingModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      goToStep1(); // Always start at step 1
+    }
+    
+    function closePricingModal() {
+      document.getElementById('pricingModal').classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => { goToStep1(); }, 300);
+    }
+    
+    function goToStep2(planName, planPrice) {
+      document.getElementById('step-1-view').style.display = 'none';
+      document.getElementById('step-2-view').style.display = 'block';
+      
+      document.getElementById('modal-plan-name').innerText = planName;
+      document.getElementById('modal-plan-price').innerText = planPrice === 0 ? '$0.00' : '$' + planPrice + '.00';
+      
+      const paymentSection = document.getElementById('modal-payment-section');
+      const pmtInputs = paymentSection.querySelectorAll('.pmt-input');
+      
+      if (planPrice === 0) {
+        paymentSection.style.display = 'none';
+        pmtInputs.forEach(i => i.removeAttribute('required'));
+      } else {
+        paymentSection.style.display = 'block';
+        pmtInputs.forEach(i => i.setAttribute('required', 'true'));
+      }
+    }
+    
+    function goToStep1() {
+      document.getElementById('step-2-view').style.display = 'none';
+      document.getElementById('step-1-view').style.display = 'block';
+    }
+
+    // Attach to all pricing links
+    document.addEventListener('DOMContentLoaded', () => {
+      const pricingLinks = document.querySelectorAll('a[href="pricing.html"]');
+      pricingLinks.forEach(link => {
+        link.addEventListener('click', openPricingModal);
+      });
+    });
+  </script>
 </body>
 </html>
