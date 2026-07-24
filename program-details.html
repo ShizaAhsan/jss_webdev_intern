@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Support Certificate Program - EdTech4D</title>
+  <meta name="description" content="Gain comprehensive skills in IT support, from networking configurations to security protocols.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="EdTech4D Home">
+        <img src="assest\logo.png" alt="EdTech4D Logo" style="height: 84px; width: auto; object-fit: contain;">
+      </a>
+      
+      <nav class="primary-nav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#programs">Programs</a>
+        <a href="index.html#outcomes">Success Stories</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <a href="login.html" class="login-link">Sign In</a>
+        <a href="signup.html" class="btn btn-primary">Create Account</a>
+      </div>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobile-overlay" role="presentation"></div>
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true" role="dialog">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="index.html#programs" class="mobile-link">Programs</a>
+      <a href="index.html#outcomes" class="mobile-link">Success Stories</a>
+      <a href="pricing.html" class="mobile-link">Pricing</a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
+      <a href="signup.html" class="btn btn-primary" style="width: 100%;">Create Account</a>
+    </div>
+  </div>
+
+  <!-- Program Hero Section -->
+  <section class="program-hero">
+    <div class="container">
+      <div class="program-hero-grid">
+        <div class="ph-content">
+          <span class="ph-badge">JOBSKILLSHARE CERTIFICATE PROGRAM</span>
+          <h1>IT Support Certificate Program</h1>
+          <h2>Empower Your IT Support Career</h2>
+          <p>Gain comprehensive skills in IT support, from networking configurations to security protocols, enhancing both technical and professional proficiencies.</p>
+          
+          <div class="ph-stats">
+            <div class="ph-stat-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <div>
+                <strong>5</strong>
+                <span>Courses</span>
+              </div>
+            </div>
+            <div class="ph-stat-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+              <div>
+                <strong>419</strong>
+                <span>Lessons</span>
+              </div>
+            </div>
+            <div class="ph-stat-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div>
+                <strong>56 hours 0 min</strong>
+                <span>Estimated time</span>
+              </div>
+            </div>
+            <div class="ph-stat-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              <div>
+                <strong>Beginner to Intermediate</strong>
+                <span>Difficulty</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="ph-actions">
+            <a href="signup.html" class="btn btn-primary" style="background-color: var(--blue-light); border-color: var(--blue-light);">Start Free Trial</a>
+            <a href="#courses" class="btn btn-outline" style="color: var(--white); border-color: var(--white);">View Curriculum</a>
+          </div>
+          
+          <ul class="ph-perks">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Practice before joining</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Recommended learning order</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress saved after login</li>
+          </ul>
+        </div>
+        
+        <div class="ph-image">
+          <div class="ph-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" alt="IT Professional">
+            <div class="ph-image-badge">
+              <strong>Your learning path</strong>
+              <span>5 Courses • 419 Lessons</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Sub Nav -->
+  <div class="sticky-subnav" id="sticky-nav">
+    <div class="container">
+      <div class="subnav-wrap">
+        <span class="jump-to-label">JUMP TO</span>
+        <nav class="subnav-links">
+          <a href="#overview" class="active">Overview</a>
+          <a href="#outcomes">Outcomes</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#courses">Courses</a>
+          <a href="#projects">Projects</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="program-content-wrapper">
+    <div class="container pd-container">
+      
+      <!-- Overview Section -->
+      <section id="overview" class="pd-section scroll-mt">
+        <div class="pd-card" style="background-color: #FFFFFF;">
+          <span class="pd-section-label">PROGRAM OVERVIEW</span>
+          <p class="pd-lead-text">The IT Support Certificate Program equips learners with the essential skills required for a successful career in IT support. Spanning five intensive courses, this program focuses on both foundational and professional development, preparing students for real-world challenges in IT support roles.</p>
+          
+          <h3 class="pd-heading-lg">Program Highlights</h3>
+          <p class="pd-text">Begin with core concepts in networking and hardware, advance through operating system management and security protocols, and conclude with career preparation in job searching and community networking. This comprehensive curriculum ensures that participants are not only technically proficient but also adept in professional communication and teamwork.</p>
+        </div>
+      </section>
+
+      <!-- Outcomes Section -->
+      <section id="outcomes" class="pd-section scroll-mt">
+        <div class="outcomes-grid">
+          
+          <div class="pd-card">
+            <span class="pd-section-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline; vertical-align:-3px; margin-right:4px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> PROGRAM OUTCOMES</span>
+            <h3 class="pd-heading-lg">What You'll Be Able to Do</h3>
+            
+            <div class="check-grid">
+              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Understand network configurations</div>
+              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Address hardware issues</div>
+              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Support mobile devices</div>
+              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Install and upgrade operating systems</div>
+              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Configure network settings</div>
+              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Implement security protocols</div>
+              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Deploy applications and cloud services</div>
+              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Identify and remove malware</div>
+              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Preempt social engineering attacks</div>
+              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Configure and manage Active Directory</div>
+            </div>
+          </div>
+          
+          <div class="career-card">
+            <span class="pd-section-label" style="color:var(--ice-blue);">YOUR CAREER PATH</span>
+            <h3 class="pd-heading-lg" style="color:var(--white);">Career Opportunities</h3>
+            
+            <div class="career-list">
+              <div class="career-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> IT Support Specialist</div>
+              <div class="career-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Network Administrator</div>
+              <div class="career-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> System Administrator</div>
+              <div class="career-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Entry-Level IT Support</div>
+              <div class="career-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Remote IT Positions</div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="pd-section scroll-mt">
+        <div class="pd-card" style="background-color: #FFFFFF; border-color: #E2E8F0;">
+          <div class="skills-header">
+            <div>
+              <span class="pd-section-label">CORE SKILL AREAS</span>
+              <h3 class="pd-heading-lg">Skills You'll Build</h3>
+            </div>
+            <div class="skills-count">
+              <strong>11</strong>
+              <span>CORE SKILLS</span>
+            </div>
+          </div>
+          
+          <div class="skills-grid">
+            <div class="skill-box" style="background-color: #F0F9FF; border: 1px solid #BAE6FD;">
+              <div class="skill-box-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <h4>Technical Skills</h4>
+              </div>
+              <ul class="skill-list">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Network Configuration</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Hardware Troubleshooting</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Operating System Deployment</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Security Protocol Configuration</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> System Resource Management</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Using Command-line Tools</li>
+              </ul>
+            </div>
+            
+            <div class="skill-box" style="background-color: #FFF7ED; border: 1px solid #FFEDD5;">
+              <div class="skill-box-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <h4>Professional Skills</h4>
+              </div>
+              <ul class="skill-list">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Technical Communication</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Problem Solving</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Teamwork</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Time Management</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Professionalism</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="pd-section">
+        <div class="pd-card tech-card">
+          <div class="tech-header">
+            <span class="pd-section-label">TECHNOLOGY STACK</span>
+            <h3 class="pd-heading-lg">Technologies Covered</h3>
+          </div>
+          <div class="tech-badges">
+            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> DNS</span>
+            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> DHCP</span>
+            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Active Directory</span>
+            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Windows 11</span>
+            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Ubuntu Linux</span>
+            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Windows Defender</span>
+            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> ServiceNow</span>
+            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Spiceworks Cloud</span>
+            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Firewall Management</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap Section -->
+      <section id="roadmap" class="pd-section scroll-mt">
+        <div class="pd-card bg-highlight">
+          <span class="pd-section-label">LEARNING ROADMAP</span>
+          <h3 class="pd-heading-lg">Your Path Through the Program</h3>
+          
+          <div class="roadmap-timeline">
+            
+            <div class="rm-item">
+              <div class="rm-marker">1</div>
+              <div class="rm-content">
+                <h4>Foundation</h4>
+                <p>Learn foundational skills in networking, mobile management, and hardware troubleshooting.</p>
+                <div class="rm-tags">
+                  <span>Modern IT Support Training: 220-1201 (Core 1)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rm-item">
+              <div class="rm-marker">2</div>
+              <div class="rm-content">
+                <h4>Professional Development</h4>
+                <p>Advance through operating system and security management.</p>
+                <div class="rm-tags">
+                  <span>Modern IT Support Training: 220-1202 (Core 2)</span>
+                  <span>IT Support: Active Directory and Tech Skills</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rm-item">
+              <div class="rm-marker">3</div>
+              <div class="rm-content">
+                <h4>Mid-career</h4>
+                <p>Enhance interpersonal and communication skills for IT settings.</p>
+                <div class="rm-tags">
+                  <span>IT Support: People Skills for IT Professionals</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rm-item">
+              <div class="rm-marker">4</div>
+              <div class="rm-content">
+                <h4>Career Preparation</h4>
+                <p>Optimize your resume and network effectively within IT communities.</p>
+                <div class="rm-tags">
+                  <span>IT Support Resume, Applying for Jobs and Communities</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rm-item rm-final">
+              <div class="rm-marker"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <div class="rm-content">
+                <h4>Certificate Program Complete</h4>
+                <p>You have progressed through the complete course sequence and its combined skill set.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Section -->
+      <section id="courses" class="pd-section scroll-mt">
+        <div class="pd-card">
+          <div class="courses-header">
+            <div>
+              <span class="pd-section-label">PROGRAM STRUCTURE</span>
+              <h3 class="pd-heading-lg">Courses in This Certificate Program</h3>
+            </div>
+            <div class="courses-count">5 courses in recommended order</div>
+          </div>
+          
+          <div class="course-list">
+            
+            <!-- Course 1 -->
+            <div class="c-item">
+              <div class="c-number">1</div>
+              <div class="c-content">
+                <span class="c-label">FOUNDATION</span>
+                <h4>Modern IT Support Training: 220-1201 (Core 1)</h4>
+                <p>This course provides foundational skills for a career in IT support, focusing on networking, troubleshooting, and mobile device management.</p>
+                <div class="c-meta">
+                  <span class="cm-pill">12 hours 0 min</span>
+                  <span class="cm-pill">Networking</span>
+                  <span class="cm-pill">Mobile Devices</span>
+                  <span class="cm-pill">Hardware</span>
+                  <span class="cm-pill">Troubleshooting</span>
+                </div>
+                <div class="c-skills">
+                  <strong>Skills introduced:</strong> Network Configuration • Hardware Troubleshooting • Technical Support • Mobile Device Management
+                </div>
+              </div>
+              <div class="c-action">
+                <a href="#" class="btn btn-outline btn-sm">View Course</a>
+              </div>
+            </div>
+            
+            <!-- Course 2 -->
+            <div class="c-item">
+              <div class="c-number">2</div>
+              <div class="c-content">
+                <span class="c-label">PROFESSIONAL DEVELOPMENT</span>
+                <h4>Modern IT Support Training: 220-1202 (Core 2)</h4>
+                <p>This course provides comprehensive training in modern IT support, focusing on operating systems, network configurations, security protocols, and troubleshooting skills.</p>
+                <div class="c-meta">
+                  <span class="cm-pill">20 hours 0 min</span>
+                  <span class="cm-pill">Operating System Installation and Upgrades</span>
+                  <span class="cm-pill">Windows Graphical and Command Line Management</span>
+                </div>
+                <div class="c-skills">
+                  <strong>Skills introduced:</strong> Operating System Installation • Network Configuration • Security Configuration • Malware Identification
+                </div>
+              </div>
+              <div class="c-action">
+                <a href="#" class="btn btn-outline btn-sm">View Course</a>
+              </div>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="c-item">
+              <div class="c-number">3</div>
+              <div class="c-content">
+                <span class="c-label">FOUNDATIONAL</span>
+                <h4>IT Support: Active Directory and Tech Skills</h4>
+                <p>This course provides an in-depth exploration of IT support and administration with a focus on Active Directory, system resource management, and security applications.</p>
+                <div class="c-meta">
+                  <span class="cm-pill">15 hours 0 min</span>
+                  <span class="cm-pill">Active Directory</span>
+                  <span class="cm-pill">System Resource Management</span>
+                  <span class="cm-pill">Security Applications</span>
+                </div>
+                <div class="c-skills">
+                  <strong>Skills introduced:</strong> Configuring Active Directory • Managing System Resources • Applying Security Policies • Using Ticketing Systems
+                </div>
+              </div>
+              <div class="c-action">
+                <a href="#" class="btn btn-outline btn-sm">View Course</a>
+              </div>
+            </div>
+
+            <!-- Course 4 -->
+            <div class="c-item">
+              <div class="c-number">4</div>
+              <div class="c-content">
+                <span class="c-label">MID-CAREER</span>
+                <h4>IT Support: People Skills for IT Professionals</h4>
+                <p>This course focuses on developing people skills for IT support professionals, enhancing communication, listening, troubleshooting, and teamwork capabilities.</p>
+                <div class="c-meta">
+                  <span class="cm-pill">5 hours 0 min</span>
+                  <span class="cm-pill">Professional Communication</span>
+                  <span class="cm-pill">Listening Skills</span>
+                  <span class="cm-pill">Difficult Conversations</span>
+                </div>
+                <div class="c-skills">
+                  <strong>Skills introduced:</strong> Professional Communication • Active Listening • Handling Difficult Conversations • Team Management
+                </div>
+              </div>
+              <div class="c-action">
+                <a href="#" class="btn btn-outline btn-sm">View Course</a>
+              </div>
+            </div>
+
+            <!-- Course 5 -->
+            <div class="c-item">
+              <div class="c-number">5</div>
+              <div class="c-content">
+                <span class="c-label">CAREER PREPARATION</span>
+                <h4>IT Support Resume, Applying for Jobs and Communities</h4>
+                <p>This course focuses on building a strong resume, effective job searching, and connecting with IT communities to launch an IT support career.</p>
+                <div class="c-meta">
+                  <span class="cm-pill">4 hours 0 min</span>
+                  <span class="cm-pill">Resume Building</span>
+                  <span class="cm-pill">Job Search Strategies</span>
+                  <span class="cm-pill">Interview Preparation</span>
+                </div>
+                <div class="c-skills">
+                  <strong>Skills introduced:</strong> Resume Writing • Job Searching • Interview Techniques • Community Networking
+                </div>
+              </div>
+              <div class="c-action">
+                <a href="#" class="btn btn-outline btn-sm">View Course</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="pd-section scroll-mt">
+        <div class="projects-card">
+          <span class="pd-section-label" style="color:var(--ice-blue);">PRACTICE WHAT YOU LEARN</span>
+          <h3 class="pd-heading-lg" style="color:var(--white);">Projects & Hands-on Activities</h3>
+          
+          <div class="pr-box">
+            <div class="pr-box-header">
+              <div class="pr-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
+              <div>
+                <h4>Skills Practiced</h4>
+                <span>20 curriculum-grounded skills</span>
+              </div>
+            </div>
+            <div class="tech-badges" style="margin-top: 16px;">
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> DNS</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> DHCP</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Active Directory</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Windows 11</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Ubuntu Linux</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Windows Defender</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> ServiceNow</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Spiceworks Cloud</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Firewall Management</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Network Configuration</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Hardware Troubleshooting</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Operating System Deployment</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Security Protocol Configuration</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> System Resource Management</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Technical Communication</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Problem Solving</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Teamwork</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Time Management</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Professionalism</span>
+              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Using Command-line Tools</span>
+            </div>
+          </div>
+          
+          <div class="pr-note">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            <div>
+              <strong>Cloud Services Note</strong>
+              <p>AWS, Azure, and other cloud subscriptions are not included with membership. Members use their own cloud accounts to follow cloud-specific courses. For some beginner-level courses, JobSkillShare provides limited Azure and AWS subscriptions for basic hands-on tasks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section id="reviews" class="pd-section scroll-mt">
+        <div class="projects-card" style="padding-bottom: 24px;">
+          <div class="rv-header">
+            <div>
+              <span class="pd-section-label" style="color:var(--ice-blue);">FEEDBACK ACROSS THE CURRICULUM</span>
+              <h3 class="pd-heading-lg" style="color:var(--white);">Program Reviews</h3>
+            </div>
+            <div class="rv-score">
+              <strong>4.8 <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></strong>
+              <span>Program average across all Course ratings</span>
+            </div>
+          </div>
+          
+          <div class="rv-body">
+            <div class="stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p id="rv-text">This course is very helpful, they taught me how to handle customers and users. How to be patient</p>
+            <span class="rv-course-tag" id="rv-tag">IT Support: People Skills for IT Professionals</span>
+            <div class="rv-user">
+              <div class="rv-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+              <div>
+                <strong id="rv-user">Learner</strong>
+                <span id="rv-date">July 19, 2026</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="rv-controls">
+            <button class="rv-btn" onclick="prevReview()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></button>
+            <span id="rv-counter">1 / 4</span>
+            <button class="rv-btn" onclick="nextReview()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="pd-section scroll-mt">
+        <div class="pd-card bg-highlight">
+          <h3 class="pd-heading-lg" style="margin-bottom: 24px;">Frequently Asked Questions</h3>
+          
+          <div class="faq-accordion">
+            <div class="faq-acc-item">
+              <button class="faq-acc-btn" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                <span>What are the prerequisites for this program?</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-acc-content hidden">
+                <p>A basic understanding of IT concepts and basic IT knowledge are recommended.</p>
+              </div>
+            </div>
+            <div class="faq-acc-item">
+              <button class="faq-acc-btn" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                <span>What careers can this certificate lead to?</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-acc-content hidden">
+                <p>Graduates can pursue roles like IT Support Specialist, Network Administrator, or System Administrator.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="pd-section">
+        <div class="projects-card text-center" style="padding: 64px 24px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); text-align: center;">
+          <span class="pd-section-label" style="color: var(--ice-blue); display: inline-block;">BUILD YOUR COMPLETE SKILL SET</span>
+          <h2 style="color:var(--white); font-size: 32px; margin-bottom: 16px;">Empower Your IT Support Career</h2>
+          <p style="color: var(--ice-blue); max-width: 600px; margin: 0 auto 32px;">Gain comprehensive skills in IT support, from networking configurations to security protocols, enhancing both technical and professional proficiencies.</p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="signup.html" class="btn btn-primary" style="background-color: var(--blue-light); border-color: var(--blue-light); color: var(--white);">Create Free Account</a>
+            <a href="login.html" class="btn btn-outline" style="background-color: var(--white); color: var(--navy); border-color: var(--white);">Already a member? Log In</a>
+          </div>
+        </div>
+      </section>
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assest\logo.png" alt="EdTech4D Logo" style="height: 96px; width: auto; margin-bottom: 12px; object-fit: contain;">
+          <p>Practical IT training for real-world careers. Build job-ready technology skills through structured Certificate Programs, focused Courses, hands-on practice, and guided learning.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+            <a href="#" class="social-icon" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Explore Learning</h4>
+          <ul>
+            <li><a href="index.html#programs">Certificate Programs</a></li>
+            <li><a href="#">Individual IT Courses</a></li>
+            <li><a href="#">Lab Catalog 2026</a></li>
+            <li><a href="pricing.html">Premium Membership</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Member Resources</h4>
+          <ul>
+            <li><a href="login.html">Open My Learning</a></li>
+            <li><a href="#">Practice Labs</a></li>
+            <li><a href="signup.html">Create an Account</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>HQ: 15524 New Hampshire Ave, Silver Spring, MD 20905</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>support@jobskillshare.org</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple script for sticky nav active state highlighting
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.scroll-mt');
+      const navLinks = document.querySelectorAll('.subnav-links a');
+      
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          if (scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+      
+      // Smooth scrolling
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop - 120,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+  <script src="script.js" defer></script>
+  <script>
+    const reviews = [
+      { text: "This course is very helpful, they taught me how to handle customers and users. How to be patient", tag: "IT Support: People Skills for IT Professionals", user: "Learner", date: "July 19, 2026" },
+      { text: "Excellent breakdown of networking concepts. I feel much more confident troubleshooting now.", tag: "IT Support: Networking Essentials", user: "John D.", date: "August 2, 2026" },
+      { text: "Great hands-on practice. The labs were exactly what I needed to understand Active Directory.", tag: "IT Support: Windows Server", user: "Sarah M.", date: "August 15, 2026" },
+      { text: "Very comprehensive. Loved the real-world scenarios provided by the instructors.", tag: "IT Support: Capstone Project", user: "Alex K.", date: "September 1, 2026" }
+    ];
+    let currentReview = 0;
+    
+    function prevReview() {
+      currentReview = (currentReview - 1 + reviews.length) % reviews.length;
+      updateReviewDOM();
+    }
+    
+    function nextReview() {
+      currentReview = (currentReview + 1) % reviews.length;
+      updateReviewDOM();
+    }
+    
+    function updateReviewDOM() {
+      const rev = reviews[currentReview];
+      document.getElementById('rv-text').innerText = rev.text;
+      document.getElementById('rv-tag').innerText = rev.tag;
+      document.getElementById('rv-user').innerText = rev.user;
+      document.getElementById('rv-date').innerText = rev.date;
+      document.getElementById('rv-counter').innerText = (currentReview + 1) + " / 4";
+    }
+  </script>
+</body>
+</html>
