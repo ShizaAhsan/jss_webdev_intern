@@ -9,7 +9,7 @@
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -19,22 +19,22 @@
   <!-- Header -->
   <header>
     <div class="container nav-wrap">
-      <a href="#" class="logo" id="logo-main" aria-label="ITTech4D Home">
-        <img src="assest\logo.png" alt="EdTech4D Logo" style="height: 84px; width: auto; object-fit: contain;">
+      <a href="index.html" class="logo" id="logo-main" aria-label="JobSkillShare Home">
+        <img src="assest\logo.png" alt="JobSkillShare Logo" style="height: 84px; width: auto; object-fit: contain;">
       </a>
       
       <!-- Primary Desktop Nav -->
       <nav class="primary-nav" aria-label="Main Navigation">
-        <a href="#">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="#programs">Programs</a>
-        <a href="#outcomes">Success Stories</a>
+        <a href="pricing.html">Pricing</a>
         <a href="#testimonials">Testimonials</a>
       </nav>
       
       <!-- Desktop Actions -->
       <div class="nav-actions">
-        <a href="login.html" class="login-link">Sign In</a>
-        <a href="signup.html" class="btn btn-primary">Start Learning</a>
+        <a href="login.html" class="login-link">Login</a>
+        <a href="#" onclick="openPricingModal(event)" class="btn btn-primary">Start Learning</a>
       </div>
       
       <!-- Mobile Toggle Button -->
@@ -50,14 +50,14 @@
   <div class="mobile-nav-overlay" id="mobile-overlay" role="presentation"></div>
   <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true" role="dialog">
     <div class="mobile-nav-links">
-      <a href="#" class="mobile-link">Home</a>
+      <a href="index.html" class="mobile-link">Home</a>
       <a href="#programs" class="mobile-link">Programs</a>
-      <a href="#outcomes" class="mobile-link">Success Stories</a>
+      <a href="pricing.html" class="mobile-link">Pricing</a>
       <a href="#testimonials" class="mobile-link">Testimonials</a>
     </div>
     <div class="mobile-nav-actions">
-      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
-      <a href="signup.html" class="btn btn-primary" style="width: 100%;">Start Learning</a>
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Login</a>
+      <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="width: 100%;">Start Learning</a>
     </div>
   </div>
 
@@ -72,30 +72,27 @@
         <p class="lede">Step-by-step career roadmaps designed around real enterprise roles. Practice in browser-based environments with live servers — no complex configurations needed.</p>
         
         <div class="hero-actions">
-          <a href="#programs" class="btn btn-primary">Explore Paths & Labs →</a>
-          <a href="#outcomes" class="btn btn-secondary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
-            Watch Platform Tour
+          <a href="#" onclick="openPricingModal(event)" class="btn btn-primary">Start Learning →</a>
+          <a href="#programs" class="btn btn-secondary">
+            Explore Programs
           </a>
         </div>
         
         <div class="hero-bullets">
           <div class="bullet-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E75B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6F13EC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
             Hands-on Active Directory & Cloud labs
           </div>
           <div class="bullet-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E75B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6F13EC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
             Complete job-aligned certificate pathways
           </div>
           <div class="bullet-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E75B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6F13EC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
             24/7 self-paced access on any browser
@@ -105,14 +102,14 @@
       
       <!-- Right Visual Mockup -->
       <div class="browser-wrapper" id="preview">
-        <div class="browser-header">
+        <!-- <div class="browser-header">
           <div class="browser-dots">
             <span class="browser-dot red"></span>
             <span class="browser-dot yellow"></span>
             <span class="browser-dot green"></span>
           </div>
           <div class="browser-address">https://jobskillshare.org/lab/active-directory-dns</div>
-        </div>
+        </div> -->
         <div class="browser-content">
           <img src="assest\blue_jss_web.png" alt="JobSkillShare Live IT Laboratory Interface Dashboard Mockup" width="600" height="450" loading="eager">
         </div>
@@ -132,127 +129,245 @@
       </div>
       
       <div class="program-grid">
-        
-        <!-- Track 1 -->
+
+        <!-- Track 1: IT Support -->
         <div class="program-card">
-          <div class="p-card-header">
-            <div class="program-icon"><img src="icon-1.png" alt="Icon"></div>
-            <div class="p-badges">
-              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Entry-Level</span>
-              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ~98 hrs</span>
+          <div class="card-thumb">
+            <img src="card_it_support.jpg" alt="IT Support Program">
+            <div class="card-thumb-overlay"></div>
+          </div>
+          <div class="card-top-row">
+            <span class="level-badge beginner">Beginner</span>
+            <span class="hours-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              ~98 hrs
+            </span>
+          </div>
+          <div class="card-body">
+            <h3>Modern IT Support Certificate Program</h3>
+            <p class="card-desc">Build practical help desk and IT support skills through a guided sequence of 5 Courses covering real-world troubleshooting.</p>
+            <div class="card-topics">
+              <span class="card-topic-chip">OS</span>
+              <span class="card-topic-chip">Hardware</span>
+              <span class="card-topic-chip">Active Directory</span>
+              <span class="card-topic-chip">Microsoft 365</span>
+              <span class="card-topic-chip">Troubleshooting</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="card-stats"><span>5</span> Courses · <span>419</span> Lessons</div>
+              <a href="program-details.html" class="btn-card">Open ↗</a>
             </div>
           </div>
-          <h3>Modern IT Support<br>Certificate Program</h3>
-          <p>Best for: Help Desk, IT Support, Service Desk</p>
-          <div class="program-meta">OS • Hardware • AD • Microsoft 365 • Troubleshooting</div>
-          <a href="program-details.html" class="btn-outline">Open Program ↗</a>
+          <div class="card-body-pad"></div>
         </div>
-        
-        <!-- Track 2 -->
+
+        <!-- Track 2: Systems Engineer -->
         <div class="program-card">
-          <div class="p-card-header">
-            <div class="program-icon"><img src="icon-2.png" alt="Icon"></div>
-            <div class="p-badges">
-              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Basic to Advanced</span>
-              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ~110 hrs</span>
+          <div class="card-thumb">
+            <img src="card_systems_engineer.jpg" alt="Systems Engineer Program">
+            <div class="card-thumb-overlay"></div>
+          </div>
+          <div class="card-top-row">
+            <span class="level-badge intermediate">Intermediate</span>
+            <span class="hours-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              ~110 hrs
+            </span>
+          </div>
+          <div class="card-body">
+            <h3>Systems Engineer Certificate Program</h3>
+            <p class="card-desc">Master server administration, networking, and infrastructure management for junior SysAdmin and Systems Engineer roles.</p>
+            <div class="card-topics">
+              <span class="card-topic-chip">Windows Server</span>
+              <span class="card-topic-chip">Networking</span>
+              <span class="card-topic-chip">Linux</span>
+              <span class="card-topic-chip">PowerShell</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="card-stats"><span>6</span> Courses · <span>380+</span> Lessons</div>
+              <a href="#" class="btn-card">Open ↗</a>
             </div>
           </div>
-          <h3>Systems Engineer<br>Certificate Program</h3>
-          <p>Best for: SysAdmin, Jr Systems Engineer, Infrastructure Tech</p>
-          <div class="program-meta">Windows Server • Networking • Linux • PowerShell</div>
-          <a href="#" class="btn-outline">Open Program ↗</a>
+          <div class="card-body-pad"></div>
         </div>
-        
-        <!-- Track 3 -->
+
+        <!-- Track 3: Cloud Engineer -->
         <div class="program-card">
-          <div class="p-card-header">
-            <div class="program-icon"><img src="icon-3.png" alt="Icon"></div>
-            <div class="p-badges">
-              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Basic to Advanced</span>
-              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ~110+ hrs</span>
+          <div class="card-thumb">
+            <img src="card_cloud_engineer.jpg" alt="Cloud Engineer Program">
+            <div class="card-thumb-overlay"></div>
+          </div>
+          <div class="card-top-row">
+            <span class="level-badge intermediate">Intermediate</span>
+            <span class="hours-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              ~110+ hrs
+            </span>
+          </div>
+          <div class="card-body">
+            <h3>Cloud Engineer Certificate Program</h3>
+            <p class="card-desc">Deploy and manage cloud infrastructure on Azure and AWS. Build skills for Cloud Admin and Cloud Specialist roles.</p>
+            <div class="card-topics">
+              <span class="card-topic-chip">Azure</span>
+              <span class="card-topic-chip">AWS</span>
+              <span class="card-topic-chip">Linux</span>
+              <span class="card-topic-chip">Automation</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="card-stats"><span>5</span> Courses · <span>350+</span> Lessons</div>
+              <a href="#" class="btn-card">Open ↗</a>
             </div>
           </div>
-          <h3>Cloud Engineer<br>Certificate Program</h3>
-          <p>Best for: Cloud Admin, Cloud Engineer, Azure/AWS Specialist</p>
-          <div class="program-meta">Azure • AWS • Linux • Automation</div>
-          <a href="#" class="btn-outline">Open Program ↗</a>
+          <div class="card-body-pad"></div>
         </div>
-        
-        <!-- Track 4 -->
+
+        <!-- Track 4: Cybersecurity -->
         <div class="program-card">
-          <div class="p-card-header">
-            <div class="program-icon"><img src="icon-4.png" alt="Icon"></div>
-            <div class="p-badges">
-              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Basic to Advanced</span>
-              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ~70+ hrs</span>
+          <div class="card-thumb">
+            <img src="card_cybersecurity.jpg" alt="Cybersecurity Program">
+            <div class="card-thumb-overlay"></div>
+          </div>
+          <div class="card-top-row">
+            <span class="level-badge intermediate">Intermediate</span>
+            <span class="hours-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              ~70+ hrs
+            </span>
+          </div>
+          <div class="card-body">
+            <h3>Cybersecurity Analyst Certificate Program</h3>
+            <p class="card-desc">Build practical cybersecurity skills in Security+ 701, Risk Management, and Incident Response through 5 Courses.</p>
+            <div class="card-topics">
+              <span class="card-topic-chip">Security+ 701</span>
+              <span class="card-topic-chip">Risk Management</span>
+              <span class="card-topic-chip">Incident Response</span>
+              <span class="card-topic-chip">SOC Labs</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="card-stats"><span>5</span> Courses · <span>408</span> Lessons</div>
+              <a href="#" class="btn-card">Open ↗</a>
             </div>
           </div>
-          <h3>Cybersecurity Analyst<br>Certificate Program</h3>
-          <p>Best for: SOC Analyst (Junior), Security Analyst</p>
-          <div class="program-meta">Networking • Linux • Security+ • SOC Labs</div>
-          <a href="#" class="btn-outline">Open Program ↗</a>
+          <div class="card-body-pad"></div>
         </div>
-        
-        <!-- Track 5 -->
+
+        <!-- Track 5: AI Engineering -->
         <div class="program-card">
-          <div class="p-card-header">
-            <div class="program-icon"><img src="icon-5.png" alt="Icon"></div>
-            <div class="p-badges">
-              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Basic to Advanced</span>
-              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ~180+ hrs</span>
+          <div class="card-thumb">
+            <img src="card_ai_engineering.jpg" alt="AI Engineering Program">
+            <div class="card-thumb-overlay"></div>
+          </div>
+          <div class="card-top-row">
+            <span class="level-badge advanced">Advanced</span>
+            <span class="hours-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              ~180+ hrs
+            </span>
+          </div>
+          <div class="card-body">
+            <h3>AI Engineering & Automation Certificate</h3>
+            <p class="card-desc">Master Python, GenAI, automation agents and IoT to launch a career as a Jr AI Engineer or Automation Engineer.</p>
+            <div class="card-topics">
+              <span class="card-topic-chip">Python</span>
+              <span class="card-topic-chip">GenAI</span>
+              <span class="card-topic-chip">Agents</span>
+              <span class="card-topic-chip">Data</span>
+              <span class="card-topic-chip">IoT</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="card-stats"><span>8</span> Courses · <span>500+</span> Lessons</div>
+              <a href="#" class="btn-card">Open ↗</a>
             </div>
           </div>
-          <h3>AI Engineering &<br>Automation Certificate Program</h3>
-          <p>Best for: Jr AI Engineer, Automation Engineer, GenAI Developer</p>
-          <div class="program-meta">Python • Data • GenAI • Agents • IoT</div>
-          <a href="#" class="btn-outline">Open Program ↗</a>
+          <div class="card-body-pad"></div>
         </div>
-        
-        <!-- Track 6 -->
+
+        <!-- Track 6: Freelancer -->
         <div class="program-card">
-          <div class="p-card-header">
-            <div class="program-icon"><img src="icon-6.png" alt="Icon"></div>
-            <div class="p-badges">
-              <span class="p-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Basic to Advanced</span>
-              <span class="p-badge text-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 20+ hrs</span>
+          <div class="card-thumb">
+            <img src="card_freelancer.jpg" alt="Freelancer Certificate Program">
+            <div class="card-thumb-overlay"></div>
+          </div>
+          <div class="card-top-row">
+            <span class="level-badge beginner">Beginner</span>
+            <span class="hours-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              20+ hrs
+            </span>
+          </div>
+          <div class="card-body">
+            <h3>Freelancer Certificate Program</h3>
+            <p class="card-desc">Start earning online on Fiverr and Upwork. Covers profile setup, gig creation, client communication, and pro delivery.</p>
+            <div class="card-topics">
+              <span class="card-topic-chip">Profiles</span>
+              <span class="card-topic-chip">Gigs</span>
+              <span class="card-topic-chip">Client Comms</span>
+              <span class="card-topic-chip">Pro Delivery</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="card-stats"><span>4</span> Courses · <span>120+</span> Lessons</div>
+              <a href="#" class="btn-card">Open ↗</a>
             </div>
           </div>
-          <h3>Freelancer Certificate<br>Program</h3>
-          <p>Best for: Fiverr/Upwork beginners, online earning, remote work skills</p>
-          <div class="program-meta">Profiles • Gigs • Client communication • Pro delivery</div>
-          <a href="#" class="btn-outline">Open Program ↗</a>
+          <div class="card-body-pad"></div>
         </div>
-        
-        <!-- Track 7 -->
+
+        <!-- Track 7: Web Development (Coming Soon) -->
         <div class="program-card coming-soon">
-          <div class="p-card-header">
-            <div class="program-icon"><img src="icon-7.png" alt="Icon"></div>
-            <div class="p-badges">
-              <span class="p-badge">Coming Soon</span>
-              <span class="p-badge text-blue">Coming Soon</span>
+          <div class="card-thumb coming-soon-thumb">
+            <div style="display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;gap:8px;color:#94A3B8;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <span style="font-size:11px;font-weight:600;letter-spacing:1px;">COMING SOON</span>
             </div>
           </div>
-          <h3>Web Development</h3>
-          <p>Best for: Frontend & Backend roles, freelancing, junior developer jobs</p>
-          <div class="program-meta">HTML • CSS • JavaScript • APIs • Git • Deployment</div>
-          <a href="#" class="btn-outline" style="pointer-events: none; opacity: 0.5;">Coming Soon</a>
+          <div class="card-top-row">
+            <span class="level-badge beginner" style="opacity:0.5;">Beginner</span>
+            <span class="hours-badge" style="opacity:0.5;">TBD</span>
+          </div>
+          <div class="card-body">
+            <h3 style="color:#94A3B8;">Web Development</h3>
+            <p class="card-desc" style="color:#CBD5E1;">Frontend & Backend roles, freelancing, junior developer jobs. HTML, CSS, JavaScript, APIs, Git.</p>
+            <div class="card-topics">
+              <span class="card-topic-chip" style="opacity:0.5;">HTML</span>
+              <span class="card-topic-chip" style="opacity:0.5;">CSS</span>
+              <span class="card-topic-chip" style="opacity:0.5;">JavaScript</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="card-stats" style="opacity:0.5;">Coming Soon</div>
+              <span class="btn-card" style="opacity:0.4;cursor:not-allowed;">Soon</span>
+            </div>
+          </div>
+          <div class="card-body-pad"></div>
         </div>
-        
-        <!-- Track 8 -->
+
+        <!-- Track 8: Data Science (Coming Soon) -->
         <div class="program-card coming-soon">
-          <div class="p-card-header">
-            <div class="program-icon"><img src="icon-8.png" alt="Icon"></div>
-            <div class="p-badges">
-              <span class="p-badge">Coming Soon</span>
-              <span class="p-badge text-blue">Coming Soon</span>
+          <div class="card-thumb coming-soon-thumb">
+            <div style="display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;gap:8px;color:#94A3B8;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              <span style="font-size:11px;font-weight:600;letter-spacing:1px;">COMING SOON</span>
             </div>
           </div>
-          <h3>Data Science</h3>
-          <p>Best for: Data Analyst, BI, Python data projects, entry data roles</p>
-          <div class="program-meta">Python • Pandas • SQL • Visualization • ML basics</div>
-          <a href="#" class="btn-outline" style="pointer-events: none; opacity: 0.5;">Coming Soon</a>
+          <div class="card-top-row">
+            <span class="level-badge intermediate" style="opacity:0.5;">Intermediate</span>
+            <span class="hours-badge" style="opacity:0.5;">TBD</span>
+          </div>
+          <div class="card-body">
+            <h3 style="color:#94A3B8;">Data Science</h3>
+            <p class="card-desc" style="color:#CBD5E1;">Data Analyst, BI, Python data projects, and entry data roles. Python, Pandas, SQL, Visualization.</p>
+            <div class="card-topics">
+              <span class="card-topic-chip" style="opacity:0.5;">Python</span>
+              <span class="card-topic-chip" style="opacity:0.5;">SQL</span>
+              <span class="card-topic-chip" style="opacity:0.5;">ML basics</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="card-stats" style="opacity:0.5;">Coming Soon</div>
+              <span class="btn-card" style="opacity:0.4;cursor:not-allowed;">Soon</span>
+            </div>
+          </div>
+          <div class="card-body-pad"></div>
         </div>
-        
+
       </div>
     </div>
   </section>
@@ -588,74 +703,74 @@
       <!-- STEP 1 VIEW -->
       <div id="step-1-view">
         <div class="modal-header text-center">
-          <span class="p-top-badge" style="background: none; color: var(--blue); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">JOIN JOBSKILLSHARE</span>
-          <h2 style="font-size: 32px; color: var(--navy-dark); margin: 8px 0 32px;">Choose how you want to learn</h2>
+          <span class="p-top-badge" style="background: none; color: var(--blue); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 11px;">JOIN JOBSKILLSHARE</span>
+          <h2 style="font-size: 24px; color: var(--navy-dark); margin: 2px 0 8px;">Choose how you want to learn</h2>
           
           <!-- Stepper -->
-          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 700px; margin: 0 auto 40px;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 28px; height: 28px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">1</div>
-              <span style="font-weight: 600; color: var(--blue); font-size: 14px;">Choose a plan</span>
+          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 600px; margin: 0 auto 12px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">1</div>
+              <span style="font-weight: 600; color: var(--blue); font-size: 13px;">Choose a plan</span>
             </div>
-            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 16px;"></div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 28px; height: 28px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">2</div>
-              <span style="font-weight: 500; color: #64748B; font-size: 14px;">Secure checkout</span>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">2</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Secure checkout</span>
             </div>
-            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 16px;"></div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 28px; height: 28px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">3</div>
-              <span style="font-weight: 500; color: #64748B; font-size: 14px;">Start learning</span>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">3</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Start learning</span>
             </div>
           </div>
         </div>
         
-        <div style="text-align: center; margin-bottom: 32px;">
-          <h3 style="font-size: 24px; color: var(--navy-dark); margin-bottom: 8px;">Select your membership</h3>
-          <p style="color: #64748B;">Create your account here with secure membership and payment processing.</p>
+        <div style="text-align: center; margin-bottom: 12px;">
+          <h3 style="font-size: 20px; color: var(--navy-dark); margin-bottom: 4px;">Select your membership</h3>
+          <p style="color: #64748B; font-size: 13.5px; margin: 0;">Create your account here with secure membership and payment processing.</p>
         </div>
 
         <div class="pricing-cards-wrapper">
           <!-- Free Card -->
-          <div class="p-card">
-            <div class="p-badge" style="background: #E2E8F0; color: #475569;">START FREE</div>
+          <div class="p-card" style="border-top: 4px solid var(--border);">
+            <div class="p-badge" style="background: #F1F5F9; color: #475569;">START FREE</div>
             <h3>Free Access</h3>
             <div class="price"><span>$</span>0.00</div>
             <p class="p-desc">Explore selected foundation Courses for three months.</p>
             <ul class="p-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Selected free Courses</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Learning portal access</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress tracking</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Selected free Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Learning portal access</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress tracking</li>
             </ul>
             <button onclick="goToStep2('Free Access', 0)" class="p-btn p-btn-light" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Create Free Account</button>
           </div>
 
-          <!-- Premium Monthly Card -->
-          <div class="p-card p-card-highlight">
-            <div class="p-badge" style="background: #DBEAFE; color: var(--blue);">FLEXIBLE</div>
+          <!-- Premium Monthly Card (Highlighted) -->
+          <div class="p-card p-card-highlight" style="border-top: 4px solid var(--coral);">
+            <div class="p-badge" style="background: var(--coral-light); color: var(--coral);">🔥 POPULAR</div>
             <h3>Premium Monthly</h3>
             <div class="price"><span>$</span>50.00<small>per month</small></div>
             <p class="p-desc">Full learning access with monthly billing.</p>
             <ul class="p-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
-              <li><strong style="color: #8B5CF6;">+ AI Career Tools</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
+              <li><strong style="color: var(--blue);">+ AI Career Tools</strong></li>
             </ul>
-            <button onclick="goToStep2('Premium Monthly', 50)" class="p-btn p-btn-light" style="width: 100%; border: 1px solid var(--blue); color: var(--blue); cursor: pointer; font-family: inherit;">Choose Premium Monthly</button>
+            <button onclick="goToStep2('Premium Monthly', 50)" class="p-btn" style="width: 100%; border: 2px solid var(--blue); color: var(--blue); background: var(--ice-blue-light); cursor: pointer; font-family: inherit;">Choose Premium Monthly</button>
           </div>
 
           <!-- Premium Yearly Card -->
-          <div class="p-card">
-            <div class="p-badge" style="background: var(--blue); color: var(--white);">BEST VALUE</div>
+          <div class="p-card" style="border-top: 4px solid var(--blue);">
+            <div class="p-badge" style="background: var(--blue); color: var(--white);">⭐ BEST VALUE</div>
             <h3>Premium Yearly</h3>
             <div class="price"><span>$</span>549.00<small>per year</small></div>
             <p class="p-desc">Build long-term skills with yearly Premium access.</p>
             <ul class="p-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
-              <li><strong style="color: #8B5CF6;">+ AI Career Tools</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
+              <li><strong style="color: var(--blue);">+ AI Career Tools</strong></li>
             </ul>
             <button onclick="goToStep2('Premium Yearly', 549)" class="p-btn p-btn-blue" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Choose Premium Yearly</button>
           </div>
@@ -663,86 +778,97 @@
       </div>
 
       <!-- STEP 2 VIEW -->
-      <div id="step-2-view" style="display: none; max-width: 800px; margin: 0 auto; text-align: left;">
-        <button onclick="goToStep1()" style="background: none; border: none; color: var(--blue); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; margin-bottom: 24px; padding: 0;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Plans
+      <div id="step-2-view" style="display: none; width: 100%; text-align: left;">
+        <button onclick="goToStep1()" style="background: none; border: none; color: var(--blue); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; margin-bottom: 16px; padding: 0;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Plans
         </button>
         
-        <div class="modal-header text-center" style="margin-bottom: 40px;">
-          <h2 style="font-size: 32px; color: var(--navy-dark); margin: 0 0 32px;">Complete Your Registration</h2>
+        <div class="modal-header text-center" style="margin-bottom: 16px;">
+          <h2 style="font-size: 24px; color: var(--navy-dark); margin: 0 0 8px;">Complete Your Registration</h2>
           
           <!-- Stepper Step 2 -->
-          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 700px; margin: 0 auto;">
-            <div style="display: flex; align-items: center; gap: 12px; opacity: 0.5;">
-              <div style="width: 28px; height: 28px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">1</div>
-              <span style="font-weight: 600; color: var(--navy); font-size: 14px;">Choose a plan</span>
+          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 600px; margin: 0 auto 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; opacity: 0.5;">
+              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">1</div>
+              <span style="font-weight: 600; color: var(--navy); font-size: 13px;">Choose a plan</span>
             </div>
-            <div style="flex: 1; height: 1px; background: var(--blue); margin: 0 16px;"></div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 28px; height: 28px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">2</div>
-              <span style="font-weight: 600; color: var(--blue); font-size: 14px;">Secure checkout</span>
+            <div style="flex: 1; height: 1px; background: var(--blue); margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">2</div>
+              <span style="font-weight: 600; color: var(--blue); font-size: 13px;">Secure checkout</span>
             </div>
-            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 16px;"></div>
-            <div style="display: flex; align-items: center; gap: 12px; opacity: 0.5;">
-              <div style="width: 28px; height: 28px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">3</div>
-              <span style="font-weight: 500; color: #64748B; font-size: 14px;">Start learning</span>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px; opacity: 0.5;">
+              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">3</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Start learning</span>
             </div>
           </div>
         </div>
 
-        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 24px; margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center;">
-          <div>
-            <div style="font-size: 12px; font-weight: 700; color: #64748B; text-transform: uppercase; margin-bottom: 4px;">Selected Plan</div>
-            <div id="modal-plan-name" style="font-size: 20px; font-weight: 700; color: var(--navy-dark);">Premium Monthly</div>
-          </div>
-          <div id="modal-plan-price" style="font-size: 24px; font-weight: 700; color: var(--blue);">$50.00</div>
-        </div>
-
-        <form onsubmit="event.preventDefault(); alert('Proceeding to Start Learning!'); closePricingModal();">
-          <!-- Account Details -->
-          <h3 style="font-size: 18px; color: var(--navy-dark); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #E2E8F0;">Account Information</h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px;">
-            <div class="form-group" style="margin-bottom: 0;">
-              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Full Name *</label>
-              <input type="text" required style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
-            </div>
-            <div class="form-group" style="margin-bottom: 0;">
-              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Email Address *</label>
-              <input type="email" required style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
-            </div>
-            <div class="form-group" style="grid-column: 1 / -1; margin-bottom: 0;">
-              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Create Password *</label>
-              <input type="password" required style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
-            </div>
-          </div>
-
-          <!-- Payment Details (Dynamically shown) -->
-          <div id="modal-payment-section">
-            <h3 style="font-size: 18px; color: var(--navy-dark); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #E2E8F0;">Payment Details</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1.6fr; gap: 24px; align-items: start;">
+          <!-- Left Col: Selected Plan summary card -->
+          <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 20px;">
+            <div style="font-size: 11px; font-weight: 700; color: #64748B; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">Selected Plan</div>
+            <div id="modal-plan-name" style="font-size: 20px; font-weight: 700; color: var(--navy-dark); margin-bottom: 8px;">Premium Monthly</div>
+            <div id="modal-plan-price" style="font-size: 28px; font-weight: 700; color: var(--blue); margin-bottom: 16px;">$50.00</div>
             
-            <div style="margin-bottom: 16px;">
-              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Discount Code (Optional)</label>
-              <div style="display: flex; gap: 8px;">
-                <input type="text" placeholder="Enter code" style="flex: 1; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
-                <button type="button" style="padding: 0 16px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 8px; color: var(--navy-dark); font-weight: 600; cursor: pointer;">Apply</button>
-              </div>
-            </div>
-
-            <div style="margin-bottom: 32px;">
-              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Card Information *</label>
-              <div style="border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                <input type="text" placeholder="Card Number" style="grid-column: 1 / -1; width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit;" required class="pmt-input">
-                <input type="text" placeholder="MM/YY" style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit;" required class="pmt-input">
-                <input type="text" placeholder="CVC" style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit;" required class="pmt-input">
-              </div>
-            </div>
+            <ul class="p-list" style="margin-bottom: 0;">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Complete platform access</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-world practice labs</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Career guidance & community</li>
+            </ul>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 16px; display: flex; justify-content: center; align-items: center; gap: 8px;">
-            Complete Registration
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </button>
-        </form>
+          <!-- Right Col: Registration & Checkout Form -->
+          <form id="checkout-form" onsubmit="processCheckout(event)" style="margin: 0;">
+            <!-- Account Details -->
+            <div id="checkout-account-section">
+              <h3 style="font-size: 15px; color: var(--navy-dark); margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid #E2E8F0;">Account Information</h3>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Full Name *</label>
+                  <input type="text" id="checkout-name" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Email Address *</label>
+                  <input type="email" id="checkout-email" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+                <div class="form-group" style="grid-column: 1 / -1; margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Create Password *</label>
+                  <input type="password" id="checkout-password" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Details (Dynamically shown) -->
+            <div id="modal-payment-section">
+              <h3 style="font-size: 15px; color: var(--navy-dark); margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid #E2E8F0;">Payment Details</h3>
+              
+              <div style="margin-bottom: 12px;">
+                <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Discount Code (Optional)</label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="text" placeholder="Enter code" style="flex: 1; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                  <button type="button" style="padding: 0 12px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 6px; color: var(--navy-dark); font-weight: 600; cursor: pointer; font-size: 13px;">Apply</button>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Card Information *</label>
+                <div style="border: 1px solid #E2E8F0; border-radius: 6px; padding: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <input type="text" placeholder="Card Number" style="grid-column: 1 / -1; width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                  <input type="text" placeholder="MM/YY" style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                  <input type="text" placeholder="CVC" style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" id="checkout-submit-btn" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 14.5px; display: flex; justify-content: center; align-items: center; gap: 8px; border-radius: 8px;">
+              Complete Registration
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+        </div>
+      </div>
       </div>
       
     </div>
@@ -779,11 +905,65 @@
         paymentSection.style.display = 'block';
         pmtInputs.forEach(i => i.setAttribute('required', 'true'));
       }
+      
+      // Handle Account Section visibility if user is logged in
+      const accountSection = document.getElementById('checkout-account-section');
+      const nameInput = document.getElementById('checkout-name');
+      const emailInput = document.getElementById('checkout-email');
+      const passInput = document.getElementById('checkout-password');
+      
+      if (window.currentUser) {
+        // User is logged in, hide account creation
+        accountSection.style.display = 'none';
+        nameInput.removeAttribute('required');
+        emailInput.removeAttribute('required');
+        passInput.removeAttribute('required');
+      } else {
+        // Guest user, require account creation
+        accountSection.style.display = 'block';
+        nameInput.setAttribute('required', 'true');
+        emailInput.setAttribute('required', 'true');
+        passInput.setAttribute('required', 'true');
+      }
     }
     
     function goToStep1() {
       document.getElementById('step-2-view').style.display = 'none';
       document.getElementById('step-1-view').style.display = 'block';
+    }
+
+    async function processCheckout(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('checkout-submit-btn');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Processing...';
+
+      try {
+        if (!window.currentUser) {
+          // Create account first
+          const name = document.getElementById('checkout-name').value;
+          const email = document.getElementById('checkout-email').value;
+          const password = document.getElementById('checkout-password').value;
+          
+          if(window.handleCheckoutRegistration) {
+             await window.handleCheckoutRegistration(name, email, password);
+          } else {
+             console.warn("Auth not linked yet. Simulating success.");
+          }
+        }
+        
+        // At this point, the user is logged in and "payment" is done.
+        alert('Checkout Successful! Your account is ready.');
+        closePricingModal();
+        
+      } catch (error) {
+        alert(error.message);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
     }
 
     // Attach to all pricing links
@@ -794,5 +974,7 @@
       });
     });
   </script>
+  <script type="module" src="auth.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

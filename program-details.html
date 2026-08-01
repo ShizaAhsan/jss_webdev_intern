@@ -8,8 +8,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,20 +16,20 @@
   <!-- Header -->
   <header>
     <div class="container nav-wrap">
-      <a href="index.html" class="logo" aria-label="EdTech4D Home">
-        <img src="assest\logo.png" alt="EdTech4D Logo" style="height: 84px; width: auto; object-fit: contain;">
+      <a href="index.html" class="logo" aria-label="JobSkillShare Home">
+        <img src="assest\logo.png" alt="JobSkillShare Logo" style="height: 84px; width: auto; object-fit: contain;">
       </a>
       
       <nav class="primary-nav" aria-label="Main Navigation">
         <a href="index.html">Home</a>
         <a href="index.html#programs">Programs</a>
-        <a href="index.html#outcomes">Success Stories</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="#" onclick="openPricingModal(event)">Pricing</a>
+        <a href="index.html#testimonials">Testimonials</a>
       </nav>
       
       <div class="nav-actions">
-        <a href="login.html" class="login-link">Sign In</a>
-        <a href="signup.html" class="btn btn-primary">Create Account</a>
+        <a href="login.html" class="login-link">Login</a>
+        <a href="#" onclick="openPricingModal(event)" class="btn btn-primary">Start Learning</a>
       </div>
       
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-drawer">
@@ -47,75 +46,72 @@
     <div class="mobile-nav-links">
       <a href="index.html" class="mobile-link">Home</a>
       <a href="index.html#programs" class="mobile-link">Programs</a>
-      <a href="index.html#outcomes" class="mobile-link">Success Stories</a>
-      <a href="pricing.html" class="mobile-link">Pricing</a>
+      <a href="#" onclick="openPricingModal(event)" class="mobile-link">Pricing</a>
+      <a href="index.html#testimonials" class="mobile-link">Testimonials</a>
     </div>
     <div class="mobile-nav-actions">
-      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
-      <a href="signup.html" class="btn btn-primary" style="width: 100%;">Create Account</a>
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Login</a>
+      <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="width: 100%;">Start Learning</a>
     </div>
   </div>
 
-  <!-- Program Hero Section -->
-  <section class="program-hero">
+
+  <!-- Program Hero Section (Compact - Fits Viewport Perfectly Without Scrolling) -->
+  <section class="program-hero" style="background: linear-gradient(135deg, #270b32 0%, #2b0b76 100%); padding: 24px 0 20px;">
     <div class="container">
-      <div class="program-hero-grid">
+      <div class="program-hero-grid" style="gap: 36px; align-items: center;">
         <div class="ph-content">
-          <span class="ph-badge">JOBSKILLSHARE CERTIFICATE PROGRAM</span>
-          <h1>IT Support Certificate Program</h1>
-          <h2>Empower Your IT Support Career</h2>
-          <p>Gain comprehensive skills in IT support, from networking configurations to security protocols, enhancing both technical and professional proficiencies.</p>
+          <span class="ph-badge" style="background: rgba(111,19,236,0.25); color: #D8B4FE; border: 1px solid rgba(111,19,236,0.4); padding: 4px 12px; border-radius: 20px; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; display: inline-block;">JOBSKILLSHARE CERTIFICATE PROGRAM</span>
+          <h1 style="color: #FFFFFF; font-size: 32px; font-weight: 700; margin-bottom: 6px; line-height: 1.2;">IT Support Certificate Program</h1>
+          <h2 style="color: #CBD5E1; font-size: 16px; font-weight: 400; margin-bottom: 12px;">Empower Your IT Support Career</h2>
+          <p style="color: #94A3B8; font-size: 13.5px; line-height: 1.5; margin-bottom: 16px;">Gain comprehensive skills in IT support, from networking configurations to security protocols, enhancing both technical and professional proficiencies.</p>
           
-          <div class="ph-stats">
-            <div class="ph-stat-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <div class="ph-stats" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px 18px; gap: 12px; margin-bottom: 16px;">
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9B4EF5" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
               <div>
-                <strong>5</strong>
-                <span>Courses</span>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">5 Courses</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Structured curriculum</span>
               </div>
             </div>
-            <div class="ph-stat-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9B4EF5" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
               <div>
-                <strong>419</strong>
-                <span>Lessons</span>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">419 Lessons</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Hands-on practice</span>
               </div>
             </div>
-            <div class="ph-stat-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9B4EF5" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               <div>
-                <strong>56 hours 0 min</strong>
-                <span>Estimated time</span>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">56 Hours</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Estimated time</span>
               </div>
             </div>
-            <div class="ph-stat-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9B4EF5" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
               <div>
-                <strong>Beginner to Intermediate</strong>
-                <span>Difficulty</span>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">Beginner to Int.</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Skill level</span>
               </div>
             </div>
           </div>
           
-          <div class="ph-actions">
-            <a href="signup.html" class="btn btn-primary" style="background-color: var(--blue-light); border-color: var(--blue-light);">Start Free Trial</a>
-            <a href="#courses" class="btn btn-outline" style="color: var(--white); border-color: var(--white);">View Curriculum</a>
+          <div class="ph-actions" style="display: flex; gap: 14px; margin-bottom: 14px;">
+            <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="background-color: #6F13EC; border-color: #6F13EC; color: #FFFFFF; font-weight: 700; padding: 10px 22px; border-radius: 8px; font-size: 14px;">Start Learning</a>
+            <a href="#courses" class="btn btn-outline" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3); background: transparent; padding: 10px 22px; border-radius: 8px; font-size: 14px;">View Curriculum</a>
           </div>
           
-          <ul class="ph-perks">
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Practice before joining</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Recommended learning order</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress saved after login</li>
+          <ul class="ph-perks" style="display: flex; gap: 16px; list-style: none; padding: 0; margin: 0; color: #CBD5E1; font-size: 12px;">
+            <li style="display: flex; align-items: center; gap: 5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Practice before joining</li>
+            <li style="display: flex; align-items: center; gap: 5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Recommended order</li>
+            <li style="display: flex; align-items: center; gap: 5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress saved</li>
           </ul>
         </div>
         
         <div class="ph-image">
-          <div class="ph-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" alt="IT Professional">
-            <div class="ph-image-badge">
-              <strong>Your learning path</strong>
-              <span>5 Courses • 419 Lessons</span>
-            </div>
+          <div class="ph-image-wrapper" style="box-shadow: 0 16px 32px rgba(0,0,0,0.4); border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); max-height: 250px;">
+            <img src="assest/hero_it_support.jpg" alt="IT Support Professional" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
         </div>
       </div>
@@ -123,201 +119,216 @@
   </section>
 
   <!-- Sticky Sub Nav -->
-  <div class="sticky-subnav" id="sticky-nav">
+  <div class="sticky-subnav" id="sticky-nav" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E2E8F0; position: sticky; top: 0; z-index: 100;">
     <div class="container">
-      <div class="subnav-wrap">
-        <span class="jump-to-label">JUMP TO</span>
-        <nav class="subnav-links">
-          <a href="#overview" class="active">Overview</a>
-          <a href="#outcomes">Outcomes</a>
-          <a href="#roadmap">Roadmap</a>
-          <a href="#courses">Courses</a>
-          <a href="#projects">Projects</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#faq">FAQ</a>
+      <div class="subnav-wrap" style="display: flex; align-items: center; gap: 24px; padding: 12px 0;">
+        <span class="jump-to-label" style="font-size: 11px; font-weight: 700; color: #94A3B8; letter-spacing: 1px;">JUMP TO</span>
+        <nav class="subnav-links" style="display: flex; gap: 24px;">
+          <a href="#overview" class="active" style="font-size: 14px; font-weight: 600; color: #6F13EC; text-decoration: none;">Overview</a>
+          <a href="#skills" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Skills</a>
+          <a href="#roadmap" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Roadmap</a>
+          <a href="#courses" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Courses</a>
+          <a href="#projects" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Projects</a>
+          <a href="#reviews" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Reviews</a>
+          <a href="#faq" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">FAQ</a>
         </nav>
       </div>
     </div>
   </div>
 
-  <div class="program-content-wrapper">
-    <div class="container pd-container">
+  <div class="program-content-wrapper" style="background-color: #FAFAFA; padding: 40px 0;">
+    
+    <!-- TOP 2-COLUMN OVERVIEW & SIDEBAR -->
+    <div class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 24px;">
+      <div class="pd-layout-grid" style="gap: 36px; align-items: start; margin-bottom: 40px;">
+        
+        <!-- LEFT COLUMN: Overview & Outcomes -->
+        <div class="pd-main" style="min-width: 0; display: flex; flex-direction: column; gap: 28px;">
+          
+          <!-- Program Overview Card -->
+          <div id="overview" class="pd-card scroll-mt" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+            <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #db8904; display: block; margin-bottom: 8px;">PROGRAM OVERVIEW</span>
+            <h3 class="pd-heading-lg" style="margin-bottom: 16px; font-size: 26px; color: #6F13EC !important; font-weight: 700;">The Complete IT Support Training</h3>
+            <p class="pd-lead-text" style="font-size: 15.5px; color: #334155; line-height: 1.6; margin-bottom: 20px;">The IT Support Certificate Program equips learners with the essential skills required for a successful career in IT support. Spanning five intensive courses, this program focuses on both foundational and professional development, preparing students for real-world challenges in IT support roles.</p>
+            
+            <h4 style="font-size: 16px; color: #0F172A; margin-bottom: 10px; font-weight: 600;">Program Highlights</h4>
+            <p class="pd-text" style="font-size: 14.5px; color: #475569; line-height: 1.6; margin: 0;">Begin with core concepts in networking and hardware, advance through operating system management and security protocols, and conclude with career preparation in job searching and community networking. This comprehensive curriculum ensures that participants are not only technically proficient but also adept in professional communication and teamwork.</p>
+          </div>
+
+          <!-- Outcomes Card -->
+          <div class="pd-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+            <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #db8904; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              PROGRAM OUTCOMES
+            </span>
+            <h3 class="pd-heading-lg" style="margin-bottom: 20px; font-size: 24px; color: #6F13EC !important; font-weight: 700;">What You'll Be Able to Do</h3>
+            
+            <div class="outcomes-grid" style="gap: 12px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Understand network configurations</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Address hardware issues</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Support mobile devices</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Install & upgrade operating systems</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Configure network settings</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Implement security protocols</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Deploy apps & cloud services</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Identify and remove malware</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Preempt social engineering</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Manage Active Directory</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Sticky Sidebar -->
+        <aside class="pd-sidebar">
+          <div style="position: sticky; top: 80px; display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- Enroll Card -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 28px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); text-align: center;">
+              <h3 style="font-size: 22px; color: #0F172A; margin: 0 0 6px; font-weight: 700;">Start Learning</h3>
+              <p style="font-size: 13.5px; color: #64748B; margin: 0 0 20px;">Join thousands of successful IT professionals.</p>
+              <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; padding: 13px; margin-bottom: 12px; background-color: #6F13EC; border-color: #6F13EC; border-radius: 10px; font-weight: 700; color: #fff;">Start Learning Now</a>
+              <span style="font-size: 12px; color: #94A3B8; display: flex; align-items: center; justify-content: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Secure 256-bit checkout</span>
+            </div>
+
+            <!-- Career Card -->
+            <div class="career-card" style="background: linear-gradient(145deg, #0B1832 0%, #1E1040 100%); border: 1px solid rgba(111,19,236,0.3); border-radius: 16px; padding: 24px; color: #FFFFFF;">
+              <span class="pd-section-label" style="font-size: 10.5px; font-weight: 700; letter-spacing: 1px; color: #D8B4FE; display: block; margin-bottom: 6px;">YOUR CAREER PATH</span>
+              <h3 style="font-size: 18px; margin: 0 0 16px; color: #FFFFFF; font-weight: 700;">Career Opportunities</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9B4EF5" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> IT Support Specialist</li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9B4EF5" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Network Administrator</li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9B4EF5" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> System Administrator</li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9B4EF5" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Entry-Level IT Support</li>
+              </ul>
+            </div>
+
+            <!-- Tech Stack -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+              <h3 style="font-size: 15px; color: #0F172A; margin: 0 0 14px; font-weight: 700;">Technologies Covered</h3>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">Active Directory</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">Windows 11</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">Ubuntu Linux</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">DNS & DHCP</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">Firewall Mgt</span>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- FULL-WIDTH CONTAINER SECTIONS (BALANCED PAGE FLOW) -->
+    <div class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 36px;">
       
-      <!-- Overview Section -->
-      <section id="overview" class="pd-section scroll-mt">
-        <div class="pd-card" style="background-color: #FFFFFF;">
-          <span class="pd-section-label">PROGRAM OVERVIEW</span>
-          <p class="pd-lead-text">The IT Support Certificate Program equips learners with the essential skills required for a successful career in IT support. Spanning five intensive courses, this program focuses on both foundational and professional development, preparing students for real-world challenges in IT support roles.</p>
-          
-          <h3 class="pd-heading-lg">Program Highlights</h3>
-          <p class="pd-text">Begin with core concepts in networking and hardware, advance through operating system management and security protocols, and conclude with career preparation in job searching and community networking. This comprehensive curriculum ensures that participants are not only technically proficient but also adept in professional communication and teamwork.</p>
-        </div>
-      </section>
-
-      <!-- Outcomes Section -->
-      <section id="outcomes" class="pd-section scroll-mt">
-        <div class="outcomes-grid">
-          
-          <div class="pd-card">
-            <span class="pd-section-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline; vertical-align:-3px; margin-right:4px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> PROGRAM OUTCOMES</span>
-            <h3 class="pd-heading-lg">What You'll Be Able to Do</h3>
-            
-            <div class="check-grid">
-              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Understand network configurations</div>
-              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Address hardware issues</div>
-              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Support mobile devices</div>
-              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Install and upgrade operating systems</div>
-              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Configure network settings</div>
-              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Implement security protocols</div>
-              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Deploy applications and cloud services</div>
-              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Identify and remove malware</div>
-              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Preempt social engineering attacks</div>
-              <div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Configure and manage Active Directory</div>
-            </div>
-          </div>
-          
-          <div class="career-card">
-            <span class="pd-section-label" style="color:var(--ice-blue);">YOUR CAREER PATH</span>
-            <h3 class="pd-heading-lg" style="color:var(--white);">Career Opportunities</h3>
-            
-            <div class="career-list">
-              <div class="career-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> IT Support Specialist</div>
-              <div class="career-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Network Administrator</div>
-              <div class="career-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> System Administrator</div>
-              <div class="career-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Entry-Level IT Support</div>
-              <div class="career-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Remote IT Positions</div>
-            </div>
-          </div>
-          
-        </div>
-      </section>
-
-      <!-- Skills Section -->
+      <!-- Skills Section (Full Width Grid) -->
       <section id="skills" class="pd-section scroll-mt">
-        <div class="pd-card" style="background-color: #FFFFFF; border-color: #E2E8F0;">
-          <div class="skills-header">
+        <div class="pd-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <div class="skills-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px;">
             <div>
-              <span class="pd-section-label">CORE SKILL AREAS</span>
-              <h3 class="pd-heading-lg">Skills You'll Build</h3>
+              <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #db8904; display: block; margin-bottom: 6px;">CORE SKILL AREAS</span>
+              <h3 class="pd-heading-lg" style="margin: 0; font-size: 26px; color: #6F13EC !important; font-weight: 700;">Skills You'll Build</h3>
             </div>
-            <div class="skills-count">
-              <strong>11</strong>
-              <span>CORE SKILLS</span>
+            <div class="skills-count" style="text-align: right;">
+              <strong style="display: block; font-size: 26px; color: #6F13EC; font-weight: 700;">11</strong>
+              <span style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #64748B;">CORE SKILLS</span>
             </div>
           </div>
           
-          <div class="skills-grid">
-            <div class="skill-box" style="background-color: #F0F9FF; border: 1px solid #BAE6FD;">
-              <div class="skill-box-header">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                <h4>Technical Skills</h4>
+          <div class="skills-grid" style="gap: 24px;">
+            <div class="skill-box" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px;">
+              <div class="skill-box-header" style="display: flex; gap: 12px; align-items: center; margin-bottom: 18px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6F13EC" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <h4 style="margin: 0; font-size: 17px; color: #0F172A; font-weight: 600;">Technical Skills</h4>
               </div>
-              <ul class="skill-list">
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Network Configuration</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Hardware Troubleshooting</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Operating System Deployment</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Security Protocol Configuration</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> System Resource Management</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Using Command-line Tools</li>
+              <ul class="skill-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Network Configuration</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Hardware Troubleshooting</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Operating System Deployment</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Security Protocol Configuration</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> System Resource Management</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Using Command-line Tools</li>
               </ul>
             </div>
             
-            <div class="skill-box" style="background-color: #FFF7ED; border: 1px solid #FFEDD5;">
-              <div class="skill-box-header">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                <h4>Professional Skills</h4>
+            <div class="skill-box" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px;">
+              <div class="skill-box-header" style="display: flex; gap: 12px; align-items: center; margin-bottom: 18px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6F13EC" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <h4 style="margin: 0; font-size: 17px; color: #0F172A; font-weight: 600;">Professional Skills</h4>
               </div>
-              <ul class="skill-list">
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Technical Communication</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Problem Solving</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Teamwork</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Time Management</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Professionalism</li>
+              <ul class="skill-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Technical Communication</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Problem Solving</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Teamwork</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Time Management</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Professionalism</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Tech Stack -->
-      <section class="pd-section">
-        <div class="pd-card tech-card">
-          <div class="tech-header">
-            <span class="pd-section-label">TECHNOLOGY STACK</span>
-            <h3 class="pd-heading-lg">Technologies Covered</h3>
-          </div>
-          <div class="tech-badges">
-            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> DNS</span>
-            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> DHCP</span>
-            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Active Directory</span>
-            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Windows 11</span>
-            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Ubuntu Linux</span>
-            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Windows Defender</span>
-            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> ServiceNow</span>
-            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Spiceworks Cloud</span>
-            <span class="t-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Firewall Management</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Roadmap Section -->
+      <!-- Roadmap Section (Full Width) -->
       <section id="roadmap" class="pd-section scroll-mt">
-        <div class="pd-card bg-highlight">
-          <span class="pd-section-label">LEARNING ROADMAP</span>
-          <h3 class="pd-heading-lg">Your Path Through the Program</h3>
+        <div class="pd-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color:#db8904; display: block; margin-bottom: 6px;">LEARNING ROADMAP</span>
+          <h3 class="pd-heading-lg" style="margin-bottom: 32px; font-size: 26px; color: #6F13EC !important; font-weight: 700;">Your Path Through the Program</h3>
           
-          <div class="roadmap-timeline">
+          <div class="roadmap-timeline" style="position: relative; padding-left: 36px; border-left: 2px solid #E2E8F0; display: flex; flex-direction: column; gap: 32px; margin-left: 12px;">
             
-            <div class="rm-item">
-              <div class="rm-marker">1</div>
+            <div class="rm-item" style="position: relative;">
+              <div class="rm-marker" style="position: absolute; left: -53px; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; border: 2px solid #43be30; color: #43be30; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 0 0 4px #FFFFFF;">1</div>
               <div class="rm-content">
-                <h4>Foundation</h4>
-                <p>Learn foundational skills in networking, mobile management, and hardware troubleshooting.</p>
-                <div class="rm-tags">
-                  <span>Modern IT Support Training: 220-1201 (Core 1)</span>
+                <h4 style="font-size: 18px; color: #0F172A; margin: 0 0 6px; font-weight: 600;">Foundation</h4>
+                <p style="font-size: 14.5px; color: #475569; margin: 0 0 10px; line-height: 1.5;">Learn foundational skills in networking, mobile management, and hardware troubleshooting.</p>
+                <div class="rm-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <span style="font-size: 12px; background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 4px 12px; border-radius: 16px; font-weight: 500;">Modern IT Support Training: 220-1201 (Core 1)</span>
                 </div>
               </div>
             </div>
             
-            <div class="rm-item">
-              <div class="rm-marker">2</div>
+            <div class="rm-item" style="position: relative;">
+              <div class="rm-marker" style="position: absolute; left: -53px; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; border: 2px solid #94A3B8; color: #64748B; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 0 0 4px #FFFFFF;">2</div>
               <div class="rm-content">
-                <h4>Professional Development</h4>
-                <p>Advance through operating system and security management.</p>
-                <div class="rm-tags">
-                  <span>Modern IT Support Training: 220-1202 (Core 2)</span>
-                  <span>IT Support: Active Directory and Tech Skills</span>
+                <h4 style="font-size: 18px; color: #0F172A; margin: 0 0 6px; font-weight: 600;">Professional Development</h4>
+                <p style="font-size: 14.5px; color: #475569; margin: 0 0 10px; line-height: 1.5;">Advance through operating system and security management.</p>
+                <div class="rm-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <span style="font-size: 12px; background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 4px 12px; border-radius: 16px; font-weight: 500;">Modern IT Support Training: 220-1202 (Core 2)</span>
+                  <span style="font-size: 12px; background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 4px 12px; border-radius: 16px; font-weight: 500;">IT Support: Active Directory and Tech Skills</span>
                 </div>
               </div>
             </div>
             
-            <div class="rm-item">
-              <div class="rm-marker">3</div>
+            <div class="rm-item" style="position: relative;">
+              <div class="rm-marker" style="position: absolute; left: -53px; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; border: 2px solid #94A3B8; color: #64748B; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 0 0 4px #FFFFFF;">3</div>
               <div class="rm-content">
-                <h4>Mid-career</h4>
-                <p>Enhance interpersonal and communication skills for IT settings.</p>
-                <div class="rm-tags">
-                  <span>IT Support: People Skills for IT Professionals</span>
+                <h4 style="font-size: 18px; color: #0F172A; margin: 0 0 6px; font-weight: 600;">Mid-career</h4>
+                <p style="font-size: 14.5px; color: #475569; margin: 0 0 10px; line-height: 1.5;">Enhance interpersonal and communication skills for IT settings.</p>
+                <div class="rm-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <span style="font-size: 12px; background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 4px 12px; border-radius: 16px; font-weight: 500;">IT Support: People Skills for IT Professionals</span>
                 </div>
               </div>
             </div>
             
-            <div class="rm-item">
-              <div class="rm-marker">4</div>
+            <div class="rm-item" style="position: relative;">
+              <div class="rm-marker" style="position: absolute; left: -53px; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; border: 2px solid #94A3B8; color: #64748B; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 0 0 4px #FFFFFF;">4</div>
               <div class="rm-content">
-                <h4>Career Preparation</h4>
-                <p>Optimize your resume and network effectively within IT communities.</p>
-                <div class="rm-tags">
-                  <span>IT Support Resume, Applying for Jobs and Communities</span>
+                <h4 style="font-size: 18px; color: #0F172A; margin: 0 0 6px; font-weight: 600;">Career Preparation</h4>
+                <p style="font-size: 14.5px; color: #475569; margin: 0 0 10px; line-height: 1.5;">Optimize your resume and network effectively within IT communities.</p>
+                <div class="rm-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <span style="font-size: 12px; background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 4px 12px; border-radius: 16px; font-weight: 500;">IT Support Resume, Applying for Jobs and Communities</span>
                 </div>
               </div>
             </div>
             
-            <div class="rm-item rm-final">
-              <div class="rm-marker"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="rm-item rm-final" style="position: relative;">
+              <div class="rm-marker" style="position: absolute; left: -53px; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #10B981; border: none; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 0 0 4px #FFFFFF;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
               <div class="rm-content">
-                <h4>Certificate Program Complete</h4>
-                <p>You have progressed through the complete course sequence and its combined skill set.</p>
+                <h4 style="font-size: 18px; color: #0F172A; margin: 0 0 6px; font-weight: 600;">Certificate Program Complete</h4>
+                <p style="font-size: 14.5px; color: #475569; margin: 0;">You have progressed through the complete course sequence and earned your certification.</p>
               </div>
             </div>
             
@@ -325,264 +336,255 @@
         </div>
       </section>
 
-      <!-- Courses Section -->
+      <!-- Courses Section (Full Width Accordions) -->
       <section id="courses" class="pd-section scroll-mt">
-        <div class="pd-card">
-          <div class="courses-header">
+        <div class="pd-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <div class="courses-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
             <div>
-              <span class="pd-section-label">PROGRAM STRUCTURE</span>
-              <h3 class="pd-heading-lg">Courses in This Certificate Program</h3>
+              <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #db8904; display: block; margin-bottom: 6px;">PROGRAM STRUCTURE</span>
+              <h3 class="pd-heading-lg" style="margin: 0; font-size: 26px; color: #6F13EC !important; font-weight: 700;">Courses in This Certificate Program</h3>
             </div>
-            <div class="courses-count">5 courses in recommended order</div>
+            <div class="courses-count" style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; color: #0F172A;">5 courses in recommended order</div>
           </div>
           
           <div class="course-list">
             
-            <!-- Course 1 -->
-            <div class="c-item">
-              <div class="c-number">1</div>
-              <div class="c-content">
-                <span class="c-label">FOUNDATION</span>
-                <h4>Modern IT Support Training: 220-1201 (Core 1)</h4>
-                <p>This course provides foundational skills for a career in IT support, focusing on networking, troubleshooting, and mobile device management.</p>
-                <div class="c-meta">
-                  <span class="cm-pill">12 hours 0 min</span>
-                  <span class="cm-pill">Networking</span>
-                  <span class="cm-pill">Mobile Devices</span>
-                  <span class="cm-pill">Hardware</span>
-                  <span class="cm-pill">Troubleshooting</span>
+            <!-- Accordion Course 1 -->
+            <div class="c-acc-item" style="border: 1px solid #E2E8F0; border-radius: 12px; margin-bottom: 14px; overflow: hidden; background: #FFFFFF;">
+              <button class="c-acc-btn" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: #FFFFFF; border: none; cursor: pointer; text-align: left;" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron').classList.toggle('rotate')">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                  <div class="c-number" style="width: 38px; height: 38px; border-radius: 8px; background: #F8FAFC; color: #6F13EC; border: 1px solid #E2E8F0; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px;">1</div>
+                  <div>
+                    <span class="c-label" style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #94A3B8; margin-bottom: 3px;">FOUNDATION</span>
+                    <h4 style="font-size: 17px; color: #0F172A; margin: 0; font-weight: 600;">Modern IT Support Training: 220-1201 (Core 1)</h4>
+                  </div>
                 </div>
-                <div class="c-skills">
-                  <strong>Skills introduced:</strong> Network Configuration • Hardware Troubleshooting • Technical Support • Mobile Device Management
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="c-acc-content hidden" style="padding: 0 24px 24px 82px; background: #FFFFFF; border-top: 1px solid #F1F5F9;">
+                <p style="font-size: 14px; color: #475569; margin-bottom: 14px; line-height: 1.6; margin-top: 14px;">This course provides foundational skills for a career in IT support, focusing on networking, troubleshooting, and mobile device management.</p>
+                <div class="c-meta" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">12 hours 0 min</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Networking</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Mobile Devices</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Hardware</span>
                 </div>
+                <a href="#" onclick="openPricingModal(event)" style="font-size: 13.5px; font-weight: 600; color: #6F13EC; text-decoration: none;">Enroll to Start Course →</a>
               </div>
-              <div class="c-action">
-                <a href="#" class="btn btn-outline btn-sm">View Course</a>
+            </div>
+
+            <!-- Accordion Course 2 -->
+            <div class="c-acc-item" style="border: 1px solid #E2E8F0; border-radius: 12px; margin-bottom: 14px; overflow: hidden; background: #FFFFFF;">
+              <button class="c-acc-btn" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: #FFFFFF; border: none; cursor: pointer; text-align: left;" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron').classList.toggle('rotate')">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                  <div class="c-number" style="width: 38px; height: 38px; border-radius: 8px; background: #F8FAFC; color: #6F13EC; border: 1px solid #E2E8F0; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px;">2</div>
+                  <div>
+                    <span class="c-label" style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #94A3B8; margin-bottom: 3px;">PROFESSIONAL DEVELOPMENT</span>
+                    <h4 style="font-size: 17px; color: #0F172A; margin: 0; font-weight: 600;">Modern IT Support Training: 220-1202 (Core 2)</h4>
+                  </div>
+                </div>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="c-acc-content hidden" style="padding: 0 24px 24px 82px; background: #FFFFFF; border-top: 1px solid #F1F5F9;">
+                <p style="font-size: 14px; color: #475569; margin-bottom: 14px; line-height: 1.6; margin-top: 14px;">This course provides comprehensive training in modern IT support, focusing on operating systems, network configurations, security protocols, and troubleshooting skills.</p>
+                <div class="c-meta" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">20 hours 0 min</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Operating System Deployment</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Security Protocols</span>
+                </div>
+                <a href="#" onclick="openPricingModal(event)" style="font-size: 13.5px; font-weight: 600; color: #6F13EC; text-decoration: none;">Enroll to Start Course →</a>
               </div>
             </div>
             
-            <!-- Course 2 -->
-            <div class="c-item">
-              <div class="c-number">2</div>
-              <div class="c-content">
-                <span class="c-label">PROFESSIONAL DEVELOPMENT</span>
-                <h4>Modern IT Support Training: 220-1202 (Core 2)</h4>
-                <p>This course provides comprehensive training in modern IT support, focusing on operating systems, network configurations, security protocols, and troubleshooting skills.</p>
-                <div class="c-meta">
-                  <span class="cm-pill">20 hours 0 min</span>
-                  <span class="cm-pill">Operating System Installation and Upgrades</span>
-                  <span class="cm-pill">Windows Graphical and Command Line Management</span>
+            <!-- Accordion Course 3 -->
+            <div class="c-acc-item" style="border: 1px solid #E2E8F0; border-radius: 12px; margin-bottom: 14px; overflow: hidden; background: #FFFFFF;">
+              <button class="c-acc-btn" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: #FFFFFF; border: none; cursor: pointer; text-align: left;" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron').classList.toggle('rotate')">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                  <div class="c-number" style="width: 38px; height: 38px; border-radius: 8px; background: #F8FAFC; color: #6F13EC; border: 1px solid #E2E8F0; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px;">3</div>
+                  <div>
+                    <span class="c-label" style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #94A3B8; margin-bottom: 3px;">FOUNDATIONAL</span>
+                    <h4 style="font-size: 17px; color: #0F172A; margin: 0; font-weight: 600;">IT Support: Active Directory and Tech Skills</h4>
+                  </div>
                 </div>
-                <div class="c-skills">
-                  <strong>Skills introduced:</strong> Operating System Installation • Network Configuration • Security Configuration • Malware Identification
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="c-acc-content hidden" style="padding: 0 24px 24px 82px; background: #FFFFFF; border-top: 1px solid #F1F5F9;">
+                <p style="font-size: 14px; color: #475569; margin-bottom: 14px; line-height: 1.6; margin-top: 14px;">This course provides an in-depth exploration of IT support and administration with a focus on Active Directory, system resource management, and security applications.</p>
+                <div class="c-meta" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">15 hours 0 min</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Active Directory</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Ticketing Systems</span>
                 </div>
-              </div>
-              <div class="c-action">
-                <a href="#" class="btn btn-outline btn-sm">View Course</a>
-              </div>
-            </div>
-
-            <!-- Course 3 -->
-            <div class="c-item">
-              <div class="c-number">3</div>
-              <div class="c-content">
-                <span class="c-label">FOUNDATIONAL</span>
-                <h4>IT Support: Active Directory and Tech Skills</h4>
-                <p>This course provides an in-depth exploration of IT support and administration with a focus on Active Directory, system resource management, and security applications.</p>
-                <div class="c-meta">
-                  <span class="cm-pill">15 hours 0 min</span>
-                  <span class="cm-pill">Active Directory</span>
-                  <span class="cm-pill">System Resource Management</span>
-                  <span class="cm-pill">Security Applications</span>
-                </div>
-                <div class="c-skills">
-                  <strong>Skills introduced:</strong> Configuring Active Directory • Managing System Resources • Applying Security Policies • Using Ticketing Systems
-                </div>
-              </div>
-              <div class="c-action">
-                <a href="#" class="btn btn-outline btn-sm">View Course</a>
+                <a href="#" onclick="openPricingModal(event)" style="font-size: 13.5px; font-weight: 600; color: #6F13EC; text-decoration: none;">Enroll to Start Course →</a>
               </div>
             </div>
 
-            <!-- Course 4 -->
-            <div class="c-item">
-              <div class="c-number">4</div>
-              <div class="c-content">
-                <span class="c-label">MID-CAREER</span>
-                <h4>IT Support: People Skills for IT Professionals</h4>
-                <p>This course focuses on developing people skills for IT support professionals, enhancing communication, listening, troubleshooting, and teamwork capabilities.</p>
-                <div class="c-meta">
-                  <span class="cm-pill">5 hours 0 min</span>
-                  <span class="cm-pill">Professional Communication</span>
-                  <span class="cm-pill">Listening Skills</span>
-                  <span class="cm-pill">Difficult Conversations</span>
+            <!-- Accordion Course 4 -->
+            <div class="c-acc-item" style="border: 1px solid #E2E8F0; border-radius: 12px; margin-bottom: 14px; overflow: hidden; background: #FFFFFF;">
+              <button class="c-acc-btn" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: #FFFFFF; border: none; cursor: pointer; text-align: left;" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron').classList.toggle('rotate')">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                  <div class="c-number" style="width: 38px; height: 38px; border-radius: 8px; background: #F8FAFC; color: #6F13EC; border: 1px solid #E2E8F0; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px;">4</div>
+                  <div>
+                    <span class="c-label" style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #94A3B8; margin-bottom: 3px;">MID-CAREER</span>
+                    <h4 style="font-size: 17px; color: #0F172A; margin: 0; font-weight: 600;">IT Support: People Skills for IT Professionals</h4>
+                  </div>
                 </div>
-                <div class="c-skills">
-                  <strong>Skills introduced:</strong> Professional Communication • Active Listening • Handling Difficult Conversations • Team Management
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="c-acc-content hidden" style="padding: 0 24px 24px 82px; background: #FFFFFF; border-top: 1px solid #F1F5F9;">
+                <p style="font-size: 14px; color: #475569; margin-bottom: 14px; line-height: 1.6; margin-top: 14px;">This course focuses on developing people skills for IT support professionals, enhancing communication, listening, troubleshooting, and teamwork capabilities.</p>
+                <div class="c-meta" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">5 hours 0 min</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Professional Communication</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Active Listening</span>
                 </div>
-              </div>
-              <div class="c-action">
-                <a href="#" class="btn btn-outline btn-sm">View Course</a>
+                <a href="#" onclick="openPricingModal(event)" style="font-size: 13.5px; font-weight: 600; color: #6F13EC; text-decoration: none;">Enroll to Start Course →</a>
               </div>
             </div>
 
-            <!-- Course 5 -->
-            <div class="c-item">
-              <div class="c-number">5</div>
-              <div class="c-content">
-                <span class="c-label">CAREER PREPARATION</span>
-                <h4>IT Support Resume, Applying for Jobs and Communities</h4>
-                <p>This course focuses on building a strong resume, effective job searching, and connecting with IT communities to launch an IT support career.</p>
-                <div class="c-meta">
-                  <span class="cm-pill">4 hours 0 min</span>
-                  <span class="cm-pill">Resume Building</span>
-                  <span class="cm-pill">Job Search Strategies</span>
-                  <span class="cm-pill">Interview Preparation</span>
+            <!-- Accordion Course 5 -->
+            <div class="c-acc-item" style="border: 1px solid #E2E8F0; border-radius: 12px; margin-bottom: 14px; overflow: hidden; background: #FFFFFF;">
+              <button class="c-acc-btn" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: #FFFFFF; border: none; cursor: pointer; text-align: left;" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron').classList.toggle('rotate')">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                  <div class="c-number" style="width: 38px; height: 38px; border-radius: 8px; background: #F8FAFC; color: #6F13EC; border: 1px solid #E2E8F0; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px;">5</div>
+                  <div>
+                    <span class="c-label" style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #94A3B8; margin-bottom: 3px;">CAREER PREPARATION</span>
+                    <h4 style="font-size: 17px; color: #0F172A; margin: 0; font-weight: 600;">IT Support Resume, Applying for Jobs and Communities</h4>
+                  </div>
                 </div>
-                <div class="c-skills">
-                  <strong>Skills introduced:</strong> Resume Writing • Job Searching • Interview Techniques • Community Networking
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="c-acc-content hidden" style="padding: 0 24px 24px 82px; background: #FFFFFF; border-top: 1px solid #F1F5F9;">
+                <p style="font-size: 14px; color: #475569; margin-bottom: 14px; line-height: 1.6; margin-top: 14px;">This course focuses on building a strong resume, effective job searching, and connecting with IT communities to launch an IT support career.</p>
+                <div class="c-meta" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">4 hours 0 min</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Resume Building</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Interview Preparation</span>
                 </div>
-              </div>
-              <div class="c-action">
-                <a href="#" class="btn btn-outline btn-sm">View Course</a>
+                <a href="#" onclick="openPricingModal(event)" style="font-size: 13.5px; font-weight: 600; color: #6F13EC; text-decoration: none;">Enroll to Start Course →</a>
               </div>
             </div>
-            
+
           </div>
         </div>
       </section>
 
-      <!-- Projects Section -->
+      <!-- Projects Section (Full Width) -->
       <section id="projects" class="pd-section scroll-mt">
-        <div class="projects-card">
-          <span class="pd-section-label" style="color:var(--ice-blue);">PRACTICE WHAT YOU LEARN</span>
-          <h3 class="pd-heading-lg" style="color:var(--white);">Projects & Hands-on Activities</h3>
+        <div class="projects-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #db8904; display: block; margin-bottom: 6px;">PRACTICE WHAT YOU LEARN</span>
+          <h3 class="pd-heading-lg" style="margin-bottom: 24px; font-size: 26px; color: #6F13EC !important; font-weight: 700;">Projects & Hands-on Activities</h3>
           
-          <div class="pr-box">
-            <div class="pr-box-header">
-              <div class="pr-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
+          <div style="border: 1px solid #E2E8F0; padding: 28px; border-radius: 12px; margin-bottom: 20px; background: #F8FAFC;">
+            <div style="display: flex; gap: 16px; margin-bottom: 14px; align-items: center;">
+              <div style="color: #6F13EC;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
               <div>
-                <h4>Skills Practiced</h4>
-                <span>20 curriculum-grounded skills</span>
+                <h4 style="font-size: 17px; color: #0F172A; margin: 0 0 2px; font-weight: 600;">Skills Practiced</h4>
+                <span style="color: #64748B; font-size: 13.5px;">20 curriculum-grounded practical skills</span>
               </div>
             </div>
-            <div class="tech-badges" style="margin-top: 16px;">
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> DNS</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> DHCP</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Active Directory</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Windows 11</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Ubuntu Linux</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Windows Defender</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> ServiceNow</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Spiceworks Cloud</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Firewall Management</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Network Configuration</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Hardware Troubleshooting</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Operating System Deployment</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Security Protocol Configuration</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> System Resource Management</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Technical Communication</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Problem Solving</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Teamwork</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Time Management</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Professionalism</span>
-              <span class="t-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg> Using Command-line Tools</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Active Directory Configuration</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">DNS & DHCP Deployment</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">ServiceNow Ticketing</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Windows 11 Administration</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Malware Removal</span>
             </div>
           </div>
           
-          <div class="pr-note">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          <div style="background: #FFF7ED; border-left: 4px solid #F97316; padding: 16px 20px; display: flex; gap: 16px; border-radius: 0 8px 8px 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
             <div>
-              <strong>Cloud Services Note</strong>
-              <p>AWS, Azure, and other cloud subscriptions are not included with membership. Members use their own cloud accounts to follow cloud-specific courses. For some beginner-level courses, JobSkillShare provides limited Azure and AWS subscriptions for basic hands-on tasks.</p>
+              <strong style="display: block; color: #9A3412; font-size: 14px; margin-bottom: 4px;">Cloud Services Note</strong>
+              <p style="font-size: 13.5px; color: #C2410C; line-height: 1.5; margin: 0;">AWS, Azure, and other cloud subscriptions are not included with membership. Members use their own cloud accounts to follow cloud-specific courses.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Reviews Section -->
+      <!-- Reviews Section (Full Width) -->
       <section id="reviews" class="pd-section scroll-mt">
-        <div class="projects-card" style="padding-bottom: 24px;">
-          <div class="rv-header">
+        <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <div class="rv-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
             <div>
-              <span class="pd-section-label" style="color:var(--ice-blue);">FEEDBACK ACROSS THE CURRICULUM</span>
-              <h3 class="pd-heading-lg" style="color:var(--white);">Program Reviews</h3>
+              <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #db8904; display: block; margin-bottom: 6px;">FEEDBACK ACROSS THE CURRICULUM</span>
+              <h3 class="pd-heading-lg" style="margin: 0; font-size: 26px; color: #6F13EC !important; font-weight: 700;">Program Reviews</h3>
             </div>
-            <div class="rv-score">
-              <strong>4.8 <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></strong>
-              <span>Program average across all Course ratings</span>
+            <div class="rv-score" style="text-align: right;">
+              <strong style="display: block; font-size: 26px; color: #0F172A; font-weight: 700;">4.8 <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2" style="transform: translateY(-2px);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></strong>
+              <span style="font-size: 12px; color: #64748B;">Average across all ratings</span>
             </div>
           </div>
           
-          <div class="rv-body">
-            <div class="stars">
+          <div class="rv-body" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 28px;">
+            <div class="stars" style="margin-bottom: 14px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
             </div>
-            <p id="rv-text">This course is very helpful, they taught me how to handle customers and users. How to be patient</p>
-            <span class="rv-course-tag" id="rv-tag">IT Support: People Skills for IT Professionals</span>
-            <div class="rv-user">
-              <div class="rv-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+            <p id="rv-text" style="font-size: 15.5px; color: #334155; line-height: 1.6; margin-bottom: 20px;">"This course is very helpful, they taught me how to handle customers and users. How to be patient."</p>
+            <div class="rv-user" style="display: flex; align-items: center; gap: 12px; border-top: 1px solid #E2E8F0; padding-top: 20px;">
+              <div class="rv-avatar" style="width: 38px; height: 38px; background: #E2E8F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #64748B;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
               <div>
-                <strong id="rv-user">Learner</strong>
-                <span id="rv-date">July 19, 2026</span>
+                <strong id="rv-user" style="display: block; font-size: 14px; color: #0F172A;">Learner</strong>
+                <span id="rv-date" style="font-size: 12px; color: #64748B;">July 19, 2026</span>
               </div>
             </div>
           </div>
           
-          <div class="rv-controls">
-            <button class="rv-btn" onclick="prevReview()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></button>
-            <span id="rv-counter">1 / 4</span>
-            <button class="rv-btn" onclick="nextReview()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+          <div class="rv-controls" style="display: flex; justify-content: flex-end; align-items: center; gap: 14px; margin-top: 16px;">
+            <button class="rv-btn" onclick="prevReview()" style="background: none; border: 1px solid #CBD5E1; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #0F172A;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></button>
+            <span id="rv-counter" style="font-size: 13px; font-weight: 600; color: #64748B;">1 / 4</span>
+            <button class="rv-btn" onclick="nextReview()" style="background: none; border: 1px solid #CBD5E1; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #0F172A;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
           </div>
         </div>
       </section>
 
-      <!-- FAQ Section -->
+      <!-- FAQ Section (Full Width) -->
       <section id="faq" class="pd-section scroll-mt">
-        <div class="pd-card bg-highlight">
-          <h3 class="pd-heading-lg" style="margin-bottom: 24px;">Frequently Asked Questions</h3>
+        <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <h3 class="pd-heading-lg" style="margin-bottom: 24px; font-size: 26px; color: #6F13EC !important; font-weight: 700;">Frequently Asked Questions</h3>
           
           <div class="faq-accordion">
-            <div class="faq-acc-item">
-              <button class="faq-acc-btn" onclick="this.nextElementSibling.classList.toggle('hidden')">
+            <div class="faq-acc-item" style="border-bottom: 1px solid #E2E8F0;">
+              <button class="faq-acc-btn" onclick="this.nextElementSibling.classList.toggle('hidden')" style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0;padding-left: 20px;padding-right: 20px; background: none; border: none; font-size: 16px; font-weight: 600; color: #0F172A; cursor: pointer; text-align: left;">
                 <span>What are the prerequisites for this program?</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </button>
-              <div class="faq-acc-content hidden">
-                <p>A basic understanding of IT concepts and basic IT knowledge are recommended.</p>
+              <div class="faq-acc-content hidden" style="padding-bottom: 20px; color: #475569; font-size: 14.5px; line-height: 1.6;">
+                <p style="margin: 0;">A basic understanding of IT concepts and basic IT knowledge are recommended.</p>
               </div>
             </div>
-            <div class="faq-acc-item">
-              <button class="faq-acc-btn" onclick="this.nextElementSibling.classList.toggle('hidden')">
+            <div class="faq-acc-item" style="border-bottom: 1px solid #E2E8F0;">
+              <button class="faq-acc-btn" onclick="this.nextElementSibling.classList.toggle('hidden')" style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0;padding-left: 20px;padding-right: 20px; background: none; border: none; font-size: 16px; font-weight: 600; color: #0F172A; cursor: pointer; text-align: left;">
                 <span>What careers can this certificate lead to?</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </button>
-              <div class="faq-acc-content hidden">
-                <p>Graduates can pursue roles like IT Support Specialist, Network Administrator, or System Administrator.</p>
+              <div class="faq-acc-content hidden" style="padding-bottom: 20px; color: #475569; font-size: 14.5px; line-height: 1.6;">
+                <p style="margin: 0;">Graduates can pursue roles like IT Support Specialist, Network Administrator, or System Administrator.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Bottom CTA -->
-      <section class="pd-section">
-        <div class="projects-card text-center" style="padding: 64px 24px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); text-align: center;">
-          <span class="pd-section-label" style="color: var(--ice-blue); display: inline-block;">BUILD YOUR COMPLETE SKILL SET</span>
-          <h2 style="color:var(--white); font-size: 32px; margin-bottom: 16px;">Empower Your IT Support Career</h2>
-          <p style="color: var(--ice-blue); max-width: 600px; margin: 0 auto 32px;">Gain comprehensive skills in IT support, from networking configurations to security protocols, enhancing both technical and professional proficiencies.</p>
-          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-            <a href="signup.html" class="btn btn-primary" style="background-color: var(--blue-light); border-color: var(--blue-light); color: var(--white);">Create Free Account</a>
-            <a href="login.html" class="btn btn-outline" style="background-color: var(--white); color: var(--navy); border-color: var(--white);">Already a member? Log In</a>
-          </div>
-        </div>
-      </section>
-      
     </div>
+  </div>
+
+  <!-- Bottom CTA (Full Width) -->
+  <section class="pd-section" style="margin-bottom: 0;">
+    <div style="padding: 64px 24px; background: linear-gradient(135deg, #0B1832 0%, #1A1040 50%, #5A0EBF 100%); text-align: center;">
+      <span class="pd-section-label" style="color: #D8B4FE; display: inline-block; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; font-size: 11px;">BUILD YOUR COMPLETE SKILL SET</span>
+      <h2 style="color: #FFFFFF; font-size: 32px; margin: 0 0 14px; font-weight: 700;">Empower Your IT Support Career</h2>
+      <p style="color: #CBD5E1; max-width: 600px; margin: 0 auto 28px; font-size: 15px; line-height: 1.6;">Gain comprehensive skills in IT support, from networking configurations to security protocols, enhancing both technical and professional proficiencies.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="background-color: #6F13EC; border-color: #6F13EC; color: #FFFFFF; border-radius: 8px; padding: 12px 28px; font-weight: 700;">Start Learning Now</a>
+        <a href="login.html" class="btn btn-outline" style="background-color: transparent; color: #FFFFFF; border-color: rgba(255,255,255,0.3); border-radius: 8px; padding: 12px 28px; font-weight: 500;">Already a member? Log In</a>
+      </div>
+    </div>
+  </section>
   </div>
 
   <!-- Footer -->
@@ -605,7 +607,7 @@
             <li><a href="index.html#programs">Certificate Programs</a></li>
             <li><a href="#">Individual IT Courses</a></li>
             <li><a href="#">Lab Catalog 2026</a></li>
-            <li><a href="pricing.html">Premium Membership</a></li>
+            <li><a href="#" onclick="openPricingModal(event)">Premium Membership</a></li>
           </ul>
         </div>
         
@@ -709,74 +711,74 @@
       <!-- STEP 1 VIEW -->
       <div id="step-1-view">
         <div class="modal-header text-center">
-          <span class="p-top-badge" style="background: none; color: var(--blue); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">JOIN JOBSKILLSHARE</span>
-          <h2 style="font-size: 32px; color: var(--navy-dark); margin: 8px 0 32px;">Choose how you want to learn</h2>
+          <span class="p-top-badge" style="background: none; color: var(--blue); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 11px;">JOIN JOBSKILLSHARE</span>
+          <h2 style="font-size: 24px; color: var(--navy-dark); margin: 2px 0 8px;">Choose how you want to learn</h2>
           
           <!-- Stepper -->
-          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 700px; margin: 0 auto 40px;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 28px; height: 28px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">1</div>
-              <span style="font-weight: 600; color: var(--blue); font-size: 14px;">Choose a plan</span>
+          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 600px; margin: 0 auto 12px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">1</div>
+              <span style="font-weight: 600; color: var(--blue); font-size: 13px;">Choose a plan</span>
             </div>
-            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 16px;"></div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 28px; height: 28px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">2</div>
-              <span style="font-weight: 500; color: #64748B; font-size: 14px;">Secure checkout</span>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">2</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Secure checkout</span>
             </div>
-            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 16px;"></div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 28px; height: 28px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">3</div>
-              <span style="font-weight: 500; color: #64748B; font-size: 14px;">Start learning</span>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">3</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Start learning</span>
             </div>
           </div>
         </div>
         
-        <div style="text-align: center; margin-bottom: 32px;">
-          <h3 style="font-size: 24px; color: var(--navy-dark); margin-bottom: 8px;">Select your membership</h3>
-          <p style="color: #64748B;">Create your account here with secure membership and payment processing.</p>
+        <div style="text-align: center; margin-bottom: 12px;">
+          <h3 style="font-size: 20px; color: var(--navy-dark); margin-bottom: 4px;">Select your membership</h3>
+          <p style="color: #64748B; font-size: 13.5px; margin: 0;">Create your account here with secure membership and payment processing.</p>
         </div>
 
         <div class="pricing-cards-wrapper">
           <!-- Free Card -->
-          <div class="p-card">
-            <div class="p-badge" style="background: #E2E8F0; color: #475569;">START FREE</div>
+          <div class="p-card" style="border-top: 4px solid var(--border);">
+            <div class="p-badge" style="background: #F1F5F9; color: #475569;">START FREE</div>
             <h3>Free Access</h3>
             <div class="price"><span>$</span>0.00</div>
             <p class="p-desc">Explore selected foundation Courses for three months.</p>
             <ul class="p-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Selected free Courses</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Learning portal access</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress tracking</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Selected free Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Learning portal access</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress tracking</li>
             </ul>
             <button onclick="goToStep2('Free Access', 0)" class="p-btn p-btn-light" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Create Free Account</button>
           </div>
 
-          <!-- Premium Monthly Card -->
-          <div class="p-card p-card-highlight">
-            <div class="p-badge" style="background: #DBEAFE; color: var(--blue);">FLEXIBLE</div>
+          <!-- Premium Monthly Card (Highlighted) -->
+          <div class="p-card p-card-highlight" style="border-top: 4px solid var(--coral);">
+            <div class="p-badge" style="background: var(--coral-light); color: var(--coral);">🔥 POPULAR</div>
             <h3>Premium Monthly</h3>
             <div class="price"><span>$</span>50.00<small>per month</small></div>
             <p class="p-desc">Full learning access with monthly billing.</p>
             <ul class="p-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
-              <li><strong style="color: #8B5CF6;">+ AI Career Tools</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
+              <li><strong style="color: var(--blue);">+ AI Career Tools</strong></li>
             </ul>
-            <button onclick="goToStep2('Premium Monthly', 50)" class="p-btn p-btn-light" style="width: 100%; border: 1px solid var(--blue); color: var(--blue); cursor: pointer; font-family: inherit;">Choose Premium Monthly</button>
+            <button onclick="goToStep2('Premium Monthly', 50)" class="p-btn" style="width: 100%; border: 2px solid var(--blue); color: var(--blue); background: var(--ice-blue-light); cursor: pointer; font-family: inherit;">Choose Premium Monthly</button>
           </div>
 
           <!-- Premium Yearly Card -->
-          <div class="p-card">
-            <div class="p-badge" style="background: var(--blue); color: var(--white);">BEST VALUE</div>
+          <div class="p-card" style="border-top: 4px solid var(--blue);">
+            <div class="p-badge" style="background: var(--blue); color: var(--white);">⭐ BEST VALUE</div>
             <h3>Premium Yearly</h3>
             <div class="price"><span>$</span>549.00<small>per year</small></div>
             <p class="p-desc">Build long-term skills with yearly Premium access.</p>
             <ul class="p-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
-              <li><strong style="color: #8B5CF6;">+ AI Career Tools</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
+              <li><strong style="color: var(--blue);">+ AI Career Tools</strong></li>
             </ul>
             <button onclick="goToStep2('Premium Yearly', 549)" class="p-btn p-btn-blue" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Choose Premium Yearly</button>
           </div>
@@ -784,86 +786,97 @@
       </div>
 
       <!-- STEP 2 VIEW -->
-      <div id="step-2-view" style="display: none; max-width: 800px; margin: 0 auto; text-align: left;">
-        <button onclick="goToStep1()" style="background: none; border: none; color: var(--blue); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; margin-bottom: 24px; padding: 0;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Plans
+      <div id="step-2-view" style="display: none; width: 100%; text-align: left;">
+        <button onclick="goToStep1()" style="background: none; border: none; color: var(--blue); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; margin-bottom: 16px; padding: 0;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Plans
         </button>
         
-        <div class="modal-header text-center" style="margin-bottom: 40px;">
-          <h2 style="font-size: 32px; color: var(--navy-dark); margin: 0 0 32px;">Complete Your Registration</h2>
+        <div class="modal-header text-center" style="margin-bottom: 16px;">
+          <h2 style="font-size: 24px; color: var(--navy-dark); margin: 0 0 8px;">Complete Your Registration</h2>
           
           <!-- Stepper Step 2 -->
-          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 700px; margin: 0 auto;">
-            <div style="display: flex; align-items: center; gap: 12px; opacity: 0.5;">
-              <div style="width: 28px; height: 28px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">1</div>
-              <span style="font-weight: 600; color: var(--navy); font-size: 14px;">Choose a plan</span>
+          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 600px; margin: 0 auto 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; opacity: 0.5;">
+              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">1</div>
+              <span style="font-weight: 600; color: var(--navy); font-size: 13px;">Choose a plan</span>
             </div>
-            <div style="flex: 1; height: 1px; background: var(--blue); margin: 0 16px;"></div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 28px; height: 28px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">2</div>
-              <span style="font-weight: 600; color: var(--blue); font-size: 14px;">Secure checkout</span>
+            <div style="flex: 1; height: 1px; background: var(--blue); margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">2</div>
+              <span style="font-weight: 600; color: var(--blue); font-size: 13px;">Secure checkout</span>
             </div>
-            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 16px;"></div>
-            <div style="display: flex; align-items: center; gap: 12px; opacity: 0.5;">
-              <div style="width: 28px; height: 28px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;">3</div>
-              <span style="font-weight: 500; color: #64748B; font-size: 14px;">Start learning</span>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px; opacity: 0.5;">
+              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">3</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Start learning</span>
             </div>
           </div>
         </div>
 
-        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 24px; margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center;">
-          <div>
-            <div style="font-size: 12px; font-weight: 700; color: #64748B; text-transform: uppercase; margin-bottom: 4px;">Selected Plan</div>
-            <div id="modal-plan-name" style="font-size: 20px; font-weight: 700; color: var(--navy-dark);">Premium Monthly</div>
-          </div>
-          <div id="modal-plan-price" style="font-size: 24px; font-weight: 700; color: var(--blue);">$50.00</div>
-        </div>
-
-        <form onsubmit="event.preventDefault(); alert('Proceeding to Start Learning!'); closePricingModal();">
-          <!-- Account Details -->
-          <h3 style="font-size: 18px; color: var(--navy-dark); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #E2E8F0;">Account Information</h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px;">
-            <div class="form-group" style="margin-bottom: 0;">
-              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Full Name *</label>
-              <input type="text" required style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
-            </div>
-            <div class="form-group" style="margin-bottom: 0;">
-              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Email Address *</label>
-              <input type="email" required style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
-            </div>
-            <div class="form-group" style="grid-column: 1 / -1; margin-bottom: 0;">
-              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Create Password *</label>
-              <input type="password" required style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
-            </div>
-          </div>
-
-          <!-- Payment Details (Dynamically shown) -->
-          <div id="modal-payment-section">
-            <h3 style="font-size: 18px; color: var(--navy-dark); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #E2E8F0;">Payment Details</h3>
+        <div class="pd-checkout-grid" style="gap: 24px; align-items: start;">
+          <!-- Left Col: Selected Plan summary card -->
+          <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 20px;">
+            <div style="font-size: 11px; font-weight: 700; color: #64748B; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">Selected Plan</div>
+            <div id="modal-plan-name" style="font-size: 20px; font-weight: 700; color: var(--navy-dark); margin-bottom: 8px;">Premium Monthly</div>
+            <div id="modal-plan-price" style="font-size: 28px; font-weight: 700; color: var(--blue); margin-bottom: 16px;">$50.00</div>
             
-            <div style="margin-bottom: 16px;">
-              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Discount Code (Optional)</label>
-              <div style="display: flex; gap: 8px;">
-                <input type="text" placeholder="Enter code" style="flex: 1; padding: 12px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit;">
-                <button type="button" style="padding: 0 16px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 8px; color: var(--navy-dark); font-weight: 600; cursor: pointer;">Apply</button>
-              </div>
-            </div>
-
-            <div style="margin-bottom: 32px;">
-              <label style="display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Card Information *</label>
-              <div style="border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                <input type="text" placeholder="Card Number" style="grid-column: 1 / -1; width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit;" required class="pmt-input">
-                <input type="text" placeholder="MM/YY" style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit;" required class="pmt-input">
-                <input type="text" placeholder="CVC" style="width: 100%; padding: 12px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit;" required class="pmt-input">
-              </div>
-            </div>
+            <ul class="p-list" style="margin-bottom: 0;">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Complete platform access</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-world practice labs</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Career guidance & community</li>
+            </ul>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 16px; display: flex; justify-content: center; align-items: center; gap: 8px;">
-            Complete Registration
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </button>
-        </form>
+          <!-- Right Col: Registration & Checkout Form -->
+          <form id="checkout-form" onsubmit="processCheckout(event)" style="margin: 0;">
+            <!-- Account Details -->
+            <div id="checkout-account-section">
+              <h3 style="font-size: 15px; color: var(--navy-dark); margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid #E2E8F0;">Account Information</h3>
+              <div class="pd-checkout-inner-grid" style="gap: 12px; margin-bottom: 16px;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Full Name *</label>
+                  <input type="text" id="checkout-name" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Email Address *</label>
+                  <input type="email" id="checkout-email" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+                <div class="form-group" style="grid-column: 1 / -1; margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Create Password *</label>
+                  <input type="password" id="checkout-password" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Details (Dynamically shown) -->
+            <div id="modal-payment-section">
+              <h3 style="font-size: 15px; color: var(--navy-dark); margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid #E2E8F0;">Payment Details</h3>
+              
+              <div style="margin-bottom: 12px;">
+                <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Discount Code (Optional)</label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="text" placeholder="Enter code" style="flex: 1; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                  <button type="button" style="padding: 0 12px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 6px; color: var(--navy-dark); font-weight: 600; cursor: pointer; font-size: 13px;">Apply</button>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Card Information *</label>
+                <div class="pd-checkout-card-grid" style="border: 1px solid #E2E8F0; border-radius: 6px; padding: 12px; gap: 10px;">
+                  <input type="text" placeholder="Card Number" style="grid-column: 1 / -1; width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                  <input type="text" placeholder="MM/YY" style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                  <input type="text" placeholder="CVC" style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" id="checkout-submit-btn" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 14.5px; display: flex; justify-content: center; align-items: center; gap: 8px; border-radius: 8px;">
+              Complete Registration
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+        </div>
+      </div>
       </div>
       
     </div>
@@ -900,11 +913,65 @@
         paymentSection.style.display = 'block';
         pmtInputs.forEach(i => i.setAttribute('required', 'true'));
       }
+      
+      // Handle Account Section visibility if user is logged in
+      const accountSection = document.getElementById('checkout-account-section');
+      const nameInput = document.getElementById('checkout-name');
+      const emailInput = document.getElementById('checkout-email');
+      const passInput = document.getElementById('checkout-password');
+      
+      if (window.currentUser) {
+        // User is logged in, hide account creation
+        accountSection.style.display = 'none';
+        nameInput.removeAttribute('required');
+        emailInput.removeAttribute('required');
+        passInput.removeAttribute('required');
+      } else {
+        // Guest user, require account creation
+        accountSection.style.display = 'block';
+        nameInput.setAttribute('required', 'true');
+        emailInput.setAttribute('required', 'true');
+        passInput.setAttribute('required', 'true');
+      }
     }
     
     function goToStep1() {
       document.getElementById('step-2-view').style.display = 'none';
       document.getElementById('step-1-view').style.display = 'block';
+    }
+
+    async function processCheckout(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('checkout-submit-btn');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Processing...';
+
+      try {
+        if (!window.currentUser) {
+          // Create account first
+          const name = document.getElementById('checkout-name').value;
+          const email = document.getElementById('checkout-email').value;
+          const password = document.getElementById('checkout-password').value;
+          
+          if(window.handleCheckoutRegistration) {
+             await window.handleCheckoutRegistration(name, email, password);
+          } else {
+             console.warn("Auth not linked yet. Simulating success.");
+          }
+        }
+        
+        // At this point, the user is logged in and "payment" is done.
+        alert('Checkout Successful! Your account is ready.');
+        closePricingModal();
+        
+      } catch (error) {
+        alert(error.message);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
     }
 
     // Attach to all pricing links

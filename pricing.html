@@ -8,7 +8,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,20 +17,20 @@
   <!-- Header -->
   <header>
     <div class="container nav-wrap">
-      <a href="index.html" class="logo" aria-label="EdTech4D Home">
-        <img src="assest\logo.png" alt="EdTech4D Logo" style="height: 84px; width: auto; object-fit: contain;">
+      <a href="index.html" class="logo" aria-label="JobSkillShare Home">
+        <img src="assest\logo.png" alt="JobSkillShare Logo" style="height: 84px; width: auto; object-fit: contain;">
       </a>
       
       <nav class="primary-nav" aria-label="Main Navigation">
         <a href="index.html">Home</a>
         <a href="index.html#programs">Programs</a>
-        <a href="index.html#outcomes">Success Stories</a>
         <a href="pricing.html" class="active">Pricing</a>
+        <a href="index.html#testimonials">Testimonials</a>
       </nav>
       
       <div class="nav-actions">
-        <a href="login.html" class="login-link">Sign In</a>
-        <a href="signup.html" class="btn btn-primary">Start Learning</a>
+        <a href="login.html" class="login-link">Login</a>
+        <a href="pricing.html" class="btn btn-primary">Start Learning</a>
       </div>
       
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-drawer">
@@ -47,50 +47,50 @@
     <div class="mobile-nav-links">
       <a href="index.html" class="mobile-link">Home</a>
       <a href="index.html#programs" class="mobile-link">Programs</a>
-      <a href="index.html#outcomes" class="mobile-link">Success Stories</a>
       <a href="pricing.html" class="mobile-link">Pricing</a>
+      <a href="index.html#testimonials" class="mobile-link">Testimonials</a>
     </div>
     <div class="mobile-nav-actions">
-      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
-      <a href="signup.html" class="btn btn-primary" style="width: 100%;">Start Learning</a>
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Login</a>
+      <a href="pricing.html" class="btn btn-primary" style="width: 100%;">Start Learning</a>
     </div>
   </div>
 
   <!-- Pricing Hero & Stepper -->
-  <section class="pricing-hero" style="background: var(--white); color: var(--navy); padding: 48px 0 24px; border-bottom: 1px solid #E2E8F0;">
+  <section class="pricing-hero" style="background: var(--white); color: var(--navy); padding: 24px 0 12px; border-bottom: 1px solid #E2E8F0;">
     <div class="container" style="position: relative;">
       <!-- Mock Close Button (from screenshot) -->
-      <a href="index.html" style="position: absolute; right: 16px; top: 0; width: 40px; height: 40px; background: #F1F5F9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #64748B; text-decoration: none; font-size: 20px;">&times;</a>
+      <a href="index.html" style="position: absolute; right: 16px; top: -10px; width: 36px; height: 36px; background: #F1F5F9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #64748B; text-decoration: none; font-size: 18px;">&times;</a>
       
-      <span style="color: var(--blue); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 13px;">JOIN JOBSKILLSHARE</span>
-      <h1 style="color: var(--navy-dark); font-size: 40px; margin-top: 8px; text-align: left;">Choose how you want to learn</h1>
+      <span style="color: var(--blue); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 11px;">JOIN JOBSKILLSHARE</span>
+      <h1 style="color: var(--navy-dark); font-size: 28px; margin-top: 4px; text-align: left;">Choose how you want to learn</h1>
       
       <!-- Stepper -->
-      <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 800px; margin: 48px auto 24px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <div style="width: 32px; height: 32px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px;">1</div>
-          <span style="font-weight: 600; color: var(--blue); font-size: 14px;">Choose a plan</span>
+      <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 600px; margin: 20px auto 12px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">1</div>
+          <span style="font-weight: 600; color: var(--blue); font-size: 13px;">Choose a plan</span>
         </div>
-        <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 24px; max-width: 150px;"></div>
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <div style="width: 32px; height: 32px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px;">2</div>
-          <span style="font-weight: 500; color: #64748B; font-size: 14px;">Secure checkout</span>
+        <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px; max-width: 100px;"></div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">2</div>
+          <span style="font-weight: 500; color: #64748B; font-size: 13px;">Secure checkout</span>
         </div>
-        <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 24px; max-width: 150px;"></div>
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <div style="width: 32px; height: 32px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px;">3</div>
-          <span style="font-weight: 500; color: #64748B; font-size: 14px;">Start learning</span>
+        <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px; max-width: 100px;"></div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">3</div>
+          <span style="font-weight: 500; color: #64748B; font-size: 13px;">Start learning</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Plan Selection -->
-  <section class="pricing-section pricing-page-section" id="pricing" style="background: #F8FAFC; padding-top: 48px; border-radius: 16px; margin: 24px auto; max-width: 1240px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+  <section class="pricing-section pricing-page-section" id="pricing" style="background: #F8FAFC; padding-top: 24px; border-radius: 16px; margin: 16px auto; max-width: 1240px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
     <div class="container">
-      <div style="margin-bottom: 32px; text-align: left;">
-        <h2 style="font-size: 28px; color: var(--navy-dark); margin-bottom: 8px;">Select your membership</h2>
-        <p style="color: #64748B; font-size: 16px;">Create your account here with secure membership and payment processing.</p>
+      <div style="margin-bottom: 16px; text-align: left;">
+        <h2 style="font-size: 20px; color: var(--navy-dark); margin-bottom: 4px;">Select your membership</h2>
+        <p style="color: #64748B; font-size: 13.5px; margin: 0;">Create your account here with secure membership and payment processing.</p>
       </div>
       
       <div class="pricing-grid">
@@ -264,5 +264,6 @@
   </footer>
 
   <script src="script.js" defer></script>
+  <script type="module" src="auth.js"></script>
 </body>
 </html>
