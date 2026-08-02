@@ -1,0 +1,124 @@
+/* ── Checkout Page Styles ───────────────────────────────────────────── */
+
+body { background: #F8FAFC; }
+
+/* ── Layout ── */
+.checkout-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .checkout-page { grid-template-columns: 1fr; padding: 24px 16px; }
+}
+
+/* ── Cards ── */
+.checkout-card {
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+.checkout-card-sticky {
+  position: sticky;
+  top: 40px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+}
+
+/* ── Stepper ── */
+.stepper { display: flex; align-items: center; margin-bottom: 32px; gap: 8px; }
+.step { display: flex; align-items: center; gap: 10px; }
+.step-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 13px; flex-shrink: 0;
+}
+.step-done   .step-num { background: #E2E8F0; color: #64748B; }
+.step-active .step-num { background: #6F13EC; color: #fff; }
+.step-todo   .step-num { background: #fff; border: 2px solid #E2E8F0; color: #94A3B8; }
+.step-label { font-weight: 600; font-size: 14px; }
+.step-done   .step-label { color: #94A3B8; }
+.step-active .step-label { color: #6F13EC; }
+.step-todo   .step-label { color: #94A3B8; }
+.step-line { flex: 1; height: 2px; background: #E2E8F0; max-width: 60px; }
+
+/* ── Plan Header ── */
+.plan-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #E2E8F0;
+}
+.plan-badge {
+  display: inline-block; padding: 4px 10px;
+  background: #EDE9FE; color: #6F13EC;
+  border-radius: 12px; font-size: 11px; font-weight: 700; margin-bottom: 8px;
+}
+.plan-price-big { font-size: 32px; font-weight: 800; color: #0F172A; line-height: 1; }
+.plan-period { font-size: 13px; color: #64748B; margin-top: 4px; }
+
+/* ── Features ── */
+.features-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px; list-style: none; padding: 0; margin: 0;
+}
+.features-grid li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #334155; }
+@media (max-width: 500px) { .features-grid { grid-template-columns: 1fr; } }
+
+/* ── Order Summary ── */
+.order-row {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 15px; color: #475569; margin-bottom: 14px;
+}
+.order-total {
+  font-size: 18px; font-weight: 700; color: #0F172A;
+  padding-top: 16px; border-top: 1px solid #E2E8F0; margin-top: 16px;
+}
+
+/* ── Checkout Button ── */
+.checkout-btn {
+  width: 100%; padding: 16px; font-size: 16px;
+  border-radius: 12px; cursor: pointer; border: none;
+  font-weight: 700; font-family: var(--font-display);
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  transition: all 0.2s;
+}
+.checkout-btn-primary { background: linear-gradient(135deg, #6F13EC, #4F46E5); color: #fff; }
+.checkout-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(111,19,236,0.3); }
+.checkout-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+/* ── Trust Row ── */
+.trust-row { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 14px; flex-wrap: wrap; }
+.trust-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #94A3B8; }
+
+/* ── Auth Notice ── */
+.auth-notice {
+  background: #FEF3C7; border: 1px solid #FDE68A;
+  border-radius: 12px; padding: 20px; margin-bottom: 24px; display: none;
+}
+.auth-notice h4 { font-size: 16px; color: #92400E; margin: 0 0 8px; }
+.auth-notice p  { font-size: 14px; color: #92400E; margin: 0 0 16px; }
+.auth-notice-btns { display: flex; gap: 12px; }
+
+/* ── Success State ── */
+.success-state { text-align: center; padding: 40px 20px; display: none; }
+.success-icon {
+  width: 72px; height: 72px;
+  background: #DEF7EC; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+}
+
+/* ── Loading Spinner ── */
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Nav Logic
+  
   const menuToggle = document.getElementById('menu-toggle');
   const mobileOverlay = document.getElementById('mobile-overlay');
   const mobileDrawer = document.getElementById('mobile-drawer');
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   let isOpen = false;
 
-  function toggleMenu(forceClose = false) {
+  function toggleMenu(forceClose = false) { 
     if (forceClose) {
       isOpen = false;
     } else {

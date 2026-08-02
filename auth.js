@@ -19,6 +19,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 import { auth, db } from "./firebase-config.js";
+import { logAffiliateConversion } from "./backend.js";
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -35,9 +36,10 @@ function getFirebaseError(code) {
     'auth/too-many-requests':     'Too many failed attempts. Please wait a few minutes.',
     'auth/popup-closed-by-user':  'Google sign-in was cancelled. Please try again.',
     'auth/popup-blocked':         'Popup was blocked. Please allow popups for this site.',
-    'auth/account-exists-with-different-credential': 'An account already exists with this email using a different sign-in method.',
+    'auth/invalid-api-key':       'Firebase is not configured yet! Please add your API key to firebase-config.js.',
+    'auth/internal-error':        'Firebase configuration error. Did you update firebase-config.js?',
   };
-  return errors[code] || 'Something went wrong. Please try again.';
+  return errors[code] || `Error: ${code}. Please make sure Firebase is configured.`;
 }
 
 // ── UI Helpers ────────────────────────────────────────────────
@@ -156,9 +158,17 @@ window.handleSignup = async function(e) {
 
     showMsg('signupSuccess', 'Account created! Redirecting to next step...', 'success');
 
-    // Route: free plan → homepage, paid plan → checkout
+    // Log affiliate conversion if a referral code was captured
+    await logAffiliateConversion(cred.user.uid, plan).catch(() => {});
+
+    // Route: free plan → homepage, paid plan → checkout with plan param
     setTimeout(() => {
-      window.location.href = plan === 'free' ? 'index.html' : `checkout.html?plan=${plan}`;
+      const redirectTo = new URLSearchParams(window.location.search).get('redirect');
+      if (redirectTo) {
+        window.location.href = redirectTo;
+      } else {
+        window.location.href = plan === 'free' ? 'index.html' : `checkout.html?plan=${plan}`;
+      }
     }, 1500);
 
   } catch (err) {

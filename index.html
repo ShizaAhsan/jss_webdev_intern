@@ -27,7 +27,7 @@
       <nav class="primary-nav" aria-label="Main Navigation">
         <a href="index.html" class="active">Home</a>
         <a href="#programs">Programs</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="#" onclick="openPricingModal(event)">Pricing</a>
         <a href="#testimonials">Testimonials</a>
       </nav>
       
@@ -52,7 +52,7 @@
     <div class="mobile-nav-links">
       <a href="index.html" class="mobile-link">Home</a>
       <a href="#programs" class="mobile-link">Programs</a>
-      <a href="pricing.html" class="mobile-link">Pricing</a>
+      <a href="#" onclick="openPricingModal(event)" class="mobile-link">Pricing</a>
       <a href="#testimonials" class="mobile-link">Testimonials</a>
     </div>
     <div class="mobile-nav-actions">
@@ -72,7 +72,7 @@
         <p class="lede">Step-by-step career roadmaps designed around real enterprise roles. Practice in browser-based environments with live servers — no complex configurations needed.</p>
         
         <div class="hero-actions">
-          <a href="#" onclick="openPricingModal(event)" class="btn btn-primary">Start Learning →</a>
+          <a href="#" onclick="openPricingModal(event)" class="btn btn-primary">Start Learning &rarr;</a>
           <a href="#programs" class="btn btn-secondary">
             Explore Programs
           </a>
@@ -608,7 +608,7 @@
           </div>
           
           <div class="enroll-action-panel">
-            <a href="pricing.html" class="btn btn-primary" style="background: var(--white); color: var(--navy); box-shadow: none;">Start Free Trial</a>
+            <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="background: var(--white); color: var(--navy); box-shadow: none;">Start Free Trial</a>
             <div class="enroll-badge-row">
               <span class="enroll-sec-badge">14-Day Free Period</span>
               <span class="enroll-sec-badge">Cancel in 1 click</span>
@@ -656,7 +656,7 @@
           <ul>
             <li><a href="#outcomes">Success Stories</a></li>
             <li><a href="#programs">Practice Labs</a></li>
-            <li><a href="pricing.html">Membership Plans</a></li>
+            <li><a href="#" onclick="openPricingModal(event)">Membership Plans</a></li>
             <li><a href="#">Contact Support</a></li>
           </ul>
         </div>
@@ -874,107 +874,13 @@
     </div>
   </div>
   
-  <script>
-    function openPricingModal(e) {
-      if(e) e.preventDefault();
-      document.getElementById('pricingModal').classList.add('active');
-      document.body.style.overflow = 'hidden';
-      goToStep1(); // Always start at step 1
-    }
-    
-    function closePricingModal() {
-      document.getElementById('pricingModal').classList.remove('active');
-      document.body.style.overflow = '';
-      setTimeout(() => { goToStep1(); }, 300);
-    }
-    
-    function goToStep2(planName, planPrice) {
-      document.getElementById('step-1-view').style.display = 'none';
-      document.getElementById('step-2-view').style.display = 'block';
-      
-      document.getElementById('modal-plan-name').innerText = planName;
-      document.getElementById('modal-plan-price').innerText = planPrice === 0 ? '$0.00' : '$' + planPrice + '.00';
-      
-      const paymentSection = document.getElementById('modal-payment-section');
-      const pmtInputs = paymentSection.querySelectorAll('.pmt-input');
-      
-      if (planPrice === 0) {
-        paymentSection.style.display = 'none';
-        pmtInputs.forEach(i => i.removeAttribute('required'));
-      } else {
-        paymentSection.style.display = 'block';
-        pmtInputs.forEach(i => i.setAttribute('required', 'true'));
-      }
-      
-      // Handle Account Section visibility if user is logged in
-      const accountSection = document.getElementById('checkout-account-section');
-      const nameInput = document.getElementById('checkout-name');
-      const emailInput = document.getElementById('checkout-email');
-      const passInput = document.getElementById('checkout-password');
-      
-      if (window.currentUser) {
-        // User is logged in, hide account creation
-        accountSection.style.display = 'none';
-        nameInput.removeAttribute('required');
-        emailInput.removeAttribute('required');
-        passInput.removeAttribute('required');
-      } else {
-        // Guest user, require account creation
-        accountSection.style.display = 'block';
-        nameInput.setAttribute('required', 'true');
-        emailInput.setAttribute('required', 'true');
-        passInput.setAttribute('required', 'true');
-      }
-    }
-    
-    function goToStep1() {
-      document.getElementById('step-2-view').style.display = 'none';
-      document.getElementById('step-1-view').style.display = 'block';
-    }
-
-    async function processCheckout(e) {
-      e.preventDefault();
-      
-      const submitBtn = document.getElementById('checkout-submit-btn');
-      const originalText = submitBtn.innerHTML;
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Processing...';
-
-      try {
-        if (!window.currentUser) {
-          // Create account first
-          const name = document.getElementById('checkout-name').value;
-          const email = document.getElementById('checkout-email').value;
-          const password = document.getElementById('checkout-password').value;
-          
-          if(window.handleCheckoutRegistration) {
-             await window.handleCheckoutRegistration(name, email, password);
-          } else {
-             console.warn("Auth not linked yet. Simulating success.");
-          }
-        }
-        
-        // At this point, the user is logged in and "payment" is done.
-        alert('Checkout Successful! Your account is ready.');
-        closePricingModal();
-        
-      } catch (error) {
-        alert(error.message);
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      }
-    }
-
-    // Attach to all pricing links
-    document.addEventListener('DOMContentLoaded', () => {
-      const pricingLinks = document.querySelectorAll('a[href="pricing.html"]');
-      pricingLinks.forEach(link => {
-        link.addEventListener('click', openPricingModal);
-      });
-    });
-  </script>
+  <script src="modal.js"></script>
   <script type="module" src="auth.js"></script>
+  <!-- Affiliate tracking: captures ?ref= codes on landing -->
+  <script type="module">
+    import { getAffiliateRef } from './backend.js';
+    // getAffiliateRef() also auto-captures on import via IIFE in backend.js
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
