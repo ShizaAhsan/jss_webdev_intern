@@ -3,825 +3,841 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JobSkillShare — Job-Ready IT Training with Hands-on Labs</title>
-  <meta name="description" content="Master job-ready IT skills with hands-on practice labs. Transition to IT Support, Systems Engineering, Cloud, and Cybersecurity with step-by-step programs.">
+  <title>Tech4D - Build Job-Ready IT Skills</title>
   
-  <!-- Preconnect to Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Main Stylesheet -->
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- JavaScript Script -->
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
 
-  <!-- Header -->
-  <header>
-    <div class="container nav-wrap">
-      <a href="index.html" class="logo" id="logo-main" aria-label="JobSkillShare Home">
-        <img src="assest\logo.png" alt="JobSkillShare Logo" style="height: 84px; width: auto; object-fit: contain;">
+  <!-- TOP ANNOUNCEMENT BANNER -->
+  <div class="bg-gradient-to-r from-blue-900 via-blue-700 to-slate-900 text-white text-xs md:text-sm py-2.5 px-4 text-center border-b border-blue-800/40 relative z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap font-medium">
+      <span class="inline-flex items-center gap-1.5 font-semibold">
+        <span>🚀</span> Cybersecurity & IT Support Campaign Enrollment Is Now Open!
+      </span>
+      <span class="hidden sm:inline text-blue-200">👉 Limited seats – Enroll today!</span>
+      <a href="campaign.html" class="inline-flex items-center gap-1 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3 py-1 rounded-lg transition shadow-sm ml-1">
+        Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
       </a>
-      
-      <!-- Primary Desktop Nav -->
-      <nav class="primary-nav" aria-label="Main Navigation">
-        <a href="index.html" class="active">Home</a>
-        <a href="#programs">Programs</a>
-        <a href="#" onclick="openPricingModal(event)">Pricing</a>
-        <a href="#testimonials">Testimonials</a>
-      </nav>
-      
-      <!-- Desktop Actions -->
-      <div class="nav-actions">
-        <a href="login.html" class="login-link">Login</a>
-        <a href="#" onclick="openPricingModal(event)" class="btn btn-primary">Start Learning</a>
-      </div>
-      
-      <!-- Mobile Toggle Button -->
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Nav Overlay & Drawer -->
-  <div class="mobile-nav-overlay" id="mobile-overlay" role="presentation"></div>
-  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true" role="dialog">
-    <div class="mobile-nav-links">
-      <a href="index.html" class="mobile-link">Home</a>
-      <a href="#programs" class="mobile-link">Programs</a>
-      <a href="#" onclick="openPricingModal(event)" class="mobile-link">Pricing</a>
-      <a href="#testimonials" class="mobile-link">Testimonials</a>
-    </div>
-    <div class="mobile-nav-actions">
-      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Login</a>
-      <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="width: 100%;">Start Learning</a>
     </div>
   </div>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      
-      <!-- Left Content -->
-      <div class="hero-content">
-        <span class="eyebrow">Interactive Job-Ready IT Training</span>
-        <h1>Master Job-Ready <span class="text-gradient">IT Skills</span> with Hands-on Labs</h1>
-        <p class="lede">Step-by-step career roadmaps designed around real enterprise roles. Practice in browser-based environments with live servers — no complex configurations needed.</p>
+  <!-- TOP NAVBAR -->
+  <nav class="glass-panel border-b border-slate-200/80 py-3 px-6 md:px-12 sticky top-0 z-50 bg-white/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="index.html" class="flex items-center">
+          <img src="assest/logo.png" alt="Tech4D Logo" style="height: 58px; width: auto; object-fit: contain;">
+        </a>
+      </div>
+
+      <!-- Navigation Links & Action Buttons -->
+      <div class="flex items-center space-x-8">
+        <div class="flex items-center space-x-6 md:space-x-8 text-sm font-semibold text-slate-700">
+          <a href="#programs-section" class="nav-link hover:text-blue-600 transition">Programs</a>
+          <a href="#courses-section" class="nav-link hover:text-blue-600 transition">Courses</a>
+          <a href="#community-section" class="nav-link hover:text-blue-600 transition">Community</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <a href="#" onclick="openPricingModal(event)" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl btn-glow transition cursor-pointer">Create Account</a>
+          <a href="login.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold px-5 py-2.5 rounded-xl transition">Log In</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-br from-white via-sky-50/50 to-blue-50/80 rounded-3xl p-8 md:p-12 border border-slate-200/80 shadow-sm relative overflow-hidden">
+      <div class="grid md:grid-cols-12 gap-8 items-center relative z-10">
+        <!-- Text Left -->
+        <div class="md:col-span-7 space-y-6">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100/80 text-blue-700 border border-blue-200">
+            <i class="fa-solid fa-sparkles mr-1.5 text-[10px]"></i> Practical Technology Training
+          </span>
+          <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
+            Build job-ready IT skills with guided courses, labs, and certificates
+          </h1>
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+            Follow structured Certificate Programs, take focused IT Courses, practice in guided labs, and get lesson-grounded support as you move from fundamentals to real workplace skills.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#" onclick="openPricingModal(event)" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-6 py-3.5 rounded-xl btn-glow transition cursor-pointer">Create Free Account</a>
+            <a href="program.html" class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 text-sm font-bold px-6 py-3.5 rounded-xl shadow-sm hover:border-slate-300 transition">Explore Certificate Programs</a>
+          </div>
+          <div class="pt-1">
+            <a href="login.html" class="text-xs text-blue-600 hover:underline font-semibold flex items-center">
+              Already a member? Log In <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
+            </a>
+          </div>
+          <div class="flex flex-wrap gap-6 text-xs font-semibold text-slate-600 pt-4 border-t border-slate-200/80">
+            <span class="flex items-center"><i class="fa-solid fa-circle-check text-blue-600 mr-2 text-sm"></i> Start with free access</span>
+            <span class="flex items-center"><i class="fa-solid fa-circle-check text-blue-600 mr-2 text-sm"></i> Learn in a clear sequence</span>
+            <span class="flex items-center"><i class="fa-solid fa-circle-check text-blue-600 mr-2 text-sm"></i> Practice job-ready skills</span>
+          </div>
+        </div>
+
+        <!-- Graphic Right -->
+        <div class="md:col-span-5 flex flex-col items-center justify-center relative mt-6 md:mt-0">
+          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border border-dashed border-blue-300 flex items-center justify-center relative bg-white/60 backdrop-blur-md shadow-lg">
+            <div class="w-48 h-48 rounded-full border border-blue-200 flex items-center justify-center relative">
+              <div class="w-24 h-24 bg-gradient-to-tr from-slate-900 to-slate-800 text-white rounded-full flex items-center justify-center text-xl font-black shadow-xl ring-4 ring-blue-500/10">
+                JSS
+              </div>
+            </div>
+            <!-- Node Orbit Badges -->
+            <div class="absolute top-2 right-2 bg-white text-xs font-bold px-3 py-1.5 rounded-full border border-slate-200 shadow-md flex items-center gap-2 animate-float">
+              <i class="fa-solid fa-wand-magic-sparkles text-blue-600"></i> AI Help
+            </div>
+            <div class="absolute top-12 left-0 bg-white text-xs font-bold px-3 py-1.5 rounded-full border border-slate-200 shadow-md flex items-center gap-2 animate-float-delayed">
+              <i class="fa-solid fa-lock text-cyan-600"></i> Labs
+            </div>
+            <div class="absolute bottom-12 right-0 bg-white text-xs font-bold px-3 py-1.5 rounded-full border border-slate-200 shadow-md flex items-center gap-2 animate-float-delayed">
+              <i class="fa-solid fa-layer-group text-blue-600"></i> Programs
+            </div>
+            <div class="absolute bottom-4 left-6 bg-white text-xs font-bold px-3 py-1.5 rounded-full border border-slate-200 shadow-md flex items-center gap-2 animate-float">
+              <i class="fa-solid fa-play text-blue-600 text-[10px]"></i> Courses
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <h4 class="text-sm font-bold text-slate-900">One connected learning path</h4>
+            <p class="text-xs text-slate-500 font-medium mt-0.5">60,000+ members from 60+ countries</p>
+            <span class="inline-block bg-blue-100/60 text-blue-800 text-[11px] font-bold px-3 py-1 rounded-full mt-2">Learn → Practice → Apply</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <section class="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100">
+      <div class="p-2">
+        <div class="text-2xl md:text-3xl font-extrabold text-slate-900">11</div>
+        <div class="text-[11px] font-bold tracking-wider text-slate-500 uppercase mt-1">Certificate Programs</div>
+      </div>
+      <div class="p-2">
+        <div class="text-2xl md:text-3xl font-extrabold text-slate-900">34</div>
+        <div class="text-[11px] font-bold tracking-wider text-slate-500 uppercase mt-1">Modern Courses</div>
+      </div>
+      <div class="p-2">
+        <div class="text-2xl md:text-3xl font-extrabold text-slate-900">3,200</div>
+        <div class="text-[11px] font-bold tracking-wider text-slate-500 uppercase mt-1">Course Lessons</div>
+      </div>
+      <div class="p-2">
+        <div class="text-2xl md:text-3xl font-extrabold text-slate-900 flex items-center justify-center gap-1.5">
+          4.8 <i class="fa-solid fa-star text-amber-400 text-lg"></i>
+        </div>
+        <div class="text-[11px] font-bold tracking-wider text-slate-500 uppercase mt-1">Across 416 Ratings</div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATE PROGRAMS SECTION -->
+    <section id="programs-section" class="space-y-6 scroll-mt-24">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200/60 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Guided Career Paths</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">Choose your Certificate Program</h2>
+        </div>
+        <p class="text-xs text-slate-500 max-w-md leading-relaxed">
+          Follow a recommended Course sequence built around a practical technology career direction.
+        </p>
+      </div>
+
+      <!-- Program Cards Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="hero-actions">
-          <a href="#" onclick="openPricingModal(event)" class="btn btn-primary">Start Learning &rarr;</a>
-          <a href="#programs" class="btn btn-secondary">
-            Explore Programs
-          </a>
-        </div>
-        
-        <div class="hero-bullets">
-          <div class="bullet-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6F13EC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            Hands-on Active Directory & Cloud labs
-          </div>
-          <div class="bullet-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6F13EC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            Complete job-aligned certificate pathways
-          </div>
-          <div class="bullet-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6F13EC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            24/7 self-paced access on any browser
-          </div>
-        </div>
-      </div>
-      
-      <!-- Right Visual Mockup -->
-      <div class="browser-wrapper" id="preview">
-        <!-- <div class="browser-header">
-          <div class="browser-dots">
-            <span class="browser-dot red"></span>
-            <span class="browser-dot yellow"></span>
-            <span class="browser-dot green"></span>
-          </div>
-          <div class="browser-address">https://jobskillshare.org/lab/active-directory-dns</div>
-        </div> -->
-        <div class="browser-content">
-          <img src="assest\blue_jss_web.png" alt="JobSkillShare Live IT Laboratory Interface Dashboard Mockup" width="600" height="450" loading="eager">
-        </div>
-      </div>
-      
-    </div>
-  </section>
-
-
-  <!-- Learning Tracks / Programs -->
-  <section class="programs-section" id="programs">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Career Path Programs</span>
-        <h2>Choose Your Specialization</h2>
-        <p>Comprehensive, job-aligned training pathways designed to take you from beginner to hired in your dream IT role.</p>
-      </div>
-      
-      <div class="program-grid">
-
-        <!-- Track 1: IT Support -->
-        <div class="program-card">
-          <div class="card-thumb">
-            <img src="card_it_support.jpg" alt="IT Support Program">
-            <div class="card-thumb-overlay"></div>
-          </div>
-          <div class="card-top-row">
-            <span class="level-badge beginner">Beginner</span>
-            <span class="hours-badge">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              ~98 hrs
-            </span>
-          </div>
-          <div class="card-body">
-            <h3>Modern IT Support Certificate Program</h3>
-            <p class="card-desc">Build practical help desk and IT support skills through a guided sequence of 5 Courses covering real-world troubleshooting.</p>
-            <div class="card-topics">
-              <span class="card-topic-chip">OS</span>
-              <span class="card-topic-chip">Hardware</span>
-              <span class="card-topic-chip">Active Directory</span>
-              <span class="card-topic-chip">Microsoft 365</span>
-              <span class="card-topic-chip">Troubleshooting</span>
-            </div>
-            <div class="card-footer-row">
-              <div class="card-stats"><span>5</span> Courses · <span>419</span> Lessons</div>
-              <a href="program-details.html" class="btn-card">Open ↗</a>
-            </div>
-          </div>
-          <div class="card-body-pad"></div>
-        </div>
-
-        <!-- Track 2: Systems Engineer -->
-        <div class="program-card">
-          <div class="card-thumb">
-            <img src="card_systems_engineer.jpg" alt="Systems Engineer Program">
-            <div class="card-thumb-overlay"></div>
-          </div>
-          <div class="card-top-row">
-            <span class="level-badge intermediate">Intermediate</span>
-            <span class="hours-badge">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              ~110 hrs
-            </span>
-          </div>
-          <div class="card-body">
-            <h3>Systems Engineer Certificate Program</h3>
-            <p class="card-desc">Master server administration, networking, and infrastructure management for junior SysAdmin and Systems Engineer roles.</p>
-            <div class="card-topics">
-              <span class="card-topic-chip">Windows Server</span>
-              <span class="card-topic-chip">Networking</span>
-              <span class="card-topic-chip">Linux</span>
-              <span class="card-topic-chip">PowerShell</span>
-            </div>
-            <div class="card-footer-row">
-              <div class="card-stats"><span>6</span> Courses · <span>380+</span> Lessons</div>
-              <a href="#" class="btn-card">Open ↗</a>
-            </div>
-          </div>
-          <div class="card-body-pad"></div>
-        </div>
-
-        <!-- Track 3: Cloud Engineer -->
-        <div class="program-card">
-          <div class="card-thumb">
-            <img src="card_cloud_engineer.jpg" alt="Cloud Engineer Program">
-            <div class="card-thumb-overlay"></div>
-          </div>
-          <div class="card-top-row">
-            <span class="level-badge intermediate">Intermediate</span>
-            <span class="hours-badge">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              ~110+ hrs
-            </span>
-          </div>
-          <div class="card-body">
-            <h3>Cloud Engineer Certificate Program</h3>
-            <p class="card-desc">Deploy and manage cloud infrastructure on Azure and AWS. Build skills for Cloud Admin and Cloud Specialist roles.</p>
-            <div class="card-topics">
-              <span class="card-topic-chip">Azure</span>
-              <span class="card-topic-chip">AWS</span>
-              <span class="card-topic-chip">Linux</span>
-              <span class="card-topic-chip">Automation</span>
-            </div>
-            <div class="card-footer-row">
-              <div class="card-stats"><span>5</span> Courses · <span>350+</span> Lessons</div>
-              <a href="#" class="btn-card">Open ↗</a>
-            </div>
-          </div>
-          <div class="card-body-pad"></div>
-        </div>
-
-        <!-- Track 4: Cybersecurity -->
-        <div class="program-card">
-          <div class="card-thumb">
-            <img src="card_cybersecurity.jpg" alt="Cybersecurity Program">
-            <div class="card-thumb-overlay"></div>
-          </div>
-          <div class="card-top-row">
-            <span class="level-badge intermediate">Intermediate</span>
-            <span class="hours-badge">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              ~70+ hrs
-            </span>
-          </div>
-          <div class="card-body">
-            <h3>Cybersecurity Analyst Certificate Program</h3>
-            <p class="card-desc">Build practical cybersecurity skills in Security+ 701, Risk Management, and Incident Response through 5 Courses.</p>
-            <div class="card-topics">
-              <span class="card-topic-chip">Security+ 701</span>
-              <span class="card-topic-chip">Risk Management</span>
-              <span class="card-topic-chip">Incident Response</span>
-              <span class="card-topic-chip">SOC Labs</span>
-            </div>
-            <div class="card-footer-row">
-              <div class="card-stats"><span>5</span> Courses · <span>408</span> Lessons</div>
-              <a href="#" class="btn-card">Open ↗</a>
-            </div>
-          </div>
-          <div class="card-body-pad"></div>
-        </div>
-
-        <!-- Track 5: AI Engineering -->
-        <div class="program-card">
-          <div class="card-thumb">
-            <img src="card_ai_engineering.jpg" alt="AI Engineering Program">
-            <div class="card-thumb-overlay"></div>
-          </div>
-          <div class="card-top-row">
-            <span class="level-badge advanced">Advanced</span>
-            <span class="hours-badge">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              ~180+ hrs
-            </span>
-          </div>
-          <div class="card-body">
-            <h3>AI Engineering & Automation Certificate</h3>
-            <p class="card-desc">Master Python, GenAI, automation agents and IoT to launch a career as a Jr AI Engineer or Automation Engineer.</p>
-            <div class="card-topics">
-              <span class="card-topic-chip">Python</span>
-              <span class="card-topic-chip">GenAI</span>
-              <span class="card-topic-chip">Agents</span>
-              <span class="card-topic-chip">Data</span>
-              <span class="card-topic-chip">IoT</span>
-            </div>
-            <div class="card-footer-row">
-              <div class="card-stats"><span>8</span> Courses · <span>500+</span> Lessons</div>
-              <a href="#" class="btn-card">Open ↗</a>
-            </div>
-          </div>
-          <div class="card-body-pad"></div>
-        </div>
-
-        <!-- Track 6: Freelancer -->
-        <div class="program-card">
-          <div class="card-thumb">
-            <img src="card_freelancer.jpg" alt="Freelancer Certificate Program">
-            <div class="card-thumb-overlay"></div>
-          </div>
-          <div class="card-top-row">
-            <span class="level-badge beginner">Beginner</span>
-            <span class="hours-badge">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              20+ hrs
-            </span>
-          </div>
-          <div class="card-body">
-            <h3>Freelancer Certificate Program</h3>
-            <p class="card-desc">Start earning online on Fiverr and Upwork. Covers profile setup, gig creation, client communication, and pro delivery.</p>
-            <div class="card-topics">
-              <span class="card-topic-chip">Profiles</span>
-              <span class="card-topic-chip">Gigs</span>
-              <span class="card-topic-chip">Client Comms</span>
-              <span class="card-topic-chip">Pro Delivery</span>
-            </div>
-            <div class="card-footer-row">
-              <div class="card-stats"><span>4</span> Courses · <span>120+</span> Lessons</div>
-              <a href="#" class="btn-card">Open ↗</a>
-            </div>
-          </div>
-          <div class="card-body-pad"></div>
-        </div>
-
-        <!-- Track 7: Web Development (Coming Soon) -->
-        <div class="program-card coming-soon">
-          <div class="card-thumb coming-soon-thumb">
-            <div style="display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;gap:8px;color:#94A3B8;">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-              <span style="font-size:11px;font-weight:600;letter-spacing:1px;">COMING SOON</span>
-            </div>
-          </div>
-          <div class="card-top-row">
-            <span class="level-badge beginner" style="opacity:0.5;">Beginner</span>
-            <span class="hours-badge" style="opacity:0.5;">TBD</span>
-          </div>
-          <div class="card-body">
-            <h3 style="color:#94A3B8;">Web Development</h3>
-            <p class="card-desc" style="color:#CBD5E1;">Frontend & Backend roles, freelancing, junior developer jobs. HTML, CSS, JavaScript, APIs, Git.</p>
-            <div class="card-topics">
-              <span class="card-topic-chip" style="opacity:0.5;">HTML</span>
-              <span class="card-topic-chip" style="opacity:0.5;">CSS</span>
-              <span class="card-topic-chip" style="opacity:0.5;">JavaScript</span>
-            </div>
-            <div class="card-footer-row">
-              <div class="card-stats" style="opacity:0.5;">Coming Soon</div>
-              <span class="btn-card" style="opacity:0.4;cursor:not-allowed;">Soon</span>
-            </div>
-          </div>
-          <div class="card-body-pad"></div>
-        </div>
-
-        <!-- Track 8: Data Science (Coming Soon) -->
-        <div class="program-card coming-soon">
-          <div class="card-thumb coming-soon-thumb">
-            <div style="display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;gap:8px;color:#94A3B8;">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-              <span style="font-size:11px;font-weight:600;letter-spacing:1px;">COMING SOON</span>
-            </div>
-          </div>
-          <div class="card-top-row">
-            <span class="level-badge intermediate" style="opacity:0.5;">Intermediate</span>
-            <span class="hours-badge" style="opacity:0.5;">TBD</span>
-          </div>
-          <div class="card-body">
-            <h3 style="color:#94A3B8;">Data Science</h3>
-            <p class="card-desc" style="color:#CBD5E1;">Data Analyst, BI, Python data projects, and entry data roles. Python, Pandas, SQL, Visualization.</p>
-            <div class="card-topics">
-              <span class="card-topic-chip" style="opacity:0.5;">Python</span>
-              <span class="card-topic-chip" style="opacity:0.5;">SQL</span>
-              <span class="card-topic-chip" style="opacity:0.5;">ML basics</span>
-            </div>
-            <div class="card-footer-row">
-              <div class="card-stats" style="opacity:0.5;">Coming Soon</div>
-              <span class="btn-card" style="opacity:0.4;cursor:not-allowed;">Soon</span>
-            </div>
-          </div>
-          <div class="card-body-pad"></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Outcomes: Stats & Testimonials Combined -->
-  <section class="outcomes-section" id="outcomes">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Real Results</span>
-        <h2>Proven Career Switches</h2>
-        <p>See how thousands of self-paced learners went from non-tech jobs to professional IT careers.</p>
-      </div>
-      
-      <!-- Stats Board -->
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-num">50,000+</div>
-          <div class="stat-label">Active Global Members</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">95%</div>
-          <div class="stat-label">Lab Completion Success Rate</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">10,000+</div>
-          <div class="stat-label">Verified IT Career Placements</div>
-        </div>
-      </div>
-      
-      <!-- Testimonials Carousel -->
-      <div class="testimonial-carousel" id="testimonials">
-        <div class="testimonial-track" id="testimonial-track">
-          
-          <div class="testimonial-card color-1">
-            <div class="t-header">
-              <div class="t-avatar av-1">ZN</div>
-              <div class="t-meta">
-                <h4>Zeeshan B. Nasir</h4>
-                <span>IT Support Technician</span>
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-amber-300 shadow-sm hover-card flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-sm shadow-sm">
+                <i class="fa-solid fa-trophy"></i>
               </div>
+              <span class="bg-gradient-to-r from-amber-500 to-amber-600 text-white font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">Most Popular</span>
             </div>
-            <p class="t-quote">"The lab console is exactly like what I face in my daily job now. Best investment for career change."</p>
-          </div>
-          
-          <div class="testimonial-card color-2">
-            <div class="t-header">
-              <div class="t-avatar av-2">MR</div>
-              <div class="t-meta">
-                <h4>Manjinder S. Rahal</h4>
-                <span>Systems Engineer</span>
-              </div>
+            <div>
+              <span class="inline-block bg-blue-50 text-blue-700 font-bold text-[10px] px-2.5 py-0.5 rounded-md uppercase tracking-wide">Beginner to Intermediate</span>
+              <h3 class="font-bold text-slate-900 text-base mt-2 leading-snug">IT Support Certificate Program</h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Build practical skills across DNS, DHCP, Active Directory through a guided sequence of 5 Courses.
+              </p>
             </div>
-            <p class="t-quote">"The active directory tasks in systems engineer roadmap helped me pass my technical interview with 100% confidence."</p>
-          </div>
-          
-          <div class="testimonial-card color-3">
-            <div class="t-header">
-              <div class="t-avatar av-3">HW</div>
-              <div class="t-meta">
-                <h4>Hadi Wali</h4>
-                <span>SOC Analyst</span>
-              </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2 py-0.5 rounded-md">DNS</span>
+              <span class="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2 py-0.5 rounded-md">DHCP</span>
+              <span class="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2 py-0.5 rounded-md">Active Directory</span>
             </div>
-            <p class="t-quote">"No other platform gives you live servers and mentor guidance in one roadmap. Landed a SOC job in 6 months."</p>
           </div>
-
-          <div class="testimonial-card color-4">
-            <div class="t-header">
-              <div class="t-avatar av-4" style="background-color: #8B5CF6;">JS</div>
-              <div class="t-meta">
-                <h4>Jessica Smith</h4>
-                <span>Cloud Administrator</span>
-              </div>
-            </div>
-            <p class="t-quote">"Transitioning to Azure was seamless thanks to the practical hands-on labs. Highly recommended for aspiring cloud engineers!"</p>
+          <div class="pt-5 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <p class="text-[11px] text-slate-400 font-semibold">5 Courses • 419 Lessons</p>
+            <a href="program-details.html" class="text-xs text-blue-600 font-bold hover:text-blue-700 flex items-center group">
+              Roadmap <i class="fa-solid fa-arrow-right ml-1 text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </a>
           </div>
-
-          <div class="testimonial-card color-5">
-            <div class="t-header">
-              <div class="t-avatar av-5" style="background-color: #10B981;">DA</div>
-              <div class="t-meta">
-                <h4>David Anderson</h4>
-                <span>Network Engineer</span>
-              </div>
-            </div>
-            <p class="t-quote">"The networking modules are top-notch. I finally understood VLANs and routing protocols perfectly."</p>
-          </div>
-          
         </div>
 
-        <div class="carousel-controls">
-          <button class="carousel-btn" id="t-prev" aria-label="Previous Testimonial">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-          <button class="carousel-btn" id="t-next" aria-label="Next Testimonial">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-amber-300 shadow-sm hover-card flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-sm shadow-sm">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <span class="bg-gradient-to-r from-amber-500 to-amber-600 text-white font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">Most Popular</span>
+            </div>
+            <div>
+              <span class="inline-block bg-blue-50 text-blue-700 font-bold text-[10px] px-2.5 py-0.5 rounded-md uppercase tracking-wide">Intermediate</span>
+              <h3 class="font-bold text-slate-900 text-base mt-2 leading-snug">Cybersecurity Analyst Certificate Program</h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Build practical cybersecurity skills in Security+ 701, Risk Management, Incident Response through a guided sequence of 5 Courses.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2 py-0.5 rounded-md">Security+ 701</span>
+              <span class="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2 py-0.5 rounded-md">Risk Management</span>
+            </div>
+          </div>
+          <div class="pt-5 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <p class="text-[11px] text-slate-400 font-semibold">5 Courses • 408 Lessons</p>
+            <a href="program.html" class="text-xs text-blue-600 font-bold hover:text-blue-700 flex items-center group">
+              Roadmap <i class="fa-solid fa-arrow-right ml-1 text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover-card flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-sm shadow-sm">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <div>
+              <span class="inline-block bg-blue-50 text-blue-700 font-bold text-[10px] px-2.5 py-0.5 rounded-md uppercase tracking-wide">Intermediate</span>
+              <h3 class="font-bold text-slate-900 text-base mt-2 leading-snug">Systems Engineer Certificate Program</h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Build practical skills across Cisco IOS, Wireshark, Windows Server through a guided sequence of 5 Courses.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2 py-0.5 rounded-md">Cisco IOS</span>
+              <span class="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2 py-0.5 rounded-md">Wireshark</span>
+            </div>
+          </div>
+          <div class="pt-5 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <p class="text-[11px] text-slate-400 font-semibold">5 Courses • 589 Lessons</p>
+            <a href="program.html" class="text-xs text-blue-600 font-bold hover:text-blue-700 flex items-center group">
+              Roadmap <i class="fa-solid fa-arrow-right ml-1 text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover-card flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-sm shadow-sm">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <div>
+              <span class="inline-block bg-blue-50 text-blue-700 font-bold text-[10px] px-2.5 py-0.5 rounded-md uppercase tracking-wide">Intermediate to Advanced</span>
+              <h3 class="font-bold text-slate-900 text-base mt-2 leading-snug">Azure Cloud Engineer Certificate Program</h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Build practical skills across Microsoft Azure, Azure Active Directory through a guided sequence of 2 Courses.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2 py-0.5 rounded-md">Microsoft Azure</span>
+              <span class="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2 py-0.5 rounded-md">Azure AD</span>
+            </div>
+          </div>
+          <div class="pt-5 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <p class="text-[11px] text-slate-400 font-semibold">2 Courses • 292 Lessons</p>
+            <a href="program.html" class="text-xs text-blue-600 font-bold hover:text-blue-700 flex items-center group">
+              Roadmap <i class="fa-solid fa-arrow-right ml-1 text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center pt-4">
+        <a href="program.html#programs" class="inline-block bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-bold text-xs px-6 py-3 rounded-xl shadow-sm transition hover:bg-slate-50">View All Certificate Programs</a>
+      </div>
+    </section>
+
+    <!-- EXPLORE INDIVIDUAL IT COURSES SECTION -->
+    <section id="courses-section" class="bg-slate-100/70 rounded-3xl p-6 md:p-10 border border-slate-200/80 space-y-8 scroll-mt-24">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Focused Skill Training</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-0.5">Explore individual IT Courses</h2>
+        </div>
+        <p class="text-xs text-slate-500 max-w-sm">Choose a focused Course when you want to strengthen one technology or workplace skill.</p>
+      </div>
+
+      <!-- Courses Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Course 1 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm flex flex-col justify-between hover-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                <i class="fa-solid fa-circle-check text-[9px]"></i> FREE COURSE
+              </span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm leading-snug">Modern IT Support Training: Part 1 | A+ (220-1102)</h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Setting up workstations</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Software Installation</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Network connectivity</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
+            <p class="text-[11px] text-slate-400 font-semibold">22 hours 14 min • 110 Lessons</p>
+            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm flex flex-col justify-between hover-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                <i class="fa-solid fa-circle-check text-[9px]"></i> FREE COURSE
+              </span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm leading-snug">Modern IT Support Training: Part 2 | A+ (220-1101)</h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Basic networking</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Troubleshooting</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Understanding computer components</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
+            <p class="text-[11px] text-slate-400 font-semibold">12 hours 0 min • 95 Lessons</p>
+            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm flex flex-col justify-between hover-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                <i class="fa-solid fa-circle-check text-[9px]"></i> FREE COURSE
+              </span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm leading-snug">IT Support: Active Directory and Tech Skills</h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Active Directory management</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">User and group configuration</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Group policy implementation</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
+            <p class="text-[11px] text-slate-400 font-semibold">15 hours 0 min • 119 Lessons</p>
+            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm flex flex-col justify-between hover-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                <i class="fa-solid fa-circle-check text-[9px]"></i> FREE COURSE
+              </span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm leading-snug">IT Support: People Skills for IT Professionals</h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Professional communication</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Listening skills</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Conflict resolution</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
+            <p class="text-[11px] text-slate-400 font-semibold">5 hours 0 min • 26 Lessons</p>
+            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+          </div>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm flex flex-col justify-between hover-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                <i class="fa-solid fa-circle-check text-[9px]"></i> FREE COURSE
+              </span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm leading-snug">IT Support Resume, Applying for Jobs and Communities</h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Resume Building</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Job Search Strategies</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Interview Preparation</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
+            <p class="text-[11px] text-slate-400 font-semibold">4 hours 0 min • 28 Lessons</p>
+            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+          </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm flex flex-col justify-between hover-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                <i class="fa-solid fa-circle-check text-[9px]"></i> FREE COURSE
+              </span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm leading-snug">Advance IT Support | Modern Desktop Administrator</h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Installing Windows 10</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Upgrading to Windows 10</span>
+              <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded">Configuring Windows updates</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
+            <p class="text-[11px] text-slate-400 font-semibold">28 hours 0 min • 498 Lessons</p>
+            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center pt-2">
+        <a href="program.html#courses" class="inline-block bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-bold text-xs px-6 py-3 rounded-xl shadow-sm transition hover:bg-slate-50">View All Individual Courses</a>
+      </div>
+    </section>
+
+    <!-- PREMIUM MEMBER FEATURES SECTION -->
+    <section class="bg-white rounded-3xl p-6 md:p-10 border border-slate-200/80 space-y-6 shadow-sm">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Premium Member Features</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-0.5">More ways to build job-ready skills</h2>
+        </div>
+        <p class="text-xs text-slate-500 max-w-sm">Combine structured learning with practice, completion recognition, and targeted AI support.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Feature 1 -->
+        <div class="bg-slate-50/80 rounded-2xl p-5 border border-slate-200/60 relative">
+          <span class="absolute top-4 right-4 bg-amber-100 text-amber-800 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Premium</span>
+          <div class="w-8 h-8 rounded-lg bg-blue-100/70 text-blue-600 flex items-center justify-center text-xs mb-3">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Course Certificates</h4>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">Recognize completed training and learning progress.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-slate-50/80 rounded-2xl p-5 border border-slate-200/60 relative">
+          <span class="absolute top-4 right-4 bg-amber-100 text-amber-800 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Premium</span>
+          <div class="w-8 h-8 rounded-lg bg-blue-100/70 text-blue-600 flex items-center justify-center text-xs mb-3">
+            <i class="fa-solid fa-terminal"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Hands-On Labs</h4>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">Practice technical skills in guided environments.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-slate-50/80 rounded-2xl p-5 border border-slate-200/60 relative">
+          <span class="absolute top-4 right-4 bg-amber-100 text-amber-800 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Premium</span>
+          <div class="w-8 h-8 rounded-lg bg-blue-100/70 text-blue-600 flex items-center justify-center text-xs mb-3">
+            <i class="fa-solid fa-sparkles"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">AI Lesson Tutor</h4>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">Ask lesson-grounded questions in supported Units.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="bg-slate-50/80 rounded-2xl p-5 border border-slate-200/60 relative">
+          <span class="absolute top-4 right-4 bg-amber-100 text-amber-800 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Premium</span>
+          <div class="w-8 h-8 rounded-lg bg-blue-100/70 text-blue-600 flex items-center justify-center text-xs mb-3">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">AI Career Tools</h4>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">Get guided support for career preparation.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Alumni Success Section -->
-  <section class="alumni-section" id="alumni">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Success Stories</span>
-        <h2>Our Alumni Work At Top Companies</h2>
-        <p>Join thousands of successful professionals who advanced their IT careers.</p>
+      <div>
+        <a href="#" onclick="openPricingModal(event)" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-6 py-3 rounded-xl transition cursor-pointer">Explore Membership Options</a>
       </div>
-      
-      <div class="alumni-grid">
-        <div class="alumni-card">
-          <img src="alumni-1.jpg" alt="Zeeshan B. Nasir" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Zeeshan B. Nasir</h3>
-            <span class="alumni-title">Information Technology Technician</span>
-            <span class="alumni-company">All Native Group</span>
-          </div>
+    </section>
+
+    <!-- TESTIMONIALS SLIDER SECTION -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Learner Experiences</span>
+          <h2 class="text-2xl font-extrabold text-slate-900">What learners say</h2>
         </div>
-        <div class="alumni-card">
-          <img src="alumni-2.jpg" alt="Manjinder Singh Rahal" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Manjinder Singh Rahal</h3>
-            <span class="alumni-title">Information Technology Specialist</span>
-            <span class="alumni-company">Woodland Joint USD</span>
-          </div>
-        </div>
-        <div class="alumni-card">
-          <img src="alumni-3.jpg" alt="Hadi Wali" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Hadi Wali</h3>
-            <span class="alumni-title">Cyber Security Engineer</span>
-            <span class="alumni-company">TikTok</span>
-          </div>
-        </div>
-        <div class="alumni-card">
-          <img src="alumni-4.jpg" alt="Bradley Williams" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Bradley Williams</h3>
-            <span class="alumni-title">Systems Administrator</span>
-            <span class="alumni-company">RadNet</span>
-          </div>
-        </div>
-        <div class="alumni-card">
-          <img src="alumni-5.jpg" alt="Haifa Shalabi" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Haifa Shalabi</h3>
-            <span class="alumni-title">System Administrator</span>
-            <span class="alumni-company">HR Service Partners</span>
-          </div>
-        </div>
-        <div class="alumni-card">
-          <img src="alumni-6.jpg" alt="Trung Nguyen" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Trung Nguyen</h3>
-            <span class="alumni-title">Technical Support Specialist</span>
-            <span class="alumni-company">BD</span>
-          </div>
-        </div>
-        <div class="alumni-card">
-          <img src="alumni-7.jpg" alt="Nelson J." class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Nelson J.</h3>
-            <span class="alumni-title">Microsoft 365 Support Engineer</span>
-            <span class="alumni-company">Microsoft</span>
-          </div>
-        </div>
-        <div class="alumni-card">
-          <img src="alumni-8.jpg" alt="Yan Lyu" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Yan Lyu</h3>
-            <span class="alumni-title">IT Support Engineer</span>
-            <span class="alumni-company">Amazon Web Services (AWS)</span>
-          </div>
-        </div>
-        <div class="alumni-card">
-          <img src="alumni-9.jpg" alt="Desktop Deployment Specialist" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Desktop Deployment Specialist</h3>
-            <span class="alumni-title">Product Specialist</span>
-            <span class="alumni-company">Computacenter US</span>
-          </div>
-        </div>
-        <div class="alumni-card">
-          <img src="alumni-10.jpg" alt="Mario Potsis" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Mario Potsis</h3>
-            <span class="alumni-title">Desktop Support Engineer</span>
-            <span class="alumni-company">A&O IT Group</span>
-          </div>
-        </div>
-        <div class="alumni-card">
-          <img src="alumni-11.jpg" alt="Reetika Dhiman" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">Reetika Dhiman</h3>
-            <span class="alumni-title">IT Specialist</span>
-            <span class="alumni-company">Knix</span>
-          </div>
-        </div>
-        <div class="alumni-card">
-          <img src="alumni-12.jpg" alt="James Triplett II" class="alumni-img">
-          <div class="alumni-info">
-            <h3 class="alumni-name">James Triplett II</h3>
-            <span class="alumni-title">IT Professional</span>
-            <span class="alumni-company">PeopleConnect</span>
+        <div class="flex items-center gap-3">
+          <span class="hidden sm:inline text-xs text-slate-500 font-medium">4.8 <i class="fa-solid fa-star text-amber-400"></i> from 417 Course ratings</span>
+          <div class="flex items-center gap-2">
+            <button id="index-prev-btn" class="w-9 h-9 rounded-full border border-slate-300 bg-white hover:bg-blue-600 hover:text-white hover:border-blue-600 text-slate-700 flex items-center justify-center text-xs transition shadow-sm cursor-pointer" aria-label="Previous Review">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="index-next-btn" class="w-9 h-9 rounded-full border border-slate-300 bg-white hover:bg-blue-600 hover:text-white hover:border-blue-600 text-slate-700 flex items-center justify-center text-xs transition shadow-sm cursor-pointer" aria-label="Next Review">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Combined Enroll CTA Panel -->
-  <section class="enroll-section" id="enroll">
-    <div class="container">
-      <div class="enroll-panel">
-        <div class="enroll-grid">
-          
-          <div class="enroll-content">
-            <h2>Ready to launch your IT career?</h2>
-            <p>Select your roadmap, access real enterprise hardware through browser-based labs, and get support from IT mentors.</p>
+      <!-- Slider Container -->
+      <div class="overflow-hidden relative rounded-2xl py-1">
+        <div id="index-reviews-track" class="flex gap-6 transition-transform duration-500 ease-out">
+          <!-- Review 1 -->
+          <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 bg-slate-900 text-white rounded-3xl p-6 text-center flex flex-col justify-between space-y-4 relative overflow-hidden shadow-xl border border-slate-800">
+            <div class="flex justify-center gap-1 text-amber-400 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="text-base font-bold tracking-tight">"I recommended this platform to all my friends. The labs are incredibly realistic."</blockquote>
             
-            <div class="enroll-trust-bar">
-              <div class="enroll-trust-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-                Secure 256-bit payment encryption
-              </div>
-              <div class="enroll-trust-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                Cancel subscription anytime
+            <div class="inline-flex items-center justify-center gap-3 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-700/60 mx-auto">
+              <div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold text-white">L</div>
+              <div class="text-left text-xs">
+                <p class="font-bold text-slate-200">Liam M.</p>
+                <p class="text-[10px] text-slate-400">IT Support Specialist</p>
               </div>
             </div>
           </div>
-          
-          <div class="enroll-action-panel">
-            <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="background: var(--white); color: var(--navy); box-shadow: none;">Start Free Trial</a>
-            <div class="enroll-badge-row">
-              <span class="enroll-sec-badge">14-Day Free Period</span>
-              <span class="enroll-sec-badge">Cancel in 1 click</span>
+
+          <!-- Review 2 -->
+          <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 bg-slate-900 text-white rounded-3xl p-6 text-center flex flex-col justify-between space-y-4 relative overflow-hidden shadow-xl border border-slate-800">
+            <div class="flex justify-center gap-1 text-amber-400 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="text-base font-bold tracking-tight">"The structured career paths helped me land my first Helpdesk job in 3 months."</blockquote>
+            
+            <div class="inline-flex items-center justify-center gap-3 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-700/60 mx-auto">
+              <div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold text-white">S</div>
+              <div class="text-left text-xs">
+                <p class="font-bold text-slate-200">Sarah K.</p>
+                <p class="text-[10px] text-slate-400">Helpdesk Analyst</p>
+              </div>
             </div>
           </div>
-          
+
+          <!-- Review 3 -->
+          <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 bg-slate-900 text-white rounded-3xl p-6 text-center flex flex-col justify-between space-y-4 relative overflow-hidden shadow-xl border border-slate-800">
+            <div class="flex justify-center gap-1 text-amber-400 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="text-base font-bold tracking-tight">"Best Active Directory training I've ever taken. Straight to the point and practical."</blockquote>
+            
+            <div class="inline-flex items-center justify-center gap-3 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-700/60 mx-auto">
+              <div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold text-white">D</div>
+              <div class="text-left text-xs">
+                <p class="font-bold text-slate-200">David R.</p>
+                <p class="text-[10px] text-slate-400">Systems Administrator</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 bg-slate-900 text-white rounded-3xl p-6 text-center flex flex-col justify-between space-y-4 relative overflow-hidden shadow-xl border border-slate-800">
+            <div class="flex justify-center gap-1 text-amber-400 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="text-base font-bold tracking-tight">"I was able to pass my Security+ exam after completing the Cybersecurity path."</blockquote>
+            
+            <div class="inline-flex items-center justify-center gap-3 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-700/60 mx-auto">
+              <div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold text-white">E</div>
+              <div class="text-left text-xs">
+                <p class="font-bold text-slate-200">Elena V.</p>
+                <p class="text-[10px] text-slate-400">Security Analyst</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 bg-slate-900 text-white rounded-3xl p-6 text-center flex flex-col justify-between space-y-4 relative overflow-hidden shadow-xl border border-slate-800">
+            <div class="flex justify-center gap-1 text-amber-400 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="text-base font-bold tracking-tight">"The hands-on labs are what sets this apart. You actually do the work, not just watch."</blockquote>
+            
+            <div class="inline-flex items-center justify-center gap-3 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-700/60 mx-auto">
+              <div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold text-white">M</div>
+              <div class="text-left text-xs">
+                <p class="font-bold text-slate-200">Michael T.</p>
+                <p class="text-[10px] text-slate-400">Cloud Engineer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Dots -->
+      <div id="index-reviews-dots" class="flex justify-center gap-2 mt-4"></div>
+    </section>
+
+    <!-- 3-STEP PROGRESS SECTION -->
+    <section class="space-y-6">
+      <div>
+        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">A Clear Way Forward</span>
+        <h2 class="text-2xl font-extrabold text-slate-900 mt-0.5">Turn learning into practical progress</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-slate-900 text-white font-extrabold flex items-center justify-center text-sm flex-shrink-0">1</div>
+          <div class="space-y-1">
+            <h4 class="font-bold text-slate-900 text-sm">Choose your path</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Start with a complete Program or one focused Course.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-slate-900 text-white font-extrabold flex items-center justify-center text-sm flex-shrink-0">2</div>
+          <div class="space-y-1">
+            <h4 class="font-bold text-slate-900 text-sm">Learn and practice</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Build understanding through lessons, examples, and labs.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-slate-900 text-white font-extrabold flex items-center justify-center text-sm flex-shrink-0">3</div>
+          <div class="space-y-1">
+            <h4 class="font-bold text-slate-900 text-sm">Complete and apply</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Track progress and apply your skills with greater confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA BOX -->
+    <section class="bg-gradient-to-br from-sky-50 via-blue-50 to-sky-100/60 rounded-3xl p-10 md:p-14 border border-blue-100 text-center space-y-4 shadow-sm">
+      <span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Start Building Your IT Career</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Choose a learning path and begin today</h2>
+      <p class="text-xs md:text-sm text-slate-600 max-w-lg mx-auto">Learn practical technology skills through a clear, connected training experience.</p>
+      <div class="pt-2">
+        <a href="#" onclick="openPricingModal(event)" class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-8 py-3.5 rounded-xl btn-glow transition shadow-lg shadow-blue-500/20 cursor-pointer">Create Free Account</a>
+      </div>
+    </section>
+
+    <!-- DISCORD COMMUNITY SECTION -->
+    <section id="community-section" class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-8 md:p-12 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-8 scroll-mt-24 shadow-xl">
+      <div class="space-y-3 max-w-xl">
+        <span class="inline-block bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Community</span>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Join the JobSkillShare Discord Community</h2>
+        <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
+          Ask questions, follow announcements, and learn alongside other members building practical IT skills.
+        </p>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-2xl w-full md:w-80 flex-shrink-0 space-y-5">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-indigo-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md">
+            <i class="fa-brands fa-discord"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 bg-emerald-400 rounded-full inline-block animate-pulse"></span>
+              <span class="text-[10px] font-bold text-emerald-300 uppercase tracking-wider">Members Online</span>
+            </div>
+            <div class="text-2xl font-black text-white">101</div>
+            <div class="text-[11px] text-slate-300 font-medium">Jobskillshare Community</div>
+          </div>
+        </div>
+        <a href="#" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-bold text-xs py-3.5 rounded-xl transition shadow-lg shadow-indigo-500/30">Join Discord Community</a>
+      </div>
+    </section>
+
+    <!-- LEARNING PATH HELPER -->
+    <section class="bg-slate-900 rounded-3xl p-8 md:p-12 text-white shadow-xl">
+      <div class="grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-6 space-y-4">
+          <span class="text-xs font-bold tracking-wider text-cyan-400 uppercase">Learning Path Helper</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">Not sure where to begin?</h2>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Tell us the IT role or skill you want. The helper recommends from JobSkillShare Programs and Courses already available.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <button class="bg-slate-800 hover:bg-slate-700 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-700 transition text-slate-200">I am new to IT</button>
+            <button class="bg-slate-800 hover:bg-slate-700 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-700 transition text-slate-200">IT Support or Helpdesk</button>
+            <button class="bg-slate-800 hover:bg-slate-700 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-700 transition text-slate-200">Systems & networking</button>
+            <button class="bg-slate-800 hover:bg-slate-700 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-700 transition text-slate-200">Cybersecurity</button>
+          </div>
+        </div>
+
+        <div class="md:col-span-6 bg-white rounded-2xl p-6 text-slate-800 shadow-2xl space-y-4">
+          <label class="block text-xs font-bold text-slate-800 uppercase tracking-wide">What do you want to learn?</label>
+          <textarea rows="3" class="w-full text-xs p-4 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 bg-slate-50/50 resize-none" placeholder="Example: I am new to IT and want to work in IT support."></textarea>
+          <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3.5 rounded-xl btn-glow transition">Find My Learning Path</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-300 mt-20 py-16 px-6 md:px-12 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 pb-12">
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center">
+          <img src="assest/logo.png" alt="Tech4D Logo" style="height: 72px; width: auto; object-fit: contain;">
+        </a>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Build job-ready technology skills through structured Certificate Programs, focused Courses, hands-on practice, and guided learning.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-white">Explore Learning</h4>
+        <ul class="space-y-2 text-xs text-slate-400">
+          <li><a href="program.html" class="hover:text-white transition">Certificate Programs</a></li>
+          <li><a href="program.html#courses-section" class="hover:text-white transition">Individual IT Courses</a></li>
+          <li><a href="#" onclick="openPricingModal(event)" class="hover:text-white transition">Premium Membership</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-white">Member Resources</h4>
+        <ul class="space-y-2 text-xs text-slate-400">
+          <li><a href="program-details.html" class="hover:text-white transition">Open My Learning</a></li>
+          <li><a href="program.html" class="hover:text-white transition">Practice Labs</a></li>
+          <li><a href="#" onclick="openPricingModal(event)" class="hover:text-white transition">Create an Account</a></li>
+          <li><a href="login.html" class="hover:text-white transition">Log In</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-white">Contact Us</h4>
+        <div class="space-y-2 text-xs text-slate-400">
+          <p class="text-white font-semibold">Headquarters</p>
+          <p>15524 New Hampshire Ave, Silver Spring, MD 20905</p>
+          <p class="text-blue-400">support@jobskillshare.org</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        
-        <div class="footer-brand">
-          <img src="assest\logo.png" alt="EdTech4D Logo" style="height: 96px; width: auto; margin-bottom: 12px; object-fit: contain;">
-          <p>Empowering job-seekers and career switchers worldwide with hands-on, enterprise-grade IT practice labs.</p>
-          <div class="social-icons">
-            <a href="https://www.youtube.com/c/JOBSkillSharesite" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-            </a>
-            <a href="https://www.facebook.com/jobskillshare.org/" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-            </a>
-            <a href="https://www.linkedin.com/company/dmvitsolutions" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </a>
-          </div>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Learning Tracks</h4>
-          <ul>
-            <li><a href="#programs">Modern IT Support</a></li>
-            <li><a href="#programs">Systems Engineer</a></li>
-            <li><a href="#programs">Cloud Infrastructure</a></li>
-            <li><a href="#programs">Cybersecurity Analyst</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#outcomes">Success Stories</a></li>
-            <li><a href="#programs">Practice Labs</a></li>
-            <li><a href="#" onclick="openPricingModal(event)">Membership Plans</a></li>
-            <li><a href="#">Contact Support</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Contact & Location</h4>
-          <div class="footer-contact-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <span>HQ: 15524 New Hampshire Ave, Silver Spring, MD 20905</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            <span>support@jobskillshare.org</span>
-          </div>
-        </div>
-        
-      </div>
-      
-      <div class="footer-bottom">
-        <p>© 2026 JobSkillShare. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
-        </div>
-      </div>
-      
+    <div class="max-w-6xl mx-auto pt-6 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 gap-2">
+      <p>© 2026 JobSkillShare. All rights reserved.</p>
+      <p>Learn practical skills. Build career confidence.</p>
     </div>
   </footer>
 
-  <!-- Mobile Navigation Interaction Logic -->
-  <script src="script.js" defer></script>
-  <!-- Pricing Modal -->
+  <!-- Membership & Pricing Modal Pop-up -->
   <div class="modal-overlay" id="pricingModal" onclick="if(event.target === this) closePricingModal()">
-    <div class="modal-content" style="max-width: 1100px;">
-      <button class="modal-close" onclick="closePricingModal()">&times;</button>
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button class="close-btn" onclick="closePricingModal()">&times;</button>
       
-      <!-- STEP 1 VIEW -->
+      <!-- Stepper Header -->
+      <div class="stepper-header">
+        <div class="step active" id="stepIndicator1">
+          <span class="step-num">1</span>
+          <span>Choose Plan</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="stepIndicator2">
+          <span class="step-num">2</span>
+          <span>Account & Payment</span>
+        </div>
+      </div>
+      
+      <!-- STEP 1: Plan Selection View -->
       <div id="step-1-view">
-        <div class="modal-header text-center">
-          <span class="p-top-badge" style="background: none; color: var(--blue); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 11px;">JOIN JOBSKILLSHARE</span>
-          <h2 style="font-size: 24px; color: var(--navy-dark); margin: 2px 0 8px;">Choose how you want to learn</h2>
-          
-          <!-- Stepper -->
-          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 600px; margin: 0 auto 12px;">
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">1</div>
-              <span style="font-weight: 600; color: var(--blue); font-size: 13px;">Choose a plan</span>
-            </div>
-            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">2</div>
-              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Secure checkout</span>
-            </div>
-            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">3</div>
-              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Start learning</span>
-            </div>
-          </div>
-        </div>
-        
-        <div style="text-align: center; margin-bottom: 12px;">
-          <h3 style="font-size: 20px; color: var(--navy-dark); margin-bottom: 4px;">Select your membership</h3>
-          <p style="color: #64748B; font-size: 13.5px; margin: 0;">Create your account here with secure membership and payment processing.</p>
+        <div style="text-align: center; margin-bottom: 24px;">
+          <span class="sub-badge">JOBSKILLSHARE MEMBERSHIP</span>
+          <h2 class="view-title">Choose Your Learning Membership</h2>
+          <p class="view-desc" style="margin-bottom: 0;">Unlock full access to hands-on labs, 500+ courses, and job-ready certificate roadmaps.</p>
         </div>
 
-        <div class="pricing-cards-wrapper">
-          <!-- Free Card -->
-          <div class="p-card" style="border-top: 4px solid var(--border);">
-            <div class="p-badge" style="background: #F1F5F9; color: #475569;">START FREE</div>
-            <h3>Free Access</h3>
-            <div class="price"><span>$</span>0.00</div>
-            <p class="p-desc">Explore selected foundation Courses for three months.</p>
-            <ul class="p-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Selected free Courses</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Learning portal access</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress tracking</li>
+        <div class="plans-grid">
+          <!-- Card 1: Free -->
+          <div class="plan-card">
+            <span class="plan-badge light">STARTER</span>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--navy-dark);">Free Access</h3>
+            <div class="plan-price">$0 <span>/ forever</span></div>
+            <p class="plan-subtext">Perfect for exploring our platform and trying out selected free lessons.</p>
+            <ul class="plan-features">
+              <li>✓ Access to 310+ Free Lessons</li>
+              <li>✓ Community Support Forum</li>
+              <li>✓ Public Learning Roadmaps</li>
             </ul>
-            <button onclick="goToStep2('Free Access', 0)" class="p-btn p-btn-light" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Create Free Account</button>
+            <button class="plan-btn outline" onclick="goToStep2('Free Access', 0)">Start Free Trial</button>
           </div>
 
-          <!-- Premium Monthly Card (Highlighted) -->
-          <div class="p-card p-card-highlight" style="border-top: 4px solid var(--coral);">
-            <div class="p-badge" style="background: var(--coral-light); color: var(--coral);">🔥 POPULAR</div>
-            <h3>Premium Monthly</h3>
-            <div class="price"><span>$</span>50.00<small>per month</small></div>
-            <p class="p-desc">Full learning access with monthly billing.</p>
-            <ul class="p-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
-              <li><strong style="color: var(--blue);">+ AI Career Tools</strong></li>
+          <!-- Card 2: Premium Monthly -->
+          <div class="plan-card popular">
+            <span class="plan-badge warning">MOST POPULAR</span>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--navy-dark);">Premium Monthly</h3>
+            <div class="plan-price">$50 <span>/ month</span></div>
+            <p class="plan-subtext">Full access to all courses, practice labs, and hands-on IT environments.</p>
+            <ul class="plan-features">
+              <li>✓ All 500+ IT Courses & Certificates</li>
+              <li>✓ Full Access to Practice Labs</li>
+              <li>✓ Certificate of Completion</li>
             </ul>
-            <button onclick="goToStep2('Premium Monthly', 50)" class="p-btn" style="width: 100%; border: 2px solid var(--blue); color: var(--blue); background: var(--ice-blue-light); cursor: pointer; font-family: inherit;">Choose Premium Monthly</button>
+            <button class="plan-btn filled" onclick="goToStep2('Premium Monthly', 50)">Choose Monthly</button>
           </div>
 
-          <!-- Premium Yearly Card -->
-          <div class="p-card" style="border-top: 4px solid var(--blue);">
-            <div class="p-badge" style="background: var(--blue); color: var(--white);">⭐ BEST VALUE</div>
-            <h3>Premium Yearly</h3>
-            <div class="price"><span>$</span>549.00<small>per year</small></div>
-            <p class="p-desc">Build long-term skills with yearly Premium access.</p>
-            <ul class="p-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
-              <li><strong style="color: var(--blue);">+ AI Career Tools</strong></li>
+          <!-- Card 3: Premium Yearly -->
+          <div class="plan-card">
+            <span class="plan-badge primary">BEST VALUE</span>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--navy-dark);">Premium Yearly</h3>
+            <div class="plan-price">$549 <span>/ year</span></div>
+            <p class="plan-subtext">Save 10% compared to monthly. Best for dedicated career changers.</p>
+            <ul class="plan-features">
+              <li>✓ Everything in Premium Monthly</li>
+              <li>✓ Priority Mentor Support</li>
+              <li>✓ Offline Download Access</li>
             </ul>
-            <button onclick="goToStep2('Premium Yearly', 549)" class="p-btn p-btn-blue" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Choose Premium Yearly</button>
+            <button class="plan-btn outline-purple" onclick="goToStep2('Premium Yearly', 549)">Choose Yearly</button>
           </div>
         </div>
       </div>
-
-      <!-- STEP 2 VIEW -->
+      
+      <!-- STEP 2: Registration & Payment View -->
       <div id="step-2-view" style="display: none; width: 100%; text-align: left;">
-        <button onclick="goToStep1()" style="background: none; border: none; color: var(--blue); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; margin-bottom: 16px; padding: 0;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Plans
-        </button>
-        
-        <div class="modal-header text-center" style="margin-bottom: 16px;">
-          <h2 style="font-size: 24px; color: var(--navy-dark); margin: 0 0 8px;">Complete Your Registration</h2>
-          
-          <!-- Stepper Step 2 -->
-          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 600px; margin: 0 auto 16px;">
-            <div style="display: flex; align-items: center; gap: 8px; opacity: 0.5;">
-              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">1</div>
-              <span style="font-weight: 600; color: var(--navy); font-size: 13px;">Choose a plan</span>
-            </div>
-            <div style="flex: 1; height: 1px; background: var(--blue); margin: 0 12px;"></div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">2</div>
-              <span style="font-weight: 600; color: var(--blue); font-size: 13px;">Secure checkout</span>
-            </div>
-            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
-            <div style="display: flex; align-items: center; gap: 8px; opacity: 0.5;">
-              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">3</div>
-              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Start learning</span>
-            </div>
-          </div>
-        </div>
+        <button class="back-link" onclick="goToStep1()">&larr; Back to Plans</button>
 
-        <div style="display: grid; grid-template-columns: 1fr 1.6fr; gap: 24px; align-items: start;">
-          <!-- Left Col: Selected Plan summary card -->
-          <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 20px;">
-            <div style="font-size: 11px; font-weight: 700; color: #64748B; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">Selected Plan</div>
+        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 32px; margin-top: 16px;">
+          <!-- Selected Plan Summary Card -->
+          <div style="background: #F8FAFC; padding: 20px; border-radius: 12px; border: 1px solid #E2E8F0; height: fit-content;">
+            <span style="font-size: 11px; font-weight: 700; color: var(--blue); letter-spacing: 0.5px;">SELECTED PLAN</span>
             <div id="modal-plan-name" style="font-size: 20px; font-weight: 700; color: var(--navy-dark); margin-bottom: 8px;">Premium Monthly</div>
             <div id="modal-plan-price" style="font-size: 28px; font-weight: 700; color: var(--blue); margin-bottom: 16px;">$50.00</div>
-            
-            <ul class="p-list" style="margin-bottom: 0;">
-              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Complete platform access</li>
-              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-world practice labs</li>
-              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Career guidance & community</li>
-            </ul>
           </div>
 
-          <!-- Right Col: Registration & Checkout Form -->
+          <!-- Registration & Checkout Form -->
           <form id="checkout-form" onsubmit="processCheckout(event)" style="margin: 0;">
-            <!-- Account Details -->
             <div id="checkout-account-section">
               <h3 style="font-size: 15px; color: var(--navy-dark); margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid #E2E8F0;">Account Information</h3>
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
@@ -840,18 +856,8 @@
               </div>
             </div>
 
-            <!-- Payment Details (Dynamically shown) -->
             <div id="modal-payment-section">
               <h3 style="font-size: 15px; color: var(--navy-dark); margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid #E2E8F0;">Payment Details</h3>
-              
-              <div style="margin-bottom: 12px;">
-                <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Discount Code (Optional)</label>
-                <div style="display: flex; gap: 8px;">
-                  <input type="text" placeholder="Enter code" style="flex: 1; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
-                  <button type="button" style="padding: 0 12px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 6px; color: var(--navy-dark); font-weight: 600; cursor: pointer; font-size: 13px;">Apply</button>
-                </div>
-              </div>
-
               <div style="margin-bottom: 16px;">
                 <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Card Information *</label>
                 <div style="border: 1px solid #E2E8F0; border-radius: 6px; padding: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
@@ -863,24 +869,109 @@
             </div>
 
             <button type="submit" id="checkout-submit-btn" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 14.5px; display: flex; justify-content: center; align-items: center; gap: 8px; border-radius: 8px;">
-              Complete Registration
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              Complete Registration &rarr;
             </button>
           </form>
         </div>
       </div>
-      </div>
-      
     </div>
   </div>
-  
+
   <script src="modal.js"></script>
   <script type="module" src="auth.js"></script>
-  <!-- Affiliate tracking: captures ?ref= codes on landing -->
-  <script type="module">
-    import { getAffiliateRef } from './backend.js';
-    // getAffiliateRef() also auto-captures on import via IIFE in backend.js
+
+  <!-- Infinite Loop Reviews Slider Script for Landing Page -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const track = document.getElementById('index-reviews-track');
+      const prevBtn = document.getElementById('index-prev-btn');
+      const nextBtn = document.getElementById('index-next-btn');
+      const dotsContainer = document.getElementById('index-reviews-dots');
+
+      if (!track || !prevBtn || !nextBtn) return;
+
+      const slides = Array.from(track.children);
+      const totalSlides = slides.length;
+      let currentIndex = 0;
+
+      function getVisibleCount() {
+        if (window.innerWidth < 640) return 1;
+        if (window.innerWidth < 1024) return 2;
+        return 3;
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, totalSlides - getVisibleCount());
+      }
+
+      function updateSlider() {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        const gap = 24; // gap-6 = 24px
+        const moveAmount = (slideWidth + gap) * currentIndex;
+        track.style.transform = `translateX(-${moveAmount}px)`;
+
+        if (dotsContainer) {
+          Array.from(dotsContainer.children).forEach((dot, idx) => {
+            dot.className = `h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-6 bg-blue-600' : 'w-2 bg-slate-300'}`;
+          });
+        }
+      }
+
+      function createDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = '';
+        const maxIdx = getMaxIndex();
+        for (let i = 0; i <= maxIdx; i++) {
+          const dot = document.createElement('button');
+          dot.setAttribute('aria-label', `Go to review slide ${i + 1}`);
+          dot.className = `h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-6 bg-blue-600' : 'w-2 bg-slate-300'}`;
+          dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateSlider();
+            resetAutoSlide();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      nextBtn.addEventListener('click', () => {
+        const maxIdx = getMaxIndex();
+        currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        updateSlider();
+        resetAutoSlide();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        const maxIdx = getMaxIndex();
+        currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        updateSlider();
+        resetAutoSlide();
+      });
+
+      let autoSlide = setInterval(() => {
+        const maxIdx = getMaxIndex();
+        currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        updateSlider();
+      }, 5000);
+
+      function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(() => {
+          const maxIdx = getMaxIndex();
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+          updateSlider();
+        }, 5000);
+      }
+
+      window.addEventListener('resize', () => {
+        createDots();
+        if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
+        updateSlider();
+      });
+
+      createDots();
+      updateSlider();
+    });
   </script>
-  <script src="script.js"></script>
 </body>
 </html>

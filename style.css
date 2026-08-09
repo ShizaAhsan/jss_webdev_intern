@@ -4,36 +4,36 @@
   --navy-dark: #070D1D;
   --navy-light: #1E1040;
 
-  /* ── Primary: Purple (#6f13ec) ── */
-  --blue: #6F13EC;
-  --blue-rgb: 111,19,236;
-  --blue-dark: #5A0EBF;
-  --blue-light: #9B4EF5;
-  --ice-blue: #EDE0FD;
-  --ice-blue-rgb: 237,224,253;
-  --ice-blue-light: #F5F0FF;
+  /* ── Primary: Blue (#1c74d4) ── */
+  --blue: #1c74d4;
+  --blue-rgb: 28,116,212;
+  --blue-dark: #1558a8;
+  --blue-light: #3b8fe0;
+  --ice-blue: #dbeafe;
+  --ice-blue-rgb: 219,234,254;
+  --ice-blue-light: #eff6ff;
 
-  /* ── Triadic 1: Orange (#EC6F13) ── */
-  --coral: #EC6F13;
-  --coral-light: #FFF0E0;
+  /* ── Accent: Cyan ── */
+  --coral: #0ea5e9;
+  --coral-light: #e0f2fe;
 
   /* ── Triadic 2: Emerald (#13EC6F) ── */
   --emerald: #13EC6F;
   --emerald-light: #E0FFF0;
 
-  --bg-light: #F8F7FC;
+  --bg-light: #F8F9FC;
   --white: #FFFFFF;
   --text-main: #0F172A;
   --text-muted: #475569;
   --text-light: #94A3B8;
   --border: #E2E8F0;
-  --border-light: rgba(237, 224, 253, 0.4);
+  --border-light: rgba(219, 234, 254, 0.4);
   --font-sans: 'Plus Jakarta Sans',sans-serif;
   --font-display: 'Outfit',sans-serif;
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08),0 2px 4px -2px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 10px 25px -5px rgba(111, 19, 236, 0.08),0 8px 10px -6px rgba(111, 19, 236, 0.06);
-  --shadow-glow: 0 8px 24px -6px rgba(111, 19, 236, 0.5);
+  --shadow-lg: 0 10px 25px -5px rgba(28, 116, 212, 0.08),0 8px 10px -6px rgba(28, 116, 212, 0.06);
+  --shadow-glow: 0 8px 24px -6px rgba(28, 116, 212, 0.5);
   --shadow-glow-navy: 0 8px 24px -6px rgba(var(--navy-rgb), 0.5);
   --radius: 12px;
   --radius-lg: 20px;
@@ -131,7 +131,7 @@ button {
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px -6px rgba(111, 19, 236, 0.7);
+  box-shadow: 0 12px 28px -6px rgba(28, 116, 212, 0.7);
   background: linear-gradient(135deg,var(--blue-light) 0,var(--blue) 100%)
 }
 .btn-primary:active {
@@ -2899,6 +2899,236 @@ footer {
     margin: 0 0 0 13px !important;
   }
 }
+
+/* ─── MODAL CARD & PLAN CARDS (used on index.html & program.html) ─── */
+.modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 860px;
+  max-height: 92vh;
+  border-radius: 20px;
+  padding: 32px;
+  position: relative;
+  overflow-y: auto;
+  transform: translateY(20px) scale(0.98);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
+}
+.modal-overlay.active .modal-card {
+  transform: translateY(0) scale(1);
+}
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: none;
+  font-size: 22px;
+  color: #64748B;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 100;
+  line-height: 1;
+}
+.close-btn:hover { background: #E2E8F0; color: #0f172a; }
+
+/* Stepper */
+.stepper-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+.step.active { color: #1c74d4; }
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.step.active .step-num { background: #1c74d4; color: #ffffff; }
+.step-line {
+  width: 60px;
+  height: 2px;
+  background: #e2e8f0;
+  border-radius: 2px;
+}
+
+/* Sub-badge & titles inside modal */
+.sub-badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.view-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0e3b6e;
+  margin: 0 0 8px;
+}
+.view-desc {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+/* Plans Grid */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+@media (max-width: 700px) {
+  .plans-grid { grid-template-columns: 1fr; }
+}
+
+/* Plan Card */
+.plan-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(28,116,212,0.12);
+}
+.plan-card.popular {
+  border-color: #1c74d4;
+  box-shadow: 0 0 0 3px rgba(28,116,212,0.12);
+}
+
+/* Plan Badge */
+.plan-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+.plan-badge.light    { background: #f1f5f9; color: #475569; }
+.plan-badge.warning  { background: #dbeafe; color: #1d4ed8; }  /* was orange - now blue */
+.plan-badge.primary  { background: #0e3b6e; color: #ffffff; }
+
+/* Plan Price */
+.plan-price {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0e3b6e;
+  margin: 8px 0;
+  line-height: 1;
+}
+.plan-price span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* Plan Subtext */
+.plan-subtext {
+  font-size: 12.5px;
+  color: #64748b;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+/* Plan Features */
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: #334155;
+}
+
+/* Plan Buttons */
+.plan-btn {
+  display: block;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  margin-top: auto;
+}
+.plan-btn.outline {
+  background: #f1f5f9;
+  color: #0e3b6e;
+  border: 1.5px solid #cbd5e1;
+}
+.plan-btn.outline:hover { background: #e2e8f0; }
+.plan-btn.filled {
+  background: #1c74d4;
+  color: #ffffff;
+}
+.plan-btn.filled:hover { background: #1558a8; }
+.plan-btn.outline-purple {  /* renamed but kept class - now blue-teal */
+  background: #0e3b6e;
+  color: #ffffff;
+  border: none;
+}
+.plan-btn.outline-purple:hover { background: #092c53; }
+
+/* Back Link */
+.back-link {
+  background: none;
+  border: none;
+  color: #1c74d4;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.back-link:hover { text-decoration: underline; }
 
 /* Added responsive grid classes */
 .pd-layout-grid {

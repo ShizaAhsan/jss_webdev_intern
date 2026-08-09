@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Certificate Programs & Individual Courses | JobSkillShare</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="program.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-navy: #0e3b6e;
+      --dark-navy: #08284d;
+      --accent-blue: #1c74d4;
+      --light-blue: #e8f2fc;
+      --bg-gray: #f4f7fa;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #cbd5e1;
+      --gold: #eab308;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* --- Announcement Bar --- */
+    .announcement-bar {
+      background-color: #e0edfa;
+      color: #0c4a6e;
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .btn-read-more {
+      background-color: var(--accent-blue);
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      margin-left: 0.5rem;
+    }
+
+    /* --- Header / Navbar --- */
+    .navbar {
+      border-bottom: 1px solid var(--border-color);
+      background: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary-navy);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent-blue); }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .btn-login {
+      background-color: var(--accent-blue);
+      color: white !important;
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+    }
+
+    /* --- Hero Section --- */
+    .hero-section { padding: 2rem 0; }
+
+    .hero-card {
+      background: linear-gradient(135deg, #092c53 0%, #0e4c8a 100%);
+      border-radius: 16px;
+      color: white;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+    }
+
+    .sub-heading {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #93c5fd;
+      display: block;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .hero-content h1 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: #ffffff !important;
+    }
+
+    .hero-content p {
+      color: #cbd5e1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .btn {
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-blue { background: var(--accent-blue); color: white; }
+    .btn-light { background: white; color: var(--primary-navy); }
+
+    /* Hero Stats */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .stat-box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .stat-box i { font-size: 1.5rem; color: #93c5fd; }
+    .stat-box h3 { font-size: 1.3rem; color: #ffffff !important; }
+    .stat-box p { font-size: 0.65rem; color: #cbd5e1; }
+
+    /* --- General Section Layout --- */
+    .section-container { padding: 3rem 0; }
+    .bg-light { background-color: var(--bg-gray); }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.8rem;
+      color: var(--primary-navy);
+    }
+
+    .count-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .section-desc {
+      max-width: 400px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .grid-2-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .grid-3-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* --- Program Card (Image 1 Style) --- */
+    .program-card {
+      border: 1px solid rgba(14, 59, 110, 0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #0e3b6e 0%, #092c53 100%);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(9, 44, 83, 0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .program-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(9, 44, 83, 0.4);
+    }
+
+    .program-banner {
+      background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-blue) 100%);
+      height: 90px;
+      position: relative;
+      padding: 1rem;
+    }
+
+    .program-banner .badge {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 10px;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .badge-icon {
+      width: 50px;
+      height: 50px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 4px solid white;
+      color: var(--accent-blue);
+      font-size: 1.2rem;
+    }
+
+    .program-body {
+      padding: 2.5rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      background: linear-gradient(180deg, #0e3b6e 0%, #092c53 100%);
+    }
+
+    .card-type {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: #93c5fd;
+      letter-spacing: 0.5px;
+    }
+
+    .program-body h3 {
+      font-size: 1.25rem;
+      color: #ffffff;
+      margin-top: 0.2rem;
+    }
+
+    .tagline {
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-top: 0.4rem;
+      color: #e2e8f0;
+    }
+
+    .desc {
+      font-size: 0.825rem;
+      color: #94a3b8;
+      margin: 0.8rem 0;
+      flex-grow: 1;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-pill {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.65rem;
+      color: #cbd5e1;
+    }
+
+    .stat-pill strong {
+      color: #ffffff;
+    }
+
+    .tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .program-card .tag {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      color: #e2e8f0;
+    }
+
+    .course-card .tag {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      color: var(--text-dark);
+    }
+
+    .btn-action {
+      display: inline-block;
+      background: var(--accent-blue);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      width: fit-content;
+    }
+
+    /* --- Course Card (Image 2 Style) --- */
+    .filter-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .search-box {
+      background: white;
+      border: 1px solid var(--border-color);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      width: 350px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      width: 100%;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .filter-btn {
+      background: white;
+      border: 1px solid var(--border-color);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background: var(--accent-blue);
+      color: white;
+      border-color: var(--accent-blue);
+    }
+
+    .count-badge {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: #e2e8f0;
+      padding: 0.3rem 0.6rem;
+      border-radius: 12px;
+    }
+
+    .course-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-image {
+      height: 140px;
+      position: relative;
+    }
+
+    .img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .bg-desk { background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
+    .bg-ai { background: linear-gradient(135deg, #0284c7, #06b6d4); }
+    .bg-aws { background: linear-gradient(135deg, #0f172a, #334155); }
+    .bg-sec { background: linear-gradient(135deg, #991b1b, #ef4444); }
+    .bg-net { background: linear-gradient(135deg, #065f46, #10b981); }
+
+    .jss-watermark {
+      position: absolute;
+      bottom: -15px;
+      left: 15px;
+      background: white;
+      border: 1px solid var(--border-color);
+      padding: 0.2rem 0.5rem;
+      font-weight: 800;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      color: var(--primary-navy);
+    }
+
+    .course-body {
+      padding: 1.5rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .course-badges {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+      align-items: center;
+    }
+
+    .brand-tag {
+      font-size: 0.6rem;
+      color: var(--accent-blue);
+      font-weight: 800;
+    }
+
+    .free-tag {
+      font-size: 0.6rem;
+      background: #dcfce7;
+      color: #15803d;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .course-body h3 {
+      font-size: 1rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .course-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+
+    /* --- CTA Section --- */
+    .cta-section { padding: 2rem 0; }
+
+    .cta-banner {
+      background: linear-gradient(90deg, #092c53 0%, #0e4c8a 100%);
+      border-radius: 12px;
+      padding: 2.5rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .cta-banner h2 { font-size: 1.6rem; color: #ffffff !important; }
+    .text-light { color: #93c5fd; }
+    .btn-blue-lg { background: #2563eb; color: white; padding: 0.8rem 1.5rem; font-size: 0.9rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" style="padding: 0.5rem 0;">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" style="display: flex; align-items: center;">
+        <img src="assest/logo.png" alt="Tech4D Logo" style="height: 58px; width: auto; object-fit: contain;">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#programs">Programs</a>
+        <a href="#courses">Courses</a>
+        <a href="index.html#community-section">Community</a>
+        <a href="#" onclick="openPricingModal(event)" style="background: #1c74d4; color: #ffffff !important; padding: 0.5rem 1.15rem; border-radius: 8px; font-weight: 700; display: inline-block;">Create Account</a>
+        <a href="login.html" class="btn-login" style="background: #e2e8f0; color: #0f172a !important; padding: 0.5rem 1.15rem; border-radius: 8px; font-weight: 700; display: inline-block;">Log In</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-card">
+        <div class="hero-content">
+          <span class="sub-heading">STRUCTURED IT CAREER PATHS</span>
+          <h1>IT Certificate Programs and Courses for Job-Ready Skills</h1>
+          <p>Choose a complete Certificate Program or find an individual Course for your next practical IT skill.</p>
+          <div class="hero-buttons">
+            <a href="#programs" class="btn btn-blue"><i class="fa-solid fa-ribbon"></i> Explore Programs</a>
+            <a href="#" class="btn btn-light"><i class="fa-solid fa-user-check"></i> Explore Membership</a>
+            <a href="#courses" class="btn btn-light"><i class="fa-solid fa-book-open"></i> Individual Courses</a>
+            <a href="#" class="btn btn-light"><i class="fa-solid fa-file-pdf"></i> Lab Catalog 2026 <i class="fa-solid fa-chevron-down"></i></a>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-box">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <h3>11</h3>
+              <p>PROGRAMS</p>
+            </div>
+          </div>
+          <div class="stat-box">
+            <i class="fa-solid fa-layer-group"></i>
+            <div>
+              <h3>28</h3>
+              <p>COURSES IN PROGRAMS</p>
+            </div>
+          </div>
+          <div class="stat-box">
+            <i class="fa-solid fa-circle-play"></i>
+            <div>
+              <h3>2,844</h3>
+              <p>LESSONS</p>
+            </div>
+          </div>
+          <div class="stat-box">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <h3>535+</h3>
+              <p>LEARNING HOURS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: All 11 Certificate Programs -->
+  <section id="programs" class="section-container">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="sub-heading">EXPLORE LEARNING PATHS</span>
+          <h2>Certificate Programs</h2>
+          <p class="count-text">11 Certificate Programs</p>
+        </div>
+        <p class="section-desc">Select a Program to view its complete roadmap, courses, skills, technologies, and career outcomes.</p>
+      </div>
+
+      <div class="grid-2-col">
+        
+        <!-- Program Card 1 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">BEGINNER TO INTERMEDIATE</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>IT Support Certificate Program</h3>
+            <p class="tagline">Empower Your IT Support Career</p>
+            <p class="desc">Gain comprehensive skills in IT support, from networking configurations to security protocols, enhancing both technical and professional proficiencies.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>5</strong> COURSES</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>419</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>56 hours 0 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">DNS</span><span class="tag">DHCP</span><span class="tag">Active Directory</span><span class="tag">Windows 11</span><span class="tag">Ubuntu Linux</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program Card 2 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">INTERMEDIATE</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>Cybersecurity Analyst Certificate Program</h3>
+            <p class="tagline">Advance Your Career in Cybersecurity</p>
+            <p class="desc">Gain essential skills and certifications for a career as a cybersecurity analyst.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>5</strong> COURSES</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>408</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>109 hours 0 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">Ethernet Switching</span><span class="tag">802.11 Standards</span><span class="tag">Linux</span><span class="tag">VPN</span><span class="tag">Intrusion Detection Systems</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program Card 3 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">INTERMEDIATE</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>Systems Engineer Certificate Program</h3>
+            <p class="tagline">Build a Solid Foundation in Systems Engineering</p>
+            <p class="desc">Develop critical skills in network administration, server management, and cloud services to excel as a systems engineer.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>5</strong> COURSES</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>589</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>91 hours 39 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">Cisco IOS</span><span class="tag">Wireshark</span><span class="tag">Windows Server 2019</span><span class="tag">Azure</span><span class="tag">Active Directory</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program Card 4 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">INTERMEDIATE TO ADVANCED</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>Azure Cloud Engineer Certificate Program</h3>
+            <p class="tagline">Become a Proficient Azure Cloud Engineer</p>
+            <p class="desc">Master the skills needed to manage and deploy robust Azure environments and advanced DevOps practices with this comprehensive certificate program.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>2</strong> COURSES</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>292</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>45 hours 0 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">Microsoft Azure</span><span class="tag">Azure Active Directory</span><span class="tag">Azure Policies</span><span class="tag">Azure Storage</span><span class="tag">Azure Kubernetes Service</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program Card 5 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">INTERMEDIATE TO ADVANCED</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>AWS Cloud Engineer Certificate Program</h3>
+            <p class="tagline">Become an AWS Certified Cloud Engineer</p>
+            <p class="desc">Master the skills needed for AWS Cloud engineering and management, gaining expertise in architectural, operational, and DevOps tools.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>3</strong> COURSES</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>177</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>36 hours 0 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">AWS</span><span class="tag">EC2</span><span class="tag">Elastic Block Storage</span><span class="tag">VPC</span><span class="tag">S3</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program Card 6 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">INTERMEDIATE TO ADVANCED</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>Cisco Network Engineer Certificate Program</h3>
+            <p class="tagline">Become a Certified Cisco Network Engineer</p>
+            <p class="desc">Gain essential skills and hands-on experience to excel as a Cisco Network Engineer, mastering networking concepts, configurations, and security protocols.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>3</strong> COURSES</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>286</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>68 hours 0 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">Wireshark</span><span class="tag">Cisco IOS</span><span class="tag">Ethernet</span><span class="tag">DHCP</span><span class="tag">DNS</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program Card 7 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">INTERMEDIATE TO ADVANCED | IN DEVELOPMENT</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>Become a Freelancer | Skills-to-Income Program</h3>
+            <p class="tagline">Transform Your Skills into a Sustainable Freelance Career</p>
+            <p class="desc">This program provides comprehensive training to help you start and grow a successful freelance business.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>2</strong> COURSES</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>63</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>15 hours 0 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">Fiverr</span><span class="tag">Upwork</span><span class="tag">LinkedIn</span><span class="tag">Dribbble</span><span class="tag">Behance</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program Card 8 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">BEGINNER-FRIENDLY | IN DEVELOPMENT</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>Data Analytics Certificate Program</h3>
+            <p class="tagline">Transform Data into Insights with Power BI</p>
+            <p class="desc">Learn to harness the power of Microsoft Power BI to convert raw data into actionable insights and build interactive dashboards.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>1</strong> COURSE</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>46</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>5 hours 0 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">Microsoft Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program Card 9 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">BEGINNER | IN DEVELOPMENT</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>Data Science Certificate Program</h3>
+            <p class="tagline">Become proficient in Python for data science applications.</p>
+            <p class="desc">Start your journey in data science by mastering Python programming, data manipulation, and foundational programming concepts.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>1</strong> COURSE</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>16</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>6 hours 0 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">Python</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program Card 10 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">BEGINNER TO INTERMEDIATE | IN DEVELOPMENT</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>AI Engineering Certificate Program</h3>
+            <p class="tagline">Unlock the World of AI with Python Expertise</p>
+            <p class="desc">Master Python programming and foundational AI engineering skills in this hands-on certificate program, designed to equip you for automation and data-driven roles.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>1</strong> COURSE</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>20</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>31 hours 0 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">Python</span><span class="tag">PyGame</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program Card 11 -->
+        <div class="program-card">
+          <div class="program-banner">
+            <span class="badge">BEGINNER TO INTERMEDIATE</span>
+            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          </div>
+          <div class="program-body">
+            <span class="card-type">CERTIFICATE PROGRAM</span>
+            <h3>Working as an IT Support Technician | Free Online Program</h3>
+            <p class="tagline">Build a career in IT Support with foundational skills.</p>
+            <p class="desc">This program provides essential IT support skills, core technical knowledge, and professional development for aspiring IT support technicians.</p>
+            <div class="stats-row">
+              <div class="stat-pill"><i class="fa-solid fa-layer-group"></i> <strong>5</strong> COURSES</div>
+              <div class="stat-pill"><i class="fa-solid fa-circle-play"></i> <strong>528</strong> LESSONS</div>
+              <div class="stat-pill"><i class="fa-regular fa-clock"></i> <strong>71 hours 54 min</strong> LEARNING TIME</div>
+            </div>
+            <div class="tags-row">
+              <span class="tag">Windows OS</span><span class="tag">MacOS</span><span class="tag">Linux</span><span class="tag">Azure</span><span class="tag">Active Directory</span>
+            </div>
+            <a href="#" class="btn-action">Explore Program &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Individual IT Courses (34 Courses Grid) -->
+  <section id="courses" class="section-container bg-light">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="sub-heading">INDIVIDUAL LEARNING OPTIONS</span>
+          <h2>Browse Individual IT Courses</h2>
+        </div>
+      </div>
+
+      <!-- Filters & Search Bar -->
+      <div class="filter-bar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search by Course, skill, or technology">
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active">All Courses</button>
+          <button class="filter-btn">Free Courses</button>
+          <span class="count-badge">34 approved Courses</span>
+        </div>
+      </div>
+
+      <div class="grid-3-col">
+        
+        <!-- Course 1 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Desktop Admin</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span><span class="free-tag">Free Course</span></div>
+            <h3>Advance IT Support | Modern Desktop Administrator</h3>
+            <p class="desc">Master advanced IT support skills essential for modern desktop administrators, focusing on Windows 10 environments and preparing for the MD-100 exam.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 490 lessons</span><span><i class="fa-regular fa-clock"></i> 25h 0m</span></div>
+            <div class="tags-row"><span class="tag">Installing Windows 10</span><span class="tag">Upgrading to Windows 10</span><span class="tag">Configuring Windows updates</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-ai">AI for IT</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>AI for IT Professionals - Knowledge Sharing</h3>
+            <p class="desc">Explore AI's role within IT settings and enhance your ability to integrate AI insights into IT support, networking, cloud, and cybersecurity tasks.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 13 lessons</span><span><i class="fa-regular fa-clock"></i> 6h 0m</span></div>
+            <div class="tags-row"><span class="tag">AI integration in IT support</span><span class="tag">AI-enhanced networking</span><span class="tag">Ansible automation with AI</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-aws">AWS Fundamentals</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>AWS Cloud Administrator | Fundamentals</h3>
+            <p class="desc">Master the essentials of cloud management with our AWS Cloud Administrator Fundamentals course, designed to deliver hands-on experience across key AWS services.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 25 lessons</span><span><i class="fa-regular fa-clock"></i> 6h 0m</span></div>
+            <div class="tags-row"><span class="tag">AWS cloud fundamentals</span><span class="tag">VPC configuration and management</span><span class="tag">EC2 and EBS operations</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-aws">AWS Advance</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>AWS Cloud Administrator Course | Advance</h3>
+            <p class="desc">Master AWS Cloud Administration with our advanced course. Deepen your skills in managing and optimizing AWS services without a DevOps focus.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 52 lessons</span><span><i class="fa-regular fa-clock"></i> 10h 0m</span></div>
+            <div class="tags-row"><span class="tag">IAM and user management</span><span class="tag">EC2 instance configuration</span><span class="tag">AWS billing management</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-aws">AWS DevOps</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>AWS DevOps Engineer Certificate</h3>
+            <p class="desc">Become a DevOps expert with our AWS DevOps Engineer Certificate. Master technologies like Docker, Terraform, Jenkins, Kubernetes, and more.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 100 lessons</span><span><i class="fa-regular fa-clock"></i> 20h 0m</span></div>
+            <div class="tags-row"><span class="tag">DevOps Implementation</span><span class="tag">Git Version Control</span><span class="tag">Docker Containerization</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Azure DevOps</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Azure DevOps: Real-World Case Studies</h3>
+            <p class="desc">Master Azure DevOps through real-world case studies and hands-on labs to implement modern DevOps practices confidently.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 152 lessons</span><span><i class="fa-regular fa-clock"></i> 20h 0m</span></div>
+            <div class="tags-row"><span class="tag">Project Management in Azure DevOps</span><span class="tag">Creating CI/CD Pipelines</span><span class="tag">Customizing Kanban Boards</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 7 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-net">Cisco CCNA</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Cisco CCNA (200-301) Networking Skills</h3>
+            <p class="desc">Master the essential networking skills needed to pass the Cisco CCNA (200-301) exam and elevate your career.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 77 lessons</span><span><i class="fa-regular fa-clock"></i> 10h 0m</span></div>
+            <div class="tags-row"><span class="tag">Router and switch configuration</span><span class="tag">IP addressing and subnetting</span><span class="tag">VLAN and network segmentation</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 8 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-net">Cisco Core</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Cisco Core Networking | Packet Tracer</h3>
+            <p class="desc">Master essential Cisco networking concepts and skills using Packet Tracer for practical, hands-on learning.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 92 lessons</span><span><i class="fa-regular fa-clock"></i> 30h 0m</span></div>
+            <div class="tags-row"><span class="tag">Cisco networking</span><span class="tag">IP routing</span><span class="tag">Subnetting</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 9 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-ai">Cloud Basics</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span><span class="free-tag">Free Course</span></div>
+            <h3>Cloud Administrator | Basics</h3>
+            <p class="desc">Gain foundational cloud computing skills with a focus on Microsoft Azure. Ideal for beginners and IT professionals transitioning to cloud roles.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 193 lessons</span><span><i class="fa-regular fa-clock"></i> 20h 0m</span></div>
+            <div class="tags-row"><span class="tag">Cloud Computing</span><span class="tag">Microsoft Azure</span><span class="tag">Virtualization</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 10 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">CompTIA Linux+</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>CompTIA Linux+ (XK0-005)</h3>
+            <p class="desc">Gain practical skills in Linux management and configuration with our hands-on CompTIA Linux+ (XK0-005) course.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 84 lessons</span><span><i class="fa-regular fa-clock"></i> 14h 0m</span></div>
+            <div class="tags-row"><span class="tag">Linux system administration</span><span class="tag">File system navigation</span><span class="tag">Access control</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 11 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-sec">CompTIA Sec+ Pt 1</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>CompTIA Security+ Training (SY0-701) Part 1</h3>
+            <p class="desc">Master essential cybersecurity concepts and prepare for the CompTIA Security+ certification with our Part 1 training.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 112 lessons</span><span><i class="fa-regular fa-clock"></i> 32h 0m</span></div>
+            <div class="tags-row"><span class="tag">Security control management</span><span class="tag">Threat analysis</span><span class="tag">Security architecture</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 12 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-sec">CompTIA Sec+ Pt 2</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>CompTIA Security+ Training (SY0-701) Part 2</h3>
+            <p class="desc">Enhance your cybersecurity skills with CompTIA Security+ Training Part 2. Master practical skills for identifying threats.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 85 lessons</span><span><i class="fa-regular fa-clock"></i> 14h 0m</span></div>
+            <div class="tags-row"><span class="tag">Network Vulnerability</span><span class="tag">Cryptographic Implementation</span><span class="tag">Threat Detection</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 13 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-sec">Cyber Expert</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Cybersecurity Technical Skills by an Expert</h3>
+            <p class="desc">Discover the skills to secure digital worlds with expert-led cybersecurity training.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 77 lessons</span><span><i class="fa-regular fa-clock"></i> 34h 0m</span></div>
+            <div class="tags-row"><span class="tag">Red Teaming</span><span class="tag">Blue Teaming</span><span class="tag">SOC/SIEM management</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 14 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Freelancing</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Freelancing – Sell Your Skills and Make Money Online</h3>
+            <p class="desc">Turn your skills into a thriving freelance business with our comprehensive course.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 20 lessons</span><span><i class="fa-regular fa-clock"></i> 4h 0m</span></div>
+            <div class="tags-row"><span class="tag">Freelance platform navigation</span><span class="tag">Profile and gig creation</span><span class="tag">Keyword research</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 15 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">IT Support Resume</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span><span class="free-tag">Free Course</span></div>
+            <h3>IT Support Resume, Applying for Jobs and Communities</h3>
+            <p class="desc">Master the art of job searching and resume building to kickstart your IT support career.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 20 lessons</span><span><i class="fa-regular fa-clock"></i> 6h 0m</span></div>
+            <div class="tags-row"><span class="tag">Resume Building</span><span class="tag">Job Search Strategies</span><span class="tag">Interview Preparation</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 16 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Active Directory</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span><span class="free-tag">Free Course</span></div>
+            <h3>IT Support: Active Directory and Tech Skills</h3>
+            <p class="desc">Master IT support skills, focusing on Active Directory and technical applications to excel in system resource management.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 119 lessons</span><span><i class="fa-regular fa-clock"></i> 13h 0m</span></div>
+            <div class="tags-row"><span class="tag">Active Directory management</span><span class="tag">User & Group configuration</span><span class="tag">Group Policy</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 17 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">People Skills</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span><span class="free-tag">Free Course</span></div>
+            <h3>IT Support: People Skills for IT Professionals</h3>
+            <p class="desc">Enhance your IT support role with exceptional people skills and professional communication strategies.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 24 lessons</span><span><i class="fa-regular fa-clock"></i> 5h 0m</span></div>
+            <div class="tags-row"><span class="tag">Professional communication</span><span class="tag">Listening skills</span><span class="tag">Conflict resolution</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 18 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Microsoft 365</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Microsoft 365 for IT Professionals</h3>
+            <p class="desc">Master Microsoft 365 administration with a focus on Entra ID, Exchange Online, and PowerShell automation.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 68 lessons</span><span><i class="fa-regular fa-clock"></i> 9h 0m</span></div>
+            <div class="tags-row"><span class="tag">M365 Administration</span><span class="tag">Exchange Online</span><span class="tag">PowerShell Automation</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 19 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-ai">Azure AZ-104</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Microsoft Azure Administrator Training (AZ-104)</h3>
+            <p class="desc">Master essential skills needed to implement, manage, and monitor Microsoft Azure infrastructures.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 140 lessons</span><span><i class="fa-regular fa-clock"></i> 45h 0m</span></div>
+            <div class="tags-row"><span class="tag">Azure AD</span><span class="tag">RBAC</span><span class="tag">Azure Storage Configuration</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 20 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Endpoint Manager</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Microsoft Endpoint Manager Training</h3>
+            <p class="desc">Master Microsoft Endpoint Manager and Intune to enhance your IT management skills.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 51 lessons</span><span><i class="fa-regular fa-clock"></i> 10h 0m</span></div>
+            <div class="tags-row"><span class="tag">User Management</span><span class="tag">Device Enrollment</span><span class="tag">App Deployment</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 21 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Exchange Online</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Microsoft Exchange Online | Administrator</h3>
+            <p class="desc">Master the administration of Microsoft Exchange Online and elevate your email management skills.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 44 lessons</span><span><i class="fa-regular fa-clock"></i> 22h 0m</span></div>
+            <div class="tags-row"><span class="tag">Exchange Administration</span><span class="tag">PowerShell Scripting</span><span class="tag">Email Security</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 22 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Core 1 (220-1201)</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Modern IT Support Training: 220-1201 (Core 1)</h3>
+            <p class="desc">Master essential IT support skills with the Modern IT Support Training: 220-1201 (Core 1) course.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 68 lessons</span><span><i class="fa-regular fa-clock"></i> 12h 0m</span></div>
+            <div class="tags-row"><span class="tag">Troubleshooting</span><span class="tag">Networking</span><span class="tag">Hardware Management</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 23 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Core 2 (220-1202)</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Modern IT Support Training: 220-1202 (Core 2)</h3>
+            <p class="desc">Gain practical expertise in operating systems, network configurations, security protocols, and troubleshooting.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 188 lessons</span><span><i class="fa-regular fa-clock"></i> 20h 0m</span></div>
+            <div class="tags-row"><span class="tag">OS Installation</span><span class="tag">Network Configuration</span><span class="tag">Security Protocols</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 24 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">A+ (220-1102)</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span><span class="free-tag">Free Course</span></div>
+            <h3>Modern IT Support Training: Part 1 | A+ (220-1102)</h3>
+            <p class="desc">Gain essential IT support skills covering Windows OS management, networking, and security.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 310 lessons</span><span><i class="fa-regular fa-clock"></i> 35h 54m</span></div>
+            <div class="tags-row"><span class="tag">Workstation Setup</span><span class="tag">Software Installation</span><span class="tag">Network Connectivity</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 25 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">A+ (220-1101)</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span><span class="free-tag">Free Course</span></div>
+            <h3>Modern IT Support Training: Part 2 | A+ (220-1101)</h3>
+            <p class="desc">Advance your IT support skills covering computing devices, components, networking, hardware, and virtualization.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 55 lessons</span><span><i class="fa-regular fa-clock"></i> 12h 0m</span></div>
+            <div class="tags-row"><span class="tag">Basic Networking</span><span class="tag">Troubleshooting</span><span class="tag">Computer Components</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 26 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Network & Systems</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Network & Systems Administration Core Skills</h3>
+            <p class="desc">Master essential skills in network and systems administration to kickstart your IT career.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 117 lessons</span><span><i class="fa-regular fa-clock"></i> 28h 0m</span></div>
+            <div class="tags-row"><span class="tag">Network Configuration</span><span class="tag">System Setup</span><span class="tag">Troubleshooting</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 27 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-sec">Networking Sec</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span><span class="free-tag">Free Course</span></div>
+            <h3>Networking Fundamentals for Cybersecurity</h3>
+            <p class="desc">Build a solid foundation in networking principles essential for a cybersecurity career.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 50 lessons</span><span><i class="fa-regular fa-clock"></i> 15h 0m</span></div>
+            <div class="tags-row"><span class="tag">Networking Fundamentals</span><span class="tag">Network Implementation</span><span class="tag">Network Operations</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 28 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-ai">Power BI</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Power BI Fundamentals | Certificate</h3>
+            <p class="desc">Transform raw data into actionable insights with Power BI, mastering dashboards and data analysis.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 46 lessons</span><span><i class="fa-regular fa-clock"></i> 5h 0m</span></div>
+            <div class="tags-row"><span class="tag">Business Intelligence</span><span class="tag">Data Transformation</span><span class="tag">Dashboard Creation</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 29 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">PowerShell</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Powershell Basics & Skills</h3>
+            <p class="desc">Master PowerShell effectively in both on-premises and cloud environments.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 39 lessons</span><span><i class="fa-regular fa-clock"></i> 14h 0m</span></div>
+            <div class="tags-row"><span class="tag">PowerShell Syntax</span><span class="tag">Command Execution</span><span class="tag">Scripting Policies</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 30 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-ai">Python AI</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Python Fundamentals - AI Engineering</h3>
+            <p class="desc">Embark on your AI career with Python, mastering logic and automation through self-paced projects.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 20 lessons</span><span><i class="fa-regular fa-clock"></i> 31h 0m</span></div>
+            <div class="tags-row"><span class="tag">Python Setup</span><span class="tag">Programming Logic</span><span class="tag">Automation Development</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 31 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-ai">Python Data Science</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Python Fundamentals for Data Science Beginners</h3>
+            <p class="desc">Master Python fundamentals and lay the groundwork for a career in data science and automation.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 16 lessons</span><span><i class="fa-regular fa-clock"></i> 6h 0m</span></div>
+            <div class="tags-row"><span class="tag">Python Programming</span><span class="tag">Data Manipulation</span><span class="tag">Logical Problem Solving</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 32 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Freelance Playbook</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>The Complete Freelance Playbook (Advanced Edition)</h3>
+            <p class="desc">Master the art of freelancing with advanced strategies to build, grow, and scale a professional freelance career.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 43 lessons</span><span><i class="fa-regular fa-clock"></i> 11h 0m</span></div>
+            <div class="tags-row"><span class="tag">Freelance Business</span><span class="tag">High-Value Services</span><span class="tag">Sales & Negotiation</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 33 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Windows 11 IT</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Windows 11 for IT Support Professionals</h3>
+            <p class="desc">Master Windows 11 to elevate your IT support skills with enhanced productivity and security features.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 54 lessons</span><span><i class="fa-regular fa-clock"></i> 11h 0m</span></div>
+            <div class="tags-row"><span class="tag">Windows 11 Deployment</span><span class="tag">Intune Management</span><span class="tag">Security Configuration</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Course 34 -->
+        <div class="course-card">
+          <div class="course-image"><div class="img-placeholder bg-desk">Windows Server Admin</div><div class="jss-watermark">JSS</div></div>
+          <div class="course-body">
+            <div class="course-badges"><span class="brand-tag">JOBSKILLSHARE COURSE</span></div>
+            <h3>Windows Server Administrator | Certificate</h3>
+            <p class="desc">Master Windows Server administration with practical, real-world skills in installation, configuration, and monitoring.</p>
+            <div class="course-meta"><span><i class="fa-regular fa-file-lines"></i> 156 lessons</span><span><i class="fa-regular fa-clock"></i> 15h 43m</span></div>
+            <div class="tags-row"><span class="tag">Server Installation</span><span class="tag">Active Directory</span><span class="tag">Group Policy</span></div>
+            <a href="course-details.html" class="btn-action">View Course Details &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-banner">
+        <div>
+          <span class="sub-heading text-light">START YOUR LEARNING PATH</span>
+          <h2>Build practical skills with a guided membership</h2>
+        </div>
+        <a href="#" onclick="openPricingModal(event)" class="btn-blue-lg">Explore Membership</a>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column brand-col">
+      <div class="logo">
+        <a href="index.html" style="display: inline-flex; align-items: center;">
+          <img src="assest/logo.png" alt="Tech4D Logo" style="height: 72px; width: auto; object-fit: contain; filter: brightness(0) invert(1);">
+        </a>
+      </div>
+      <h3 class="tagline">Practical IT training for real-world careers</h3>
+      <p class="description">
+        Build job-ready technology skills through structured Certificate Programs, 
+        focused Courses, hands-on practice, and guided learning.
+      </p>
+      <div class="social-links">
+        <a href="#" aria-label="YouTube" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Facebook" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Discord" class="social-btn"><i class="fa-brands fa-discord"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>Explore Learning</h4>
+      <ul>
+        <li><a href="#programs">Certificate Programs</a></li>
+        <li><a href="#courses">Individual IT Courses</a></li>
+        <li><a href="#">Lab Catalog 2026</a></li>
+        <li><a href="#" onclick="openPricingModal(event)">Premium Membership</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Member Resources</h4>
+      <ul>
+        <li><a href="program-details.html">Open My Learning</a></li>
+        <li><a href="#courses">Practice Labs</a></li>
+        <li><a href="#" onclick="openPricingModal(event)">Create an Account</a></li>
+        <li><a href="login.html">Log In</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column contact-col">
+      <h4>Contact Us</h4>
+      <div class="contact-item">
+        <span class="icon">📍</span>
+        <div>
+          <strong>HEADQUARTERS</strong>
+          <p>12324 New Hampshire Ave<br>Silver Spring, MD 20904</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="icon">✉️</span>
+        <div>
+          <strong>HELPDESK</strong>
+          <p><a href="mailto:support@jobskillshare.org">support@jobskillshare.org</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="icon">📄</span>
+        <div>
+          <strong>BUSINESS INQUIRIES</strong>
+          <p><a href="mailto:sales@jobskillshare.org">sales@jobskillshare.org</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-container">
+      <p>&copy; <span id="year"></span> JobSkillShare. All rights reserved.</p>
+      <p class="slogan">Learn practical skills. Build career confidence.</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Membership & Pricing Modal -->
+  <div class="modal-overlay" id="pricingModal" onclick="if(event.target === this) closePricingModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button class="close-btn" onclick="closePricingModal()">&times;</button>
+      
+      <!-- Stepper Header -->
+      <div class="stepper-header">
+        <div class="step active" id="stepIndicator1">
+          <span class="step-num">1</span>
+          <span>Choose Plan</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="stepIndicator2">
+          <span class="step-num">2</span>
+          <span>Account & Payment</span>
+        </div>
+      </div>
+      
+      <!-- STEP 1: Plan Selection View -->
+      <div id="step-1-view">
+        <div style="text-align: center; margin-bottom: 24px;">
+          <span class="sub-badge">JOBSKILLSHARE MEMBERSHIP</span>
+          <h2 class="view-title">Choose Your Learning Membership</h2>
+          <p class="view-desc" style="margin-bottom: 0;">Unlock full access to hands-on labs, 500+ courses, and job-ready certificate roadmaps.</p>
+        </div>
+
+        <div class="plans-grid">
+          <!-- Card 1: Free -->
+          <div class="plan-card">
+            <span class="plan-badge light">STARTER</span>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--navy-dark);">Free Access</h3>
+            <div class="plan-price">$0 <span>/ forever</span></div>
+            <p class="plan-subtext">Perfect for exploring our platform and trying out selected free lessons.</p>
+            <ul class="plan-features">
+              <li>✓ Access to 310+ Free Lessons</li>
+              <li>✓ Community Support Forum</li>
+              <li>✓ Public Learning Roadmaps</li>
+            </ul>
+            <button class="plan-btn outline" onclick="goToStep2('Free Access', 0)">Start Free Trial</button>
+          </div>
+
+          <!-- Card 2: Premium Monthly -->
+          <div class="plan-card popular">
+            <span class="plan-badge warning">MOST POPULAR</span>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--navy-dark);">Premium Monthly</h3>
+            <div class="plan-price">$50 <span>/ month</span></div>
+            <p class="plan-subtext">Full access to all courses, practice labs, and hands-on IT environments.</p>
+            <ul class="plan-features">
+              <li>✓ All 500+ IT Courses & Certificates</li>
+              <li>✓ Full Access to Practice Labs</li>
+              <li>✓ Certificate of Completion</li>
+            </ul>
+            <button class="plan-btn filled" onclick="goToStep2('Premium Monthly', 50)">Choose Monthly</button>
+          </div>
+
+          <!-- Card 3: Premium Yearly -->
+          <div class="plan-card">
+            <span class="plan-badge primary">BEST VALUE</span>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--navy-dark);">Premium Yearly</h3>
+            <div class="plan-price">$549 <span>/ year</span></div>
+            <p class="plan-subtext">Save 10% compared to monthly. Best for dedicated career changers.</p>
+            <ul class="plan-features">
+              <li>✓ Everything in Premium Monthly</li>
+              <li>✓ Priority Mentor Support</li>
+              <li>✓ Offline Download Access</li>
+            </ul>
+            <button class="plan-btn outline-purple" onclick="goToStep2('Premium Yearly', 549)">Choose Yearly</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- STEP 2: Registration & Payment View -->
+      <div id="step-2-view" style="display: none; width: 100%; text-align: left;">
+        <button class="back-link" onclick="goToStep1()">&larr; Back to Plans</button>
+
+        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 32px; margin-top: 16px;">
+          <!-- Selected Plan Summary Card -->
+          <div style="background: #F8FAFC; padding: 20px; border-radius: 12px; border: 1px solid #E2E8F0; height: fit-content;">
+            <span style="font-size: 11px; font-weight: 700; color: var(--blue); letter-spacing: 0.5px;">SELECTED PLAN</span>
+            <div id="modal-plan-name" style="font-size: 20px; font-weight: 700; color: var(--navy-dark); margin-bottom: 8px;">Premium Monthly</div>
+            <div id="modal-plan-price" style="font-size: 28px; font-weight: 700; color: var(--blue); margin-bottom: 16px;">$50.00</div>
+          </div>
+
+          <!-- Registration & Checkout Form -->
+          <form id="checkout-form" onsubmit="processCheckout(event)" style="margin: 0;">
+            <div id="checkout-account-section">
+              <h3 style="font-size: 15px; color: var(--navy-dark); margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid #E2E8F0;">Account Information</h3>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Full Name *</label>
+                  <input type="text" id="checkout-name" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Email Address *</label>
+                  <input type="email" id="checkout-email" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+                <div class="form-group" style="grid-column: 1 / -1; margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Create Password *</label>
+                  <input type="password" id="checkout-password" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+              </div>
+            </div>
+
+            <div id="modal-payment-section">
+              <h3 style="font-size: 15px; color: var(--navy-dark); margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid #E2E8F0;">Payment Details</h3>
+              <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Card Information *</label>
+                <div style="border: 1px solid #E2E8F0; border-radius: 6px; padding: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <input type="text" placeholder="Card Number" style="grid-column: 1 / -1; width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                  <input type="text" placeholder="MM/YY" style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                  <input type="text" placeholder="CVC" style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" id="checkout-submit-btn" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 14.5px; display: flex; justify-content: center; align-items: center; gap: 8px; border-radius: 8px;">
+              Complete Registration &rarr;
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="modal.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
