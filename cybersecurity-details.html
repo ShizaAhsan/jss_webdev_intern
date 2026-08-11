@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Analyst Certificate Program - EdTech4D</title>
+  <meta name="description" content="Master threat analysis, security operations, and incident response. Prepare for CompTIA Security+ 701 and SOC Analyst roles.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="JobSkillShare Home">
+        <img src="assest/logo.png" alt="JobSkillShare Logo" style="height: 58px; width: auto; object-fit: contain;">
+      </a>
+      
+      <nav class="primary-nav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="program.html">Programs</a>
+        <a href="program.html#courses">Courses</a>
+        <a href="index.html#community-section">Community</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="#" onclick="openPricingModal(event)" class="btn btn-primary">Start Learning</a>
+      </div>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobile-overlay" role="presentation"></div>
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true" role="dialog">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="program.html" class="mobile-link">Programs</a>
+      <a href="program.html#courses" class="mobile-link">Courses</a>
+      <a href="index.html#community-section" class="mobile-link">Community</a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Login</a>
+      <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="width: 100%;">Start Learning</a>
+    </div>
+  </div>
+
+
+  <!-- Program Hero Section -->
+  <section class="program-hero" style="background: linear-gradient(135deg, #082244 0%, #0e3b6e 50%, #1c74d4 100%); padding: 28px 0 24px;">
+    <div class="container">
+      <div class="program-hero-grid" style="gap: 36px; align-items: center;">
+        <div class="ph-content">
+          <span class="ph-badge" style="background: rgba(28,116,212,0.25); color: #93c5fd; border: 1px solid rgba(28,116,212,0.4); padding: 4px 12px; border-radius: 20px; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; display: inline-block;">JOBSKILLSHARE CERTIFICATE PROGRAM</span>
+          <h1 style="color: #FFFFFF; font-size: 32px; font-weight: 700; margin-bottom: 6px; line-height: 1.2;">Cybersecurity Analyst Certificate Program</h1>
+          <h2 style="color: #CBD5E1; font-size: 16px; font-weight: 400; margin-bottom: 12px;">Defend Networks & Master Security Operations</h2>
+          <p style="color: #94A3B8; font-size: 13.5px; line-height: 1.5; margin-bottom: 16px;">Gain comprehensive skills in threat analysis, incident response, SIEM log monitoring, and CompTIA Security+ 701 exam preparation to launch your career as a SOC Analyst.</p>
+          
+          <div class="ph-stats" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px 18px; gap: 12px; margin-bottom: 16px;">
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <div>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">5 Courses</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Structured curriculum</span>
+              </div>
+            </div>
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+              <div>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">408 Lessons</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Hands-on practice</span>
+              </div>
+            </div>
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">48 Hours</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Estimated time</span>
+              </div>
+            </div>
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              <div>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">Intermediate</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Skill level</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="ph-actions" style="display: flex; gap: 14px; margin-bottom: 14px;">
+            <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="background-color: #1c74d4; border-color: #1c74d4; color: #FFFFFF; font-weight: 700; padding: 10px 22px; border-radius: 8px; font-size: 14px;">Start Enroll</a>
+            <a href="#courses" class="btn btn-outline" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3); background: transparent; padding: 10px 22px; border-radius: 8px; font-size: 14px;">View Curriculum</a>
+          </div>
+          
+          <ul class="ph-perks" style="display: flex; gap: 16px; list-style: none; padding: 0; margin: 0; color: #CBD5E1; font-size: 12px;">
+            <li style="display: flex; align-items: center; gap: 5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> CompTIA Security+ 701 Ready</li>
+            <li style="display: flex; align-items: center; gap: 5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Real Virtual SOC Labs</li>
+            <li style="display: flex; align-items: center; gap: 5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Certificate Included</li>
+          </ul>
+        </div>
+        
+        <div class="ph-image">
+          <div class="ph-image-wrapper" style="box-shadow: 0 16px 32px rgba(0,0,0,0.4); border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); max-height: 250px;">
+            <img src="assest/card_cybersecurity.jpg" alt="Cybersecurity Professional" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Sub Nav -->
+  <div class="sticky-subnav" id="sticky-nav" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E2E8F0; position: sticky; top: 0; z-index: 100;">
+    <div class="container">
+      <div class="subnav-wrap" style="display: flex; align-items: center; gap: 24px; padding: 12px 0;">
+        <span class="jump-to-label" style="font-size: 11px; font-weight: 700; color: #94A3B8; letter-spacing: 1px;">JUMP TO</span>
+        <nav class="subnav-links" style="display: flex; gap: 24px;">
+          <a href="#overview" class="active" style="font-size: 14px; font-weight: 600; color: #1c74d4; text-decoration: none;">Overview</a>
+          <a href="#skills" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Skills</a>
+          <a href="#courses" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Curriculum</a>
+          <a href="#careers" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Careers</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="program-content-wrapper" style="background-color: #FAFAFA; padding: 40px 0;">
+    
+    <!-- TOP 2-COLUMN OVERVIEW & SIDEBAR -->
+    <div class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 24px;">
+      <div class="pd-layout-grid" style="display: grid; grid-template-columns: 1fr 340px; gap: 36px; align-items: start; margin-bottom: 40px;">
+        
+        <!-- LEFT COLUMN: Overview & Outcomes -->
+        <div class="pd-main" style="min-width: 0; display: flex; flex-direction: column; gap: 28px;">
+          
+          <!-- Program Overview Card -->
+          <div id="overview" class="pd-card scroll-mt" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+            <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #1c74d4; display: block; margin-bottom: 8px;">PROGRAM OVERVIEW</span>
+            <h3 class="pd-heading-lg" style="margin-bottom: 16px; font-size: 26px; color: #0e3b6e !important; font-weight: 700;">The Complete Cybersecurity Analyst Training</h3>
+            <p class="pd-lead-text" style="font-size: 15.5px; color: #334155; line-height: 1.6; margin-bottom: 20px;">The Cybersecurity Analyst Certificate Program equips learners with the core security competencies needed to defend enterprise environments. Covering threat monitoring, vulnerability management, incident investigation, and SOC tools, this 5-course track prepares you for high-growth security roles.</p>
+            
+            <h4 style="font-size: 16px; color: #0F172A; margin-bottom: 10px; font-weight: 600;">Program Highlights</h4>
+            <p class="pd-text" style="font-size: 14.5px; color: #475569; line-height: 1.6; margin: 0;">Begin with CompTIA Security+ 701 core principles, advance to threat analysis and SIEM log monitoring, master incident containment playbooks, and conduct real hands-on SOC scenarios using Wireshark, Splunk, and vulnerability scanners.</p>
+          </div>
+
+          <!-- Outcomes Card -->
+          <div id="skills" class="pd-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+            <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #1c74d4; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              PROGRAM OUTCOMES
+            </span>
+            <h3 class="pd-heading-lg" style="margin-bottom: 20px; font-size: 24px; color: #0e3b6e !important; font-weight: 700;">What You'll Be Able to Do</h3>
+            
+            <div class="outcomes-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Monitor SIEM alert dashboards</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Perform packet analysis with Wireshark</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Execute incident response playbooks</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Conduct vulnerability assessments</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Prepare for CompTIA Security+ 701</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Detect social engineering attacks</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Perform digital forensics collection</div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #334155;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Configure firewalls & IDS/IPS</div>
+            </div>
+          </div>
+
+          <!-- Courses Sequence -->
+          <div id="courses" class="pd-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+            <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #1c74d4; display: block; margin-bottom: 8px;">CURRICULUM ROADMAP</span>
+            <h3 class="pd-heading-lg" style="margin-bottom: 20px; font-size: 24px; color: #0e3b6e !important; font-weight: 700;">5-Course Guided Sequence</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <!-- Course 1 -->
+              <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; display: flex; gap: 16px; align-items: center; background: #F8FAFC;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: #1c74d4; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+                <div>
+                  <h4 style="font-size: 16px; font-weight: 700; color: #0F172A; margin: 0 0 4px;">CompTIA Security+ 701 Core Fundamentals</h4>
+                  <p style="font-size: 13px; color: #64748B; margin: 0;">Learn core security principles, encryption standards, IAM, and risk concepts.</p>
+                </div>
+              </div>
+
+              <!-- Course 2 -->
+              <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; display: flex; gap: 16px; align-items: center; background: #F8FAFC;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: #1c74d4; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+                <div>
+                  <h4 style="font-size: 16px; font-weight: 700; color: #0F172A; margin: 0 0 4px;">Threat Analysis & Risk Management</h4>
+                  <p style="font-size: 13px; color: #64748B; margin: 0;">Identify malware types, phishing vectors, and implement risk controls.</p>
+                </div>
+              </div>
+
+              <!-- Course 3 -->
+              <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; display: flex; gap: 16px; align-items: center; background: #F8FAFC;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: #1c74d4; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+                <div>
+                  <h4 style="font-size: 16px; font-weight: 700; color: #0F172A; margin: 0 0 4px;">Security Operations Center (SOC) Training</h4>
+                  <p style="font-size: 13px; color: #64748B; margin: 0;">Hands-on SIEM log monitoring, alert triage, Wireshark, and network analysis.</p>
+                </div>
+              </div>
+
+              <!-- Course 4 -->
+              <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; display: flex; gap: 16px; align-items: center; background: #F8FAFC;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: #1c74d4; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+                <div>
+                  <h4 style="font-size: 16px; font-weight: 700; color: #0F172A; margin: 0 0 4px;">Incident Response & Digital Forensics</h4>
+                  <p style="font-size: 13px; color: #64748B; margin: 0;">Execute incident containment playbooks and collect evidence for investigations.</p>
+                </div>
+              </div>
+
+              <!-- Course 5 -->
+              <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; display: flex; gap: 16px; align-items: center; background: #F8FAFC;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: #1c74d4; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">5</div>
+                <div>
+                  <h4 style="font-size: 16px; font-weight: 700; color: #0F172A; margin: 0 0 4px;">Network Security & Vulnerability Assessment</h4>
+                  <p style="font-size: 13px; color: #64748B; margin: 0;">Firewall configuration, vulnerability scanning, and system hardening.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Sticky Sidebar -->
+        <aside class="pd-sidebar" id="careers">
+          <div style="position: sticky; top: 80px; display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- Enroll Card -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 28px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); text-align: center;">
+              <h3 style="font-size: 22px; color: #0F172A; margin: 0 0 6px; font-weight: 700;">Start Learning</h3>
+              <p style="font-size: 13.5px; color: #64748B; margin: 0 0 20px;">Join 60,000+ security learners today.</p>
+              <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; padding: 13px; margin-bottom: 12px; background-color: #1c74d4; border-color: #1c74d4; border-radius: 10px; font-weight: 700; color: #fff;">Start Enroll Now</a>
+              <span style="font-size: 12px; color: #94A3B8; display: flex; align-items: center; justify-content: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> 3-Month & Full Access Options</span>
+            </div>
+
+            <!-- Career Card -->
+            <div class="career-card" style="background: linear-gradient(145deg, #082244 0%, #0e3b6e 100%); border: 1px solid rgba(28,116,212,0.3); border-radius: 16px; padding: 24px; color: #FFFFFF;">
+              <span class="pd-section-label" style="font-size: 10.5px; font-weight: 700; letter-spacing: 1px; color: #93c5fd; display: block; margin-bottom: 6px;">YOUR CAREER PATH</span>
+              <h3 style="font-size: 18px; margin: 0 0 16px; color: #FFFFFF; font-weight: 700;">Target Job Roles</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> SOC Analyst</li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Cybersecurity Analyst</li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Incident Responder</li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Security Administrator</li>
+              </ul>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background: #082244; color: #94A3B8; padding: 40px 0 20px;">
+    <div class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 24px; text-align: center; font-size: 13px;">
+      <p>© 2026 JobSkillShare. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
