@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cisco Network Engineer Certificate Program - JobSkillShare</title>
+  <meta name="description" content="Gain essential skills and hands-on experience to excel as a Cisco Network Engineer, mastering networking concepts, configurations, and security protocols.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="JobSkillShare Home">
+        <img src="assest/logo.png" alt="JobSkillShare Logo" style="height: 58px; width: auto; object-fit: contain;">
+      </a>
+      
+      <nav class="primary-nav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="program.html">Programs</a>
+        <a href="program.html#courses">Courses</a>
+        <a href="index.html#community-section">Community</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="#" onclick="openPricingModal(event)" class="btn btn-primary">Start Learning</a>
+      </div>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobile-overlay" role="presentation"></div>
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true" role="dialog">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="program.html" class="mobile-link">Programs</a>
+      <a href="program.html#courses" class="mobile-link">Courses</a>
+      <a href="index.html#community-section" class="mobile-link">Community</a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Login</a>
+      <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="width: 100%;">Start Learning</a>
+    </div>
+  </div>
+
+  <!-- Program Hero Section -->
+  <section class="program-hero" style="background: linear-gradient(135deg, #092c53 0%, #0e4c8a 100%); padding: 24px 0 20px;">
+    <div class="container">
+      <div class="program-hero-grid" style="gap: 36px; align-items: center;">
+        <div class="ph-content">
+          <span class="ph-badge" style="background: rgba(28,116,212,0.25); color: #93c5fd; border: 1px solid rgba(28,116,212,0.4); padding: 4px 12px; border-radius: 20px; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; display: inline-block;">JOBSKILLSHARE CERTIFICATE PROGRAM</span>
+          <h1 style="color: #FFFFFF; font-size: 32px; font-weight: 700; margin-bottom: 6px; line-height: 1.2;">Cisco Network Engineer Certificate Program</h1>
+          <h2 style="color: #CBD5E1; font-size: 16px; font-weight: 400; margin-bottom: 12px;">Become a Certified Cisco Network Engineer</h2>
+          <p style="color: #94A3B8; font-size: 13.5px; line-height: 1.5; margin-bottom: 16px;">Gain essential skills and hands-on experience to excel as a Cisco Network Engineer, mastering networking concepts, configurations, and security protocols.</p>
+          
+          <div class="ph-stats" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px 18px; gap: 12px; margin-bottom: 16px;">
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <div>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">3 Courses</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Structured curriculum</span>
+              </div>
+            </div>
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+              <div>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">286 Lessons</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Hands-on practice</span>
+              </div>
+            </div>
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">68 hours 0 min</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Estimated time</span>
+              </div>
+            </div>
+            <div class="ph-stat-item" style="display: flex; gap: 10px; align-items: center; color: #FFFFFF;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              <div>
+                <strong style="display: block; font-size: 14px; line-height: 1.1;">Intermediate to Adv</strong>
+                <span style="font-size: 11px; color: #94A3B8;">Skill level</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="ph-actions" style="display: flex; gap: 14px; margin-bottom: 14px;">
+            <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="background-color: #1c74d4; border-color: #1c74d4; color: #FFFFFF; font-weight: 700; padding: 10px 22px; border-radius: 8px; font-size: 14px;">Start Learning</a>
+            <a href="#courses" class="btn btn-outline" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3); background: transparent; padding: 10px 22px; border-radius: 8px; font-size: 14px;">View Curriculum</a>
+          </div>
+          
+          <ul class="ph-perks" style="display: flex; gap: 16px; list-style: none; padding: 0; margin: 0; color: #CBD5E1; font-size: 12px;">
+            <li style="display: flex; align-items: center; gap: 5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Practice before joining</li>
+            <li style="display: flex; align-items: center; gap: 5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Recommended order</li>
+            <li style="display: flex; align-items: center; gap: 5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress saved</li>
+          </ul>
+        </div>
+        
+        <div class="ph-image">
+          <div class="ph-image-wrapper" style="box-shadow: 0 16px 32px rgba(0,0,0,0.4); border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); max-height: 250px;">
+            <img src="card_systems_engineer.jpg" alt="Cisco Network Engineer" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Sub Nav -->
+  <div class="sticky-subnav" id="sticky-nav" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E2E8F0; position: sticky; top: 0; z-index: 100;">
+    <div class="container">
+      <div class="subnav-wrap" style="display: flex; align-items: center; gap: 24px; padding: 12px 0;">
+        <span class="jump-to-label" style="font-size: 11px; font-weight: 700; color: #94A3B8; letter-spacing: 1px;">JUMP TO</span>
+        <nav class="subnav-links" style="display: flex; gap: 24px;">
+          <a href="#overview" class="active" style="font-size: 14px; font-weight: 600; color: #1c74d4; text-decoration: none;">Overview</a>
+          <a href="#skills" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Skills</a>
+          <a href="#roadmap" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Roadmap</a>
+          <a href="#courses" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Courses</a>
+          <a href="#projects" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Projects</a>
+          <a href="#reviews" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">Reviews</a>
+          <a href="#faq" style="font-size: 14px; font-weight: 500; color: #64748B; text-decoration: none;">FAQ</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="program-content-wrapper" style="background-color: #FAFAFA; padding: 40px 0;">
+    
+    <!-- TOP 2-COLUMN OVERVIEW & SIDEBAR -->
+    <div class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 24px;">
+      <div class="pd-layout-grid" style="gap: 36px; align-items: start; margin-bottom: 40px;">
+        
+        <!-- LEFT COLUMN: Overview & Outcomes -->
+        <div class="pd-main" style="min-width: 0; display: flex; flex-direction: column; gap: 28px;">
+          
+          <!-- Program Overview Card -->
+          <div id="overview" class="pd-card scroll-mt" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+            <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #1c74d4; display: block; margin-bottom: 8px;">PROGRAM OVERVIEW</span>
+            <h3 class="pd-heading-lg" style="margin: 0 0 16px; font-size: 26px; color: #1c74d4 !important; font-weight: 700;">Program Overview</h3>
+            <p class="pd-lead-text" style="font-size: 15.5px; color: #334155; line-height: 1.6; margin-bottom: 20px;">The Cisco Network Engineer Certificate Program equips aspiring network professionals with the essential skills needed to excel in the field of IT networking and systems administration. This comprehensive curriculum covers core topics and advanced concepts, preparing learners for the Cisco CCNA certification and careers in network engineering.</p>
+            
+            <h4 style="font-size: 16px; color: #0F172A; margin-top: 16px; margin-bottom: 8px; font-weight: 600;">Learning Path</h4>
+            <p class="pd-text" style="font-size: 14.5px; color: #475569; line-height: 1.6; margin-bottom: 16px;">The program progresses from foundational network configuration and systems administration to Cisco networking with Packet Tracer and advanced CCNA-focused networking skills.</p>
+
+            <h4 style="font-size: 16px; color: #0F172A; margin-top: 16px; margin-bottom: 8px; font-weight: 600;">Who Should Enroll</h4>
+            <p class="pd-text" style="font-size: 14.5px; color: #475569; line-height: 1.6; margin: 0;">This program is designed for those with a basic understanding of computer networks who wish to advance their careers as Cisco Network Engineers or related roles. It is ideal for aspiring network administrators and cybersecurity specialists.</p>
+          </div>
+
+          <!-- Outcomes Card -->
+          <div class="pd-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+            <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #1c74d4; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              PROGRAM OUTCOMES
+            </span>
+            <h3 class="pd-heading-lg" style="margin-bottom: 20px; font-size: 24px; color: #0e3b6e !important; font-weight: 700;">What You’ll Be Able to Do</h3>
+            <ul style="list-style: disc; margin-left: 20px; color: #334155; font-size: 14px; display: flex; flex-direction: column; gap: 8px;">
+              <li>Set up and manage network configurations</li>
+              <li>Troubleshoot network and system issues</li>
+              <li>Understand TCP/IP and OSI models</li>
+              <li>Implement network security measures</li>
+              <li>Configure Cisco Routers and Switches</li>
+              <li>Implement and troubleshoot VLANs</li>
+              <li>Design and configure routing strategies</li>
+              <li>Implement security with ACLs</li>
+              <li>Deploy VPNs using IPSEC</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Sticky Sidebar -->
+        <aside class="pd-sidebar">
+          <div style="position: sticky; top: 80px; display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- Enroll Card -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 28px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); text-align: center;">
+              <h3 style="font-size: 22px; color: #0F172A; margin: 0 0 6px; font-weight: 700;">Start Learning</h3>
+              <p style="font-size: 13.5px; color: #64748B; margin: 0 0 20px;">Join thousands of successful IT professionals.</p>
+              <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; padding: 13px; margin-bottom: 12px; background-color: #1c74d4; border-color: #1c74d4; border-radius: 10px; font-weight: 700; color: #fff;">Start Learning Now</a>
+              <span style="font-size: 12px; color: #94A3B8; display: flex; align-items: center; justify-content: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Secure 256-bit checkout</span>
+            </div>
+
+            <!-- Career Card -->
+            <div class="career-card" style="background: linear-gradient(145deg, #082244 0%, #0e3b6e 100%); border: 1px solid rgba(28,116,212,0.3); border-radius: 16px; padding: 24px; color: #FFFFFF;">
+              <span class="pd-section-label" style="font-size: 10.5px; font-weight: 700; letter-spacing: 1px; color: #93c5fd; display: block; margin-bottom: 6px;">YOUR CAREER PATH</span>
+              <h3 style="font-size: 18px; margin: 0 0 16px; color: #FFFFFF; font-weight: 700;">Career Opportunities</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                  Network Engineer
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                  System Administrator
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                  Cloud Administrator
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                  Cybersecurity Specialist
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #E2E8F0;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                  Network Technician
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tech Stack -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+              <h3 style="font-size: 15px; color: #0F172A; margin: 0 0 14px; font-weight: 700;">Technologies Covered</h3>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">Wireshark</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">Cisco IOS</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">Ethernet</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">DHCP</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">DNS</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">IPv4/IPv6</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">Cisco Routers &amp; Switches</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">Packet Tracer</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">NAT</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">IPSEC</span>
+                <span style="font-size: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px 10px; border-radius: 16px; color: #475569; font-weight: 500;">VLANs</span>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- FULL-WIDTH CONTAINER SECTIONS -->
+    <div class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 36px;">
+      
+      <!-- Skills Section (Full Width Grid) -->
+      <section id="skills" class="pd-section scroll-mt">
+        <div class="pd-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <div class="skills-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px;">
+            <div>
+              <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #1c74d4; display: block; margin-bottom: 6px;">CORE SKILL AREAS</span>
+              <h3 class="pd-heading-lg" style="margin: 0; font-size: 26px; color: #1c74d4 !important; font-weight: 700;">Skills You'll Build</h3>
+            </div>
+            <div class="skills-count" style="text-align: right;">
+              <strong style="display: block; font-size: 26px; color: #1c74d4; font-weight: 700;">16</strong>
+              <span style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #64748B;">CORE SKILLS</span>
+            </div>
+          </div>
+          
+          <div class="skills-grid" style="gap: 24px;">
+            <div class="skill-box" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px;">
+              <div class="skill-box-header" style="display: flex; gap: 12px; align-items: center; margin-bottom: 18px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1c74d4" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <h4 style="margin: 0; font-size: 17px; color: #0F172A; font-weight: 600;">Technical Skills (12)</h4>
+              </div>
+              <ul class="skill-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Configuring Routers and Switches</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Troubleshooting Networks</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Subnetting</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Inter-VLAN Routing</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Routing Protocol Deployment</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Configuring Network Security</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Access Control Lists</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Implementing IPSEC VPNs</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Network Configuration</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> System Setup</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Troubleshooting Cisco Devices</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Implementing Cloud Solutions</li>
+              </ul>
+            </div>
+            
+            <div class="skill-box" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px;">
+              <div class="skill-box-header" style="display: flex; gap: 12px; align-items: center; margin-bottom: 18px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1c74d4" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <h4 style="margin: 0; font-size: 17px; color: #0F172A; font-weight: 600;">Professional Skills (4)</h4>
+              </div>
+              <ul class="skill-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Analytical Thinking</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Problem-solving</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Technical Communication</li>
+                <li style="display: flex; gap: 10px; font-size: 14px; color: #334155;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Network Design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap Section (Full Width) -->
+      <section id="roadmap" class="pd-section scroll-mt">
+        <div class="pd-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #1c74d4; display: block; margin-bottom: 6px;">LEARNING ROADMAP</span>
+          <h3 class="pd-heading-lg" style="margin: 0 0 32px; font-size: 26px; color: #1c74d4 !important; font-weight: 700;">Your Path Through the Program</h3>
+          <div class="roadmap-timeline" style="position: relative; padding-left: 52px;">
+            <div style="position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #1c74d4, #94A3B8);"></div>
+
+            <!-- Step 1 -->
+            <div class="rm-item" style="position: relative; margin-bottom: 32px;">
+              <div class="rm-marker" style="position: absolute; left: -53px; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #1c74d4; border: none; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 0 0 4px #FFFFFF;">1</div>
+              <div class="rm-content">
+                <h4 style="font-size: 18px; color: #1c74d4; margin: 0 0 6px; font-weight: 600;">Core</h4>
+                <p style="font-size: 14.5px; color: #475569; margin: 0 0 10px; line-height: 1.5;">Learn foundational skills for network configuration and systems setup.</p>
+                <div class="rm-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <span style="font-size: 12px; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1c74d4; padding: 4px 12px; border-radius: 16px; font-weight: 500;">Network &amp; Systems Administration Core Skills</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="rm-item" style="position: relative; margin-bottom: 32px;">
+              <div class="rm-marker" style="position: absolute; left: -53px; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; border: 2px solid #1c74d4; color: #1c74d4; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 0 0 4px #FFFFFF;">2</div>
+              <div class="rm-content">
+                <h4 style="font-size: 18px; color: #0F172A; margin: 0 0 6px; font-weight: 600;">Networking Specialist</h4>
+                <p style="font-size: 14.5px; color: #475569; margin: 0 0 10px; line-height: 1.5;">Master Cisco networking concepts with Packet Tracer.</p>
+                <div class="rm-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <span style="font-size: 12px; background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 4px 12px; border-radius: 16px; font-weight: 500;">Cisco Core Networking | Packet Tracer</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="rm-item" style="position: relative; margin-bottom: 32px;">
+              <div class="rm-marker" style="position: absolute; left: -53px; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; border: 2px solid #94A3B8; color: #64748B; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 0 0 4px #FFFFFF;">3</div>
+              <div class="rm-content">
+                <h4 style="font-size: 18px; color: #0F172A; margin: 0 0 6px; font-weight: 600;">Professional Development</h4>
+                <p style="font-size: 14.5px; color: #475569; margin: 0 0 10px; line-height: 1.5;">Prepare for Cisco CCNA certification with advanced networking skills.</p>
+                <div class="rm-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <span style="font-size: 12px; background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; padding: 4px 12px; border-radius: 16px; font-weight: 500;">Cisco CCNA (200-301) Networking Skills</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Final -->
+            <div class="rm-item rm-final" style="position: relative;">
+              <div class="rm-marker" style="position: absolute; left: -53px; top: 0; width: 32px; height: 32px; border-radius: 50%; background: #10B981; border: none; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; box-shadow: 0 0 0 4px #FFFFFF;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <div class="rm-content">
+                <h4 style="font-size: 18px; color: #0F172A; margin: 0 0 6px; font-weight: 600;">Certificate Program Complete</h4>
+                <p style="font-size: 14.5px; color: #475569; margin: 0;">You have progressed through the complete course sequence and its combined skill set.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Section (Full Width Accordions) -->
+      <section id="courses" class="pd-section scroll-mt">
+        <div class="pd-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <div class="courses-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
+            <div>
+              <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #1c74d4; display: block; margin-bottom: 6px;">PROGRAM STRUCTURE</span>
+              <h3 class="pd-heading-lg" style="margin: 0; font-size: 26px; color: #1c74d4 !important; font-weight: 700;">Courses in This Certificate Program</h3>
+            </div>
+            <div class="courses-count" style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; color: #0F172A;">3 courses in recommended order</div>
+          </div>
+          
+          <div class="course-list">
+
+            <!-- Accordion Course 1 -->
+            <div class="c-acc-item" style="border: 1px solid #E2E8F0; border-radius: 12px; margin-bottom: 14px; overflow: hidden; background: #FFFFFF;">
+              <button class="c-acc-btn" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: #FFFFFF; border: none; cursor: pointer; text-align: left;" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron').classList.toggle('rotate')">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                  <div class="c-number" style="width: 38px; height: 38px; border-radius: 8px; background: #F8FAFC; color: #1c74d4; border: 1px solid #E2E8F0; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px;">1</div>
+                  <div>
+                    <span class="c-label" style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #10B981; margin-bottom: 3px;">CORE</span>
+                    <h4 style="font-size: 17px; color: #0F172A; margin: 0; font-weight: 600;">Network &amp; Systems Administration Core Skills</h4>
+                  </div>
+                </div>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="c-acc-content hidden" style="padding: 0 24px 24px 82px; background: #FFFFFF; border-top: 1px solid #F1F5F9;">
+                <p style="font-size: 14px; color: #475569; margin-bottom: 14px; line-height: 1.6; margin-top: 14px;">This course provides foundational skills for aspiring Network Engineers and System Administrators, covering network configurations, systems setup, and troubleshooting.</p>
+                <div class="c-meta" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+                  <span class="cm-pill" style="font-size: 12px; background: #EFF6FF; padding: 4px 10px; border-radius: 20px; border: 1px solid #BFDBFE; color: #1c74d4; font-weight: 600;">28 hours 0 min</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Networking Basics</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Network Cabling and Hardware</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Network Addressing and Services</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Network Security</span>
+                </div>
+                <p style="font-size: 12px; color: #64748B; margin-bottom: 14px;"><strong>Skills Introduced:</strong> Network Configuration · System Setup · Troubleshooting · Security Setup · Routing · Switching</p>
+                <a href="#" onclick="openPricingModal(event)" style="font-size: 13.5px; font-weight: 600; color: #1c74d4; text-decoration: none;">Enroll to Start Course →</a>
+              </div>
+            </div>
+
+            <!-- Accordion Course 2 -->
+            <div class="c-acc-item" style="border: 1px solid #E2E8F0; border-radius: 12px; margin-bottom: 14px; overflow: hidden; background: #FFFFFF;">
+              <button class="c-acc-btn" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: #FFFFFF; border: none; cursor: pointer; text-align: left;" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron').classList.toggle('rotate')">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                  <div class="c-number" style="width: 38px; height: 38px; border-radius: 8px; background: #F8FAFC; color: #1c74d4; border: 1px solid #E2E8F0; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px;">2</div>
+                  <div>
+                    <span class="c-label" style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #8B5CF6; margin-bottom: 3px;">SPECIALIZATION</span>
+                    <h4 style="font-size: 17px; color: #0F172A; margin: 0; font-weight: 600;">Cisco Core Networking | Packet Tracer</h4>
+                  </div>
+                </div>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="c-acc-content hidden" style="padding: 0 24px 24px 82px; background: #FFFFFF; border-top: 1px solid #F1F5F9;">
+                <p style="font-size: 14px; color: #475569; margin-bottom: 14px; line-height: 1.6; margin-top: 14px;">Master Cisco networking concepts and skills using Packet Tracer through intensive hands-on labs and theoretical learning.</p>
+                <div class="c-meta" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+                  <span class="cm-pill" style="font-size: 12px; background: #EFF6FF; padding: 4px 10px; border-radius: 20px; border: 1px solid #BFDBFE; color: #1c74d4; font-weight: 600;">30 hours 0 min</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">IPv4 Subnetting</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Inter-VLAN Routing</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">IP Routing (Static vs Dynamic)</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">EIGRP</span>
+                </div>
+                <p style="font-size: 12px; color: #64748B; margin-bottom: 14px;"><strong>Skills Introduced:</strong> Subnetting · Inter-VLAN Routing · Static and Dynamic Routing · Configuring EIGRP and OSPF · Access Control Lists · Configuring NAT</p>
+                <a href="#" onclick="openPricingModal(event)" style="font-size: 13.5px; font-weight: 600; color: #1c74d4; text-decoration: none;">Enroll to Start Course →</a>
+              </div>
+            </div>
+
+            <!-- Accordion Course 3 -->
+            <div class="c-acc-item" style="border: 1px solid #E2E8F0; border-radius: 12px; margin-bottom: 14px; overflow: hidden; background: #FFFFFF;">
+              <button class="c-acc-btn" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: #FFFFFF; border: none; cursor: pointer; text-align: left;" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron').classList.toggle('rotate')">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                  <div class="c-number" style="width: 38px; height: 38px; border-radius: 8px; background: #F8FAFC; color: #1c74d4; border: 1px solid #E2E8F0; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px;">3</div>
+                  <div>
+                    <span class="c-label" style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #F59E0B; margin-bottom: 3px;">PROFESSIONAL DEVELOPMENT</span>
+                    <h4 style="font-size: 17px; color: #0F172A; margin: 0; font-weight: 600;">Cisco CCNA (200-301) Networking Skills</h4>
+                  </div>
+                </div>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="c-acc-content hidden" style="padding: 0 24px 24px 82px; background: #FFFFFF; border-top: 1px solid #F1F5F9;">
+                <p style="font-size: 14px; color: #475569; margin-bottom: 14px; line-height: 1.6; margin-top: 14px;">Master essential skills to pass the Cisco CCNA (200-301) exam through comprehensive networking training.</p>
+                <div class="c-meta" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+                  <span class="cm-pill" style="font-size: 12px; background: #EFF6FF; padding: 4px 10px; border-radius: 20px; border: 1px solid #BFDBFE; color: #1c74d4; font-weight: 600;">10 hours 0 min</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Networking Concepts</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">IP Addressing &amp; Virtualization</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Switching Fundamentals</span>
+                  <span class="cm-pill" style="font-size: 12px; background: #F8FAFC; padding: 4px 10px; border-radius: 20px; border: 1px solid #E2E8F0; color: #475569;">Configuring VLANs</span>
+                </div>
+                <p style="font-size: 12px; color: #64748B; margin-bottom: 14px;"><strong>Skills Introduced:</strong> Router and Switch Configuration · Firewall Setup · IP Addressing · VLAN Implementation · Routing Principles · NAT Configuration</p>
+                <a href="#" onclick="openPricingModal(event)" style="font-size: 13.5px; font-weight: 600; color: #1c74d4; text-decoration: none;">Enroll to Start Course →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section (Full Width) -->
+      <section id="projects" class="pd-section scroll-mt">
+        <div class="projects-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #1c74d4; display: block; margin-bottom: 6px;">PRACTICE WHAT YOU LEARN</span>
+          <h3 class="pd-heading-lg" style="margin-bottom: 24px; font-size: 26px; color: #1c74d4 !important; font-weight: 700;">Projects &amp; Hands-on Activities</h3>
+          
+          <div style="border: 1px solid #E2E8F0; padding: 28px; border-radius: 12px; margin-bottom: 20px; background: #F8FAFC;">
+            <div style="display: flex; gap: 16px; margin-bottom: 14px; align-items: center;">
+              <div style="color: #1c74d4;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
+              <div>
+                <h4 style="font-size: 17px; color: #0F172A; margin: 0 0 2px; font-weight: 600;">Skills Practiced</h4>
+                <span style="color: #64748B; font-size: 13.5px;">16 curriculum-grounded practical skills</span>
+              </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Configuring Routers and Switches</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Troubleshooting Networks</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Subnetting</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Inter-VLAN Routing</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Routing Protocol Deployment</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Configuring Network Security</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Access Control Lists</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Implementing IPSEC VPNs</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Packet Tracer Labs</span>
+              <span style="font-size: 12px; background: #FFFFFF; border: 1px solid #CBD5E1; padding: 4px 10px; border-radius: 16px; color: #334155;">Wireshark Packet Analysis</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section (Full Width) -->
+      <section id="reviews" class="pd-section scroll-mt">
+        <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <div class="rv-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
+            <div>
+              <span class="pd-section-label" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #1c74d4; display: block; margin-bottom: 6px;">FEEDBACK ACROSS THE CURRICULUM</span>
+              <h3 class="pd-heading-lg" style="margin: 0; font-size: 26px; color: #1c74d4 !important; font-weight: 700;">Program Reviews</h3>
+            </div>
+            <div class="rv-score" style="text-align: right;">
+              <strong style="display: block; font-size: 26px; color: #0F172A; font-weight: 700;">4.9 <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2" style="transform: translateY(-2px);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></strong>
+              <span style="font-size: 12px; color: #64748B;">Average across all ratings</span>
+            </div>
+          </div>
+          
+          <div class="rv-body" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 28px;">
+            <div class="stars" style="margin-bottom: 14px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p id="rv-text" style="font-size: 15.5px; color: #334155; line-height: 1.6; margin-bottom: 20px;">"The Cisco Packet Tracer labs and CCNA exam prep were phenomenal. I built solid subnetting, VLAN, and routing skills that helped me land a Network Engineer job!"</p>
+            <div class="rv-user" style="display: flex; align-items: center; gap: 12px; border-top: 1px solid #E2E8F0; padding-top: 20px;">
+              <div class="rv-avatar" style="width: 38px; height: 38px; background: #E2E8F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #64748B;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+              <div>
+                <strong id="rv-user" style="display: block; font-size: 14px; color: #0F172A;">Network Administrator Learner</strong>
+                <span id="rv-date" style="font-size: 12px; color: #64748B;">August 12, 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section (Full Width) -->
+      <section id="faq" class="pd-section scroll-mt">
+        <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <h3 class="pd-heading-lg" style="margin-bottom: 24px; font-size: 26px; color: #1c74d4 !important; font-weight: 700;">Frequently Asked Questions</h3>
+          
+          <div class="faq-accordion">
+            <div class="faq-acc-item" style="border-bottom: 1px solid #E2E8F0;">
+              <button class="faq-acc-btn" onclick="this.nextElementSibling.classList.toggle('hidden')" style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0;padding-left: 20px;padding-right: 20px; background: none; border: none; font-size: 16px; font-weight: 600; color: #0F172A; cursor: pointer; text-align: left;">
+                <span>What are the prerequisites for this program?</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-acc-content hidden" style="padding-bottom: 20px; color: #475569; font-size: 14.5px; line-height: 1.6;">
+                <p style="margin: 0;">This program is designed for those with a basic understanding of computer networks who wish to advance their careers as Cisco Network Engineers or related roles.</p>
+              </div>
+            </div>
+            <div class="faq-acc-item" style="border-bottom: 1px solid #E2E8F0;">
+              <button class="faq-acc-btn" onclick="this.nextElementSibling.classList.toggle('hidden')" style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0;padding-left: 20px;padding-right: 20px; background: none; border: none; font-size: 16px; font-weight: 600; color: #0F172A; cursor: pointer; text-align: left;">
+                <span>What careers can this certificate lead to?</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-acc-content hidden" style="padding-bottom: 20px; color: #475569; font-size: 14.5px; line-height: 1.6;">
+                <p style="margin: 0;">Graduates can pursue roles like Network Engineer, System Administrator, Cloud Administrator, Cybersecurity Specialist, and Network Technician.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Bottom CTA (Full Width) -->
+  <section class="pd-section" style="margin-bottom: 0;">
+    <div style="padding: 64px 24px; background: linear-gradient(135deg, #082244 0%, #0e4c8a 50%, #1c74d4 100%); text-align: center;">
+      <span class="pd-section-label" style="color: #93c5fd; display: inline-block; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; font-size: 11px;">BUILD YOUR COMPLETE SKILL SET</span>
+      <h2 style="color: #FFFFFF; font-size: 32px; margin: 0 0 14px; font-weight: 700;">Become a Certified Cisco Network Engineer</h2>
+      <p style="color: #CBD5E1; max-width: 600px; margin: 0 auto 28px; font-size: 15px; line-height: 1.6;">Build practical networking, Cisco configuration, troubleshooting, routing, and security skills through a structured 3-course learning path.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="background-color: #1c74d4; border-color: #1c74d4; color: #FFFFFF; border-radius: 8px; padding: 12px 28px; font-weight: 700;">Start Learning Now</a>
+        <a href="login.html" class="btn btn-outline" style="background-color: transparent; color: #FFFFFF; border-color: rgba(255,255,255,0.3); border-radius: 8px; padding: 12px 28px; font-weight: 500;">Already a member? Log In</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assest/logo.png" alt="EdTech4D Logo" style="height: 96px; width: auto; margin-bottom: 12px; object-fit: contain;">
+          <p>Practical IT training for real-world careers. Build job-ready technology skills through structured Certificate Programs, focused Courses, hands-on practice, and guided learning.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+            <a href="#" class="social-icon" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Explore Learning</h4>
+          <ul>
+            <li><a href="program.html">Certificate Programs</a></li>
+            <li><a href="program.html#courses">All Courses</a></li>
+            <li><a href="index.html#community-section">Community</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#" onclick="openPricingModal(event)">Membership Plans</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Legal &amp; Support</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 JobSkillShare. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
