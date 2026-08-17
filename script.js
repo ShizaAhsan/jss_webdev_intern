@@ -137,4 +137,48 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ─── GLOBAL JSS REDIRECT ────────────────────────────────────────────────────
+  // login.html links are handled by each page — no interception here.
+  // goToStep2 (plan card buttons) redirect to JSS — see below.
+  // ─── END GLOBAL JSS REDIRECT ────────────────────────────────────────────────
 });
+
+// ─── JSS Membership URL ─────────────────────────────────────────────────────
+const JSS_MEMBERSHIP_URL = 'https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership';
+
+// When user picks a plan card inside the modal → redirect to JSS
+function goToStep2(planName, planPrice) {
+  window.open(JSS_MEMBERSHIP_URL, '_blank');
+}
+
+// goToStep1 / closePricingModal — used by modals that still render locally
+function goToStep1() {
+  const s1 = document.getElementById('step-1-view');
+  const s2 = document.getElementById('step-2-view');
+  if (s1) s1.style.display = '';
+  if (s2) s2.style.display = 'none';
+}
+
+function closePricingModal() {
+  const modal = document.getElementById('pricingModal');
+  if (modal) modal.classList.remove('active');
+  document.body.style.overflow = '';
+  setTimeout(() => goToStep1(), 300);
+}
+
+// openPricingModal — opens the local popup (defined per-page).
+// This global version is a fallback for pages without their own modal HTML.
+function openPricingModal(e) {
+  if (e) e.preventDefault();
+  const modal = document.getElementById('pricingModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    goToStep1();
+  } else {
+    // No local modal — go straight to JSS
+    window.open(JSS_MEMBERSHIP_URL, '_blank');
+  }
+}
+// ─── END JSS REDIRECT ───────────────────────────────────────────────────────

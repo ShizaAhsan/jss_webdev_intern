@@ -41,8 +41,7 @@
       </div>
 
       <!-- Navigation Links & Action Buttons -->
-      <div class="flex items-center space-x-8">
-        <div class="flex items-center space-x-6 md:space-x-8 text-sm font-semibold text-slate-700">
+      <div class="flex items-center space-x-6 md:space-x-8 text-sm font-semibold text-slate-700">
           <a href="#programs-section" class="nav-link hover:text-blue-600 transition">Programs</a>
           <a href="#courses-section" class="nav-link hover:text-blue-600 transition">Courses</a>
           <a href="#community-section" class="nav-link hover:text-blue-600 transition">Community</a>
@@ -516,7 +515,7 @@
     </section>
 
     <!-- TESTIMONIALS SLIDER SECTION -->
-    <section class="space-y-4">
+    <section class="space-y-4" style="margin-top: 8px; padding-top: 0; padding-bottom: 0;">
       <div class="flex items-center justify-between">
         <div>
           <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Learner Experiences</span>
@@ -536,8 +535,8 @@
       </div>
 
       <!-- Slider Container -->
-      <div class="overflow-hidden relative rounded-2xl py-1">
-        <div id="index-reviews-track" class="flex gap-6 transition-transform duration-500 ease-out">
+      <div class="overflow-hidden relative rounded-2xl" style="padding: 4px 0;">
+        <div id="index-reviews-track" class="flex gap-6" style="transition: transform 0.55s cubic-bezier(0.4,0,0.2,1); will-change: transform;">
           <!-- Review 1 -->
           <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 bg-slate-900 text-white rounded-3xl p-6 text-center flex flex-col justify-between space-y-4 relative overflow-hidden shadow-xl border border-slate-800">
             <div class="flex justify-center gap-1 text-amber-400 text-xs">
@@ -811,7 +810,7 @@
               <li>✓ Community Support Forum</li>
               <li>✓ Public Learning Roadmaps</li>
             </ul>
-            <button class="plan-btn outline" onclick="goToStep2('Free Access', 0)">Start Free Trial</button>
+            <button class="plan-btn outline" onclick="window.open('https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership','_blank')">Start Free Trial</button>
           </div>
 
           <!-- Card 2: Premium Monthly -->
@@ -825,7 +824,7 @@
               <li>✓ Full Access to Practice Labs</li>
               <li>✓ Certificate of Completion</li>
             </ul>
-            <button class="plan-btn filled" onclick="goToStep2('Premium Monthly', 50)">Choose Monthly</button>
+            <button class="plan-btn filled" onclick="window.open('https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership','_blank')">Choose Monthly</button>
           </div>
 
           <!-- Card 3: Premium Yearly -->
@@ -839,7 +838,7 @@
               <li>✓ Priority Mentor Support</li>
               <li>✓ Offline Download Access</li>
             </ul>
-            <button class="plan-btn outline-purple" onclick="goToStep2('Premium Yearly', 549)">Choose Yearly</button>
+            <button class="plan-btn outline-purple" onclick="window.open('https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership','_blank')">Choose Yearly</button>
           </div>
         </div>
       </div>
@@ -910,9 +909,10 @@
 
       if (!track || !prevBtn || !nextBtn) return;
 
-      const slides = Array.from(track.children);
-      const totalSlides = slides.length;
-      let currentIndex = 0;
+      // ── Clone-based Infinite Smooth Carousel ────────────────────────────────
+      // We clone VISIBLE_COUNT cards from the start and end and prepend/append
+      // them. The real slides sit in the middle. After every transition we
+      // silently snap to the real position when we reach a clone.
 
       function getVisibleCount() {
         if (window.innerWidth < 640) return 1;
@@ -920,77 +920,147 @@
         return 3;
       }
 
-      function getMaxIndex() {
-        return Math.max(0, totalSlides - getVisibleCount());
+      const originalSlides = Array.from(track.children);
+      const total = originalSlides.length;
+
+      function buildClones() {
+        // Remove old clones
+        track.querySelectorAll('.rv-clone').forEach(c => c.remove());
+        const vis = getVisibleCount();
+
+        // Prepend clones of the LAST `vis` originals
+        for (let i = total - vis; i < total; i++) {
+          const clone = originalSlides[i].cloneNode(true);
+          clone.classList.add('rv-clone');
+          track.prepend(clone);
+        }
+        // Append clones of the FIRST `vis` originals
+        for (let i = 0; i < vis; i++) {
+          const clone = originalSlides[i].cloneNode(true);
+          clone.classList.add('rv-clone');
+          track.append(clone);
+        }
       }
 
-      function updateSlider() {
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        const gap = 24; // gap-6 = 24px
-        const moveAmount = (slideWidth + gap) * currentIndex;
-        track.style.transform = `translateX(-${moveAmount}px)`;
+      let vis = getVisibleCount();
+      let currentIndex = vis; // start at first real slide (after prepended clones)
+      let isTransitioning = false;
 
-        if (dotsContainer) {
-          Array.from(dotsContainer.children).forEach((dot, idx) => {
-            dot.className = `h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-6 bg-blue-600' : 'w-2 bg-slate-300'}`;
-          });
+      buildClones();
+
+      function allSlides() { return Array.from(track.children); }
+
+      function jumpTo(idx, animated) {
+        const slides = allSlides();
+        if (!slides[0]) return;
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        const gap = 24;
+        const offset = (slideWidth + gap) * idx;
+        if (!animated) {
+          track.style.transition = 'none';
+        } else {
+          track.style.transition = 'transform 0.55s cubic-bezier(0.4,0,0.2,1)';
         }
+        track.style.transform = `translateX(-${offset}px)`;
+      }
+
+      function updateDots() {
+        if (!dotsContainer) return;
+        // Map currentIndex (which includes clones) to a real slide index
+        const realIdx = ((currentIndex - vis) % total + total) % total;
+        Array.from(dotsContainer.children).forEach((dot, idx) => {
+          dot.className = `h-2 rounded-full transition-all duration-300 ${idx === realIdx ? 'w-6 bg-blue-600' : 'w-2 bg-slate-300'}`;
+        });
       }
 
       function createDots() {
         if (!dotsContainer) return;
         dotsContainer.innerHTML = '';
-        const maxIdx = getMaxIndex();
-        for (let i = 0; i <= maxIdx; i++) {
+        for (let i = 0; i < total; i++) {
           const dot = document.createElement('button');
-          dot.setAttribute('aria-label', `Go to review slide ${i + 1}`);
-          dot.className = `h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-6 bg-blue-600' : 'w-2 bg-slate-300'}`;
+          dot.setAttribute('aria-label', `Go to review ${i + 1}`);
+          dot.className = `h-2 rounded-full transition-all duration-300 ${i === 0 ? 'w-6 bg-blue-600' : 'w-2 bg-slate-300'}`;
           dot.addEventListener('click', () => {
-            currentIndex = i;
-            updateSlider();
+            if (isTransitioning) return;
+            currentIndex = vis + i;
+            jumpTo(currentIndex, true);
+            updateDots();
             resetAutoSlide();
           });
           dotsContainer.appendChild(dot);
         }
       }
 
+      // After transition ends, silently snap if we're in a clone zone
+      track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        const totalWithClones = allSlides().length;
+        const clonesAtStart = vis;
+        const clonesAtEnd = vis;
+        const realEnd = totalWithClones - clonesAtEnd; // index of first appended clone
+
+        if (currentIndex >= realEnd) {
+          // Jumped into appended clones → snap silently to real start
+          currentIndex = clonesAtStart + (currentIndex - realEnd);
+          jumpTo(currentIndex, false);
+        } else if (currentIndex < clonesAtStart) {
+          // Jumped into prepended clones → snap silently to real end
+          currentIndex = realEnd - (clonesAtStart - currentIndex);
+          jumpTo(currentIndex, false);
+        }
+        updateDots();
+      });
+
       nextBtn.addEventListener('click', () => {
-        const maxIdx = getMaxIndex();
-        currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
-        updateSlider();
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex++;
+        jumpTo(currentIndex, true);
         resetAutoSlide();
       });
 
       prevBtn.addEventListener('click', () => {
-        const maxIdx = getMaxIndex();
-        currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
-        updateSlider();
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex--;
+        jumpTo(currentIndex, true);
         resetAutoSlide();
       });
 
       let autoSlide = setInterval(() => {
-        const maxIdx = getMaxIndex();
-        currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
-        updateSlider();
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex++;
+        jumpTo(currentIndex, true);
       }, 5000);
 
       function resetAutoSlide() {
         clearInterval(autoSlide);
         autoSlide = setInterval(() => {
-          const maxIdx = getMaxIndex();
-          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
-          updateSlider();
+          if (isTransitioning) return;
+          isTransitioning = true;
+          currentIndex++;
+          jumpTo(currentIndex, true);
         }, 5000);
       }
 
       window.addEventListener('resize', () => {
-        createDots();
-        if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
-        updateSlider();
+        // Rebuild clones on resize since visible count may change
+        const newVis = getVisibleCount();
+        if (newVis !== vis) {
+          vis = newVis;
+          buildClones();
+          currentIndex = vis; // reset to first real slide
+        }
+        jumpTo(currentIndex, false);
+        updateDots();
       });
 
+      // Init
       createDots();
-      updateSlider();
+      jumpTo(currentIndex, false);
+      updateDots();
+      // ── End Infinite Carousel ───────────────────────────────────────────────
     });
   </script>
 </body>

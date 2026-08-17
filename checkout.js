@@ -24,8 +24,8 @@ document.getElementById('plan-features').innerHTML = plan.features
   .join('');
 
 // Update login hrefs to include plan param so they redirect back
-document.getElementById('loginBtn').href  = `login.html?redirect=checkout.html%3Fplan%3D${planKey}`;
-document.getElementById('signupBtn').href = `login.html?redirect=checkout.html%3Fplan%3D${planKey}`;
+document.getElementById('loginBtn').href  = 'https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership';
+document.getElementById('signupBtn').href = 'https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership';
 
 // ── Show affiliate banner if ref exists ──────────────────────────────
 const ref = getAffiliateRef();

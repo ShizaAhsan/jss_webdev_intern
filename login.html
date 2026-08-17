@@ -46,7 +46,7 @@
       <div class="glass-alert glass-alert-success" id="loginSuccess" style="display:none;"></div>
 
       <!-- Google -->
-      <button class="btn-google" id="googleSignInBtn" onclick="signInWithGoogle()">
+      <button class="btn-google" id="googleSignInBtn" onclick="redirectToJSS(event)">
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" style="width:20px;height:20px;">
         Continue with Google
       </button>
@@ -54,7 +54,7 @@
       <div class="glass-divider"><span>or sign in with email</span></div>
 
       <!-- Login form -->
-      <form id="loginForm" onsubmit="handleLogin(event)" novalidate>
+      <form id="loginForm" onsubmit="redirectToJSS(event)" novalidate>
         <div class="glass-field">
           <label class="glass-label" for="loginEmail">Email Address</label>
           <input type="email" id="loginEmail" class="glass-input" placeholder="name@example.com" required autocomplete="email">
@@ -85,7 +85,7 @@
       </form>
 
       <p class="glass-footer">
-        Don't have an account? <a href="index.html#pricing">Create one free →</a>
+        Don't have an account? <a href="https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership" target="_blank">Create one free →</a>
       </p>
     </div>
 
@@ -108,6 +108,14 @@
     </div>
   </div>
 
-  <script type="module" src="auth.js"></script>
+  <script>
+    const JSS_URL = 'https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership';
+    function redirectToJSS(e) {
+      if (e) e.preventDefault();
+      window.open(JSS_URL, '_blank');
+    }
+    // Forgot password — still go to JSS
+    function handleForgotPassword(e) { redirectToJSS(e); }
+  </script>
 </body>
 </html>

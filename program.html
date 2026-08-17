@@ -73,6 +73,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .logo {
@@ -86,8 +88,9 @@
 
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -217,6 +220,24 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .grid-2-col, .grid-3-col {
+        grid-template-columns: 1fr;
+      }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+      .hero-card {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+      }
     }
 
     /* --- Program Card (Image 1 Style) --- */
@@ -379,7 +400,8 @@
       border: 1px solid var(--border-color);
       padding: 0.5rem 1rem;
       border-radius: 6px;
-      width: 350px;
+      width: 100%;
+      max-width: 350px;
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -654,7 +676,7 @@
             <div class="tags-row">
               <span class="tag">Ethernet Switching</span><span class="tag">802.11 Standards</span><span class="tag">Linux</span><span class="tag">VPN</span><span class="tag">Intrusion Detection Systems</span>
             </div>
-            <a href="#" class="btn-action">Explore Program &rarr;</a>
+            <a href="cybersecurity-details.html" class="btn-action">Explore Program &rarr;</a>
           </div>
         </div>
 
@@ -1465,7 +1487,7 @@
               <li>✓ Community Support Forum</li>
               <li>✓ Public Learning Roadmaps</li>
             </ul>
-            <button class="plan-btn outline" onclick="goToStep2('Free Access', 0)">Start Free Trial</button>
+            <button class="plan-btn outline" onclick="window.open('https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership','_blank')">Start Free Trial</button>
           </div>
 
           <!-- Card 2: Premium Monthly -->
@@ -1479,7 +1501,7 @@
               <li>✓ Full Access to Practice Labs</li>
               <li>✓ Certificate of Completion</li>
             </ul>
-            <button class="plan-btn filled" onclick="goToStep2('Premium Monthly', 50)">Choose Monthly</button>
+            <button class="plan-btn filled" onclick="window.open('https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership','_blank')">Choose Monthly</button>
           </div>
 
           <!-- Card 3: Premium Yearly -->
@@ -1493,7 +1515,7 @@
               <li>✓ Priority Mentor Support</li>
               <li>✓ Offline Download Access</li>
             </ul>
-            <button class="plan-btn outline-purple" onclick="goToStep2('Premium Yearly', 549)">Choose Yearly</button>
+            <button class="plan-btn outline-purple" onclick="window.open('https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership','_blank')">Choose Yearly</button>
           </div>
         </div>
       </div>
