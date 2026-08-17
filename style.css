@@ -1882,6 +1882,17 @@ footer {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  max-height: 320px !important;
+  background-color: rgba(9, 44, 83, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ph-image-wrapper img {
+  object-fit: contain !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .ph-image-badge {
