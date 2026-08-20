@@ -31,28 +31,48 @@
   </div>
 
   <!-- TOP NAVBAR -->
-  <nav class="glass-panel border-b border-slate-200/80 py-3 px-4 md:px-12 sticky top-0 z-50 bg-white/90 backdrop-blur-md">
-    <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-y-2">
+  <header class="glass-panel border-b border-slate-200/80 py-3 px-4 md:px-12 sticky top-0 z-50 bg-white/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center">
-        <a href="index.html" class="flex items-center">
-          <img src="assest/logo.png" alt="Tech4D Logo" style="height: 58px; width: auto; object-fit: contain;">
-        </a>
-      </div>
+      <a href="index.html" class="logo" aria-label="Tech4D Home">
+        <img src="assest/logo.png" alt="Tech4D Logo" style="height: 58px; width: auto; object-fit: contain;">
+      </a>
 
-      <!-- Navigation Links & Action Buttons -->
-      <div class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-semibold text-slate-700 flex-wrap">
-          <a href="#programs-section" class="nav-link hover:text-blue-600 transition">Programs</a>
-          <a href="#courses-section" class="nav-link hover:text-blue-600 transition">Courses</a>
-          <a href="#community-section" class="nav-link hover:text-blue-600 transition">Community</a>
-        </div>
-        <div class="flex items-center gap-2 md:gap-3">
-          <a href="#" onclick="openPricingModal(event)" class="bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-semibold px-3 md:px-5 py-2 md:py-2.5 rounded-xl btn-glow transition cursor-pointer">Create Account</a>
-          <a href="login.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs md:text-sm font-semibold px-3 md:px-5 py-2 md:py-2.5 rounded-xl transition">Log In</a>
-        </div>
+      <!-- Navigation Links -->
+      <nav class="primary-nav" aria-label="Main Navigation">
+        <a href="#programs-section">Programs</a>
+        <a href="#courses-section">Courses</a>
+        <a href="#community-section">Community</a>
+      </nav>
+      
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="login.html" class="login-link">Log In</a>
+        <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="padding: 10px 20px; font-weight: 600;">Create Account</a>
       </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </nav>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobile-overlay" role="presentation"></div>
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true" role="dialog">
+    <div class="mobile-nav-links">
+      <a href="#programs-section" class="mobile-link">Programs</a>
+      <a href="#courses-section" class="mobile-link">Courses</a>
+      <a href="#community-section" class="mobile-link">Community</a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="bg-slate-100 text-slate-800 font-bold py-3 px-4 rounded-xl text-center block transition mb-2">Log In</a>
+      <a href="#" onclick="openPricingModal(event)" class="bg-blue-600 text-white font-bold py-3 px-4 rounded-xl text-center block transition">Create Account</a>
+    </div>
+  </div>
 
   <!-- MAIN CONTAINER -->
   <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6 md:space-y-8">
@@ -322,7 +342,7 @@
           </div>
           <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
             <p class="text-[11px] text-slate-400 font-semibold">22 hours 14 min • 110 Lessons</p>
-            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+            <a href="#" onclick="openPricingModal(event)" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
           </div>
         </div>
 
@@ -346,7 +366,7 @@
           </div>
           <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
             <p class="text-[11px] text-slate-400 font-semibold">12 hours 0 min • 95 Lessons</p>
-            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+            <a href="#" onclick="openPricingModal(event)" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
           </div>
         </div>
 
@@ -370,7 +390,7 @@
           </div>
           <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
             <p class="text-[11px] text-slate-400 font-semibold">15 hours 0 min • 119 Lessons</p>
-            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+            <a href="#" onclick="openPricingModal(event)" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
           </div>
         </div>
 
@@ -394,7 +414,7 @@
           </div>
           <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
             <p class="text-[11px] text-slate-400 font-semibold">5 hours 0 min • 26 Lessons</p>
-            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+            <a href="#" onclick="openPricingModal(event)" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
           </div>
         </div>
 
@@ -418,7 +438,7 @@
           </div>
           <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
             <p class="text-[11px] text-slate-400 font-semibold">4 hours 0 min • 28 Lessons</p>
-            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+            <a href="#" onclick="openPricingModal(event)" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
           </div>
         </div>
 
@@ -442,7 +462,7 @@
           </div>
           <div class="pt-4 border-t border-slate-100 mt-4 space-y-3">
             <p class="text-[11px] text-slate-400 font-semibold">28 hours 0 min • 498 Lessons</p>
-            <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
+            <a href="#" onclick="openPricingModal(event)" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition">Watch Free Course</a>
           </div>
         </div>
 

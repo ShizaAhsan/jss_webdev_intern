@@ -1,6 +1,6 @@
 // ── Pricing Modal Logic ──────────────────────────────────────────────
 // Handles opening/closing the membership modal and the step 1 → step 2 flow.
-// Included on: index.html, program-details.html, course-details.html
+// Included across program and landing pages
 
 function openPricingModal(e) {
   if(e) e.preventDefault();

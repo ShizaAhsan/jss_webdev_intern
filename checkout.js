@@ -85,8 +85,8 @@ window.handleGetAccess = async function() {
       btn.style.display = 'none';
       document.getElementById('successState').style.display = 'block';
 
-      // Auto-redirect to course page after 3 seconds
-      setTimeout(() => { window.location.href = 'course-details.html'; }, 3000);
+      // Auto-redirect to home page after 3 seconds
+      setTimeout(() => { window.location.href = 'index.html'; }, 3000);
     } else {
       throw new Error('Membership upgrade failed. Please try again.');
     }
