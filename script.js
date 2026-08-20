@@ -182,3 +182,14 @@ function openPricingModal(e) {
   }
 }
 // ─── END JSS REDIRECT ───────────────────────────────────────────────────────
+
+// ─── GLOBAL LOGIN LINK INTERCEPTOR (failsafe) ───────────────────────────────
+// Catches any <a href="login.html"> that wasn't individually updated.
+document.addEventListener('click', function(e) {
+  const anchor = e.target.closest('a[href="login.html"]');
+  if (anchor) {
+    e.preventDefault();
+    window.open(JSS_MEMBERSHIP_URL, '_blank', 'noopener,noreferrer');
+  }
+}, true);
+// ─── END GLOBAL INTERCEPTOR ─────────────────────────────────────────────────
