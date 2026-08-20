@@ -28,7 +28,7 @@
       </nav>
       
       <div class="nav-actions">
-        <a href="login.html" class="login-link">Login</a>
+        <a href="https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership" target="_blank" rel="noopener noreferrer" class="login-link">Login</a>
         <a href="#" onclick="openPricingModal(event)" class="btn btn-primary">Start Learning</a>
       </div>
       
@@ -50,7 +50,7 @@
       <a href="index.html#community-section" class="mobile-link">Community</a>
     </div>
     <div class="mobile-nav-actions">
-      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Login</a>
+      <a href="https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">Login</a>
       <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="width: 100%;">Start Learning</a>
     </div>
   </div>
@@ -569,7 +569,7 @@
       <p style="color: #CBD5E1; max-width: 600px; margin: 0 auto 28px; font-size: 15px; line-height: 1.6;">Build practical networking, Cisco configuration, troubleshooting, routing, and security skills through a structured 3-course learning path.</p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
         <a href="#" onclick="openPricingModal(event)" class="btn btn-primary" style="background-color: #1c74d4; border-color: #1c74d4; color: #FFFFFF; border-radius: 8px; padding: 12px 28px; font-weight: 700;">Start Learning Now</a>
-        <a href="login.html" class="btn btn-outline" style="background-color: transparent; color: #FFFFFF; border-color: rgba(255,255,255,0.3); border-radius: 8px; padding: 12px 28px; font-weight: 500;">Already a member? Log In</a>
+        <a href="https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="background-color: transparent; color: #FFFFFF; border-color: rgba(255,255,255,0.3); border-radius: 8px; padding: 12px 28px; font-weight: 500;">Already a member? Log In</a>
       </div>
     </div>
   </section>
@@ -600,26 +600,284 @@
         <div class="footer-col">
           <h4>Account</h4>
           <ul>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership" target="_blank" rel="noopener noreferrer">Login</a></li>
             <li><a href="#" onclick="openPricingModal(event)">Membership Plans</a></li>
           </ul>
         </div>
         
-        <div class="footer-col">
-          <h4>Legal &amp; Support</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
+  <!-- Pricing Modal -->
+  <div class="modal-overlay" id="pricingModal" onclick="if(event.target === this) closePricingModal()">
+    <div class="modal-content" style="max-width: 1100px;">
+      <button class="modal-close" onclick="closePricingModal()">&times;</button>
+      
+      <!-- STEP 1 VIEW -->
+      <div id="step-1-view">
+        <div class="modal-header text-center">
+          <span class="p-top-badge" style="background: none; color: var(--blue); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 11px;">JOIN JOBSKILLSHARE</span>
+          <h2 style="font-size: 24px; color: var(--navy-dark); margin: 2px 0 8px;">Choose how you want to learn</h2>
+          
+          <!-- Stepper -->
+          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 600px; margin: 0 auto 12px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">1</div>
+              <span style="font-weight: 600; color: var(--blue); font-size: 13px;">Choose a plan</span>
+            </div>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">2</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Secure checkout</span>
+            </div>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">3</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Start learning</span>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-bottom: 12px;">
+          <h3 style="font-size: 20px; color: var(--navy-dark); margin-bottom: 4px;">Select your membership</h3>
+          <p style="color: #64748B; font-size: 13.5px; margin: 0;">Create your account here with secure membership and payment processing.</p>
+        </div>
+
+        <div class="pricing-cards-wrapper">
+          <!-- Free Card -->
+          <div class="p-card" style="border-top: 4px solid var(--border);">
+            <div class="p-badge" style="background: #F1F5F9; color: #475569;">START FREE</div>
+            <h3>Free Access</h3>
+            <div class="price"><span>$</span>0.00</div>
+            <p class="p-desc">Explore selected foundation Courses for three months.</p>
+            <ul class="p-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Selected free Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Learning portal access</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Progress tracking</li>
+            </ul>
+            <button onclick="window.open('https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership','_blank')" class="p-btn p-btn-light" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Create Free Account</button>
+          </div>
+
+          <!-- Premium Monthly Card (Highlighted) -->
+          <div class="p-card p-card-highlight" style="border-top: 4px solid var(--coral);">
+            <div class="p-badge" style="background: var(--coral-light); color: var(--coral);">🔥 POPULAR</div>
+            <h3>Premium Monthly</h3>
+            <div class="price"><span>$</span>50.00<small>per month</small></div>
+            <p class="p-desc">Full learning access with monthly billing.</p>
+            <ul class="p-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
+              <li><strong style="color: var(--blue);">+ AI Career Tools</strong></li>
+            </ul>
+            <button onclick="window.open('https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership','_blank')" class="p-btn" style="width: 100%; border: 2px solid var(--blue); color: var(--blue); background: var(--ice-blue-light); cursor: pointer; font-family: inherit;">Choose Premium Monthly</button>
+          </div>
+
+          <!-- Premium Yearly Card -->
+          <div class="p-card" style="border-top: 4px solid var(--blue);">
+            <div class="p-badge" style="background: var(--blue); color: var(--white);">⭐ BEST VALUE</div>
+            <h3>Premium Yearly</h3>
+            <div class="price"><span>$</span>549.00<small>per year</small></div>
+            <p class="p-desc">Build long-term skills with yearly Premium access.</p>
+            <ul class="p-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All Certificate Programs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All premium Courses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hands-on Labs and certificates</li>
+              <li><strong style="color: var(--blue);">+ AI Career Tools</strong></li>
+            </ul>
+            <button onclick="window.open('https://www.jobskillshare.org/?ref=shizaahsan2006-gmail-com#/membership','_blank')" class="p-btn p-btn-blue" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Choose Premium Yearly</button>
+          </div>
         </div>
       </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2026 JobSkillShare. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
 
+      <!-- STEP 2 VIEW -->
+      <div id="step-2-view" style="display: none; width: 100%; text-align: left;">
+        <button onclick="goToStep1()" style="background: none; border: none; color: var(--blue); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; margin-bottom: 16px; padding: 0;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Plans
+        </button>
+        
+        <div class="modal-header text-center" style="margin-bottom: 16px;">
+          <h2 style="font-size: 24px; color: var(--navy-dark); margin: 0 0 8px;">Complete Your Registration</h2>
+          
+          <!-- Stepper Step 2 -->
+          <div class="checkout-stepper" style="display: flex; justify-content: center; align-items: center; max-width: 600px; margin: 0 auto 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; opacity: 0.5;">
+              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">1</div>
+              <span style="font-weight: 600; color: var(--navy); font-size: 13px;">Choose a plan</span>
+            </div>
+            <div style="flex: 1; height: 1px; background: var(--blue); margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">2</div>
+              <span style="font-weight: 600; color: var(--blue); font-size: 13px;">Secure checkout</span>
+            </div>
+            <div style="flex: 1; height: 1px; background: #E2E8F0; margin: 0 12px;"></div>
+            <div style="display: flex; align-items: center; gap: 8px; opacity: 0.5;">
+              <div style="width: 24px; height: 24px; background: #FFFFFF; border: 2px solid #E2E8F0; color: #94A3B8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">3</div>
+              <span style="font-weight: 500; color: #64748B; font-size: 13px;">Start learning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pd-checkout-grid" style="gap: 24px; align-items: start;">
+          <!-- Left Col: Selected Plan summary card -->
+          <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 20px;">
+            <div style="font-size: 11px; font-weight: 700; color: #64748B; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">Selected Plan</div>
+            <div id="modal-plan-name" style="font-size: 20px; font-weight: 700; color: var(--navy-dark); margin-bottom: 8px;">Premium Monthly</div>
+            <div id="modal-plan-price" style="font-size: 28px; font-weight: 700; color: var(--blue); margin-bottom: 16px;">$50.00</div>
+            
+            <ul class="p-list" style="margin-bottom: 0;">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Complete platform access</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-world practice labs</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald, #13EC6F)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Career guidance & community</li>
+            </ul>
+          </div>
+
+          <!-- Right Col: Registration & Checkout Form -->
+          <form id="checkout-form" onsubmit="processCheckout(event)" style="margin: 0;">
+            <!-- Account Details -->
+            <div id="checkout-account-section">
+              <h3 style="font-size: 15px; color: var(--navy-dark); margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid #E2E8F0;">Account Information</h3>
+              <div class="pd-checkout-inner-grid" style="gap: 12px; margin-bottom: 16px;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Full Name *</label>
+                  <input type="text" id="checkout-name" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Email Address *</label>
+                  <input type="email" id="checkout-email" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+                <div class="form-group" style="grid-column: 1 / -1; margin-bottom: 0;">
+                  <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Create Password *</label>
+                  <input type="password" id="checkout-password" required style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Details (Dynamically shown) -->
+            <div id="modal-payment-section">
+              <h3 style="font-size: 15px; color: var(--navy-dark); margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid #E2E8F0;">Payment Details</h3>
+              
+              <div style="margin-bottom: 12px;">
+                <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Discount Code (Optional)</label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="text" placeholder="Enter code" style="flex: 1; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                  <button type="button" style="padding: 0 12px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 6px; color: var(--navy-dark); font-weight: 600; cursor: pointer; font-size: 13px;">Apply</button>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 4px;">Card Information *</label>
+                <div class="pd-checkout-card-grid" style="border: 1px solid #E2E8F0; border-radius: 6px; padding: 12px; gap: 10px;">
+                  <input type="text" placeholder="Card Number" style="grid-column: 1 / -1; width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                  <input type="text" placeholder="MM/YY" style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                  <input type="text" placeholder="CVC" style="width: 100%; padding: 8px 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-family: inherit; font-size: 13.5px;" required class="pmt-input">
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" id="checkout-submit-btn" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 14.5px; display: flex; justify-content: center; align-items: center; gap: 8px; border-radius: 8px;">
+              Complete Registration
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function openPricingModal(e) {
+      if(e) e.preventDefault();
+      document.getElementById('pricingModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      goToStep1();
+    }
+    
+    function closePricingModal() {
+      document.getElementById('pricingModal').classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => { goToStep1(); }, 300);
+    }
+    
+    function goToStep2(planName, planPrice) {
+      document.getElementById('step-1-view').style.display = 'none';
+      document.getElementById('step-2-view').style.display = 'block';
+      
+      document.getElementById('modal-plan-name').innerText = planName;
+      document.getElementById('modal-plan-price').innerText = planPrice === 0 ? '$0.00' : '$' + planPrice + '.00';
+      
+      const paymentSection = document.getElementById('modal-payment-section');
+      const pmtInputs = paymentSection.querySelectorAll('.pmt-input');
+      
+      if (planPrice === 0) {
+        paymentSection.style.display = 'none';
+        pmtInputs.forEach(i => i.removeAttribute('required'));
+      } else {
+        paymentSection.style.display = 'block';
+        pmtInputs.forEach(i => i.setAttribute('required', 'true'));
+      }
+      
+      const accountSection = document.getElementById('checkout-account-section');
+      const nameInput = document.getElementById('checkout-name');
+      const emailInput = document.getElementById('checkout-email');
+      const passInput = document.getElementById('checkout-password');
+      
+      if (window.currentUser) {
+        accountSection.style.display = 'none';
+        nameInput.removeAttribute('required');
+        emailInput.removeAttribute('required');
+        passInput.removeAttribute('required');
+      } else {
+        accountSection.style.display = 'block';
+        nameInput.setAttribute('required', 'true');
+        emailInput.setAttribute('required', 'true');
+        passInput.setAttribute('required', 'true');
+      }
+    }
+    
+    function goToStep1() {
+      document.getElementById('step-2-view').style.display = 'none';
+      document.getElementById('step-1-view').style.display = 'block';
+    }
+
+    async function processCheckout(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('checkout-submit-btn');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Processing...';
+
+      try {
+        if (!window.currentUser) {
+          const name = document.getElementById('checkout-name').value;
+          const email = document.getElementById('checkout-email').value;
+          const password = document.getElementById('checkout-password').value;
+          
+          if(window.handleCheckoutRegistration) {
+             await window.handleCheckoutRegistration(name, email, password);
+          } else {
+             console.warn("Auth not linked yet. Simulating success.");
+          }
+        }
+        
+        alert('Checkout Successful! Your account is ready.');
+        closePricingModal();
+        
+      } catch (error) {
+        alert(error.message);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const pricingLinks = document.querySelectorAll('a[href="#" onclick="openPricingModal(event)"]');
+      pricingLinks.forEach(link => {
+        link.addEventListener('click', openPricingModal);
+      });
+    });
+  </script>
 </body>
 </html>
